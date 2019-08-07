@@ -1,3 +1,3 @@
 function b=square(a)
-    b=a*a+1
+    b=a*a
 end

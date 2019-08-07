@@ -6,3 +6,7 @@ class c_sharptopy:
         self.library=Library
     def square(self,num):
         return self.library.Class1().Square(num)
+
+if __name__ == '__main__':
+    a=c_sharptopy()
+    print(a.square(50))
