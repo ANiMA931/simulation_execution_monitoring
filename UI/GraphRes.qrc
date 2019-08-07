@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="chart">
+    <file>10.png</file>
+    <file>9.png</file>
+    <file>7.png</file>
+    <file>8.png</file>
+    <file>4.png</file>
+    <file>1.jpg</file>
+    <file>2.jpg</file>
+    <file>3.jpg</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>快进.ico</file>
+    <file>单步.ico</file>
+    <file>播放按钮.ico</file>
+    <file>倒退.ico</file>
+    <file>电源按钮.ico</file>
+    <file>加号.ico</file>
+    <file>取消.ico</file>
+    <file>停止.ico</file>
+    <file>下一个.ico</file>
+    <file>暂停.ico</file>
+  </qresource>
+  <qresource prefix="patterns">
+    <file>11.png</file>
+    <file>6.png</file>
+    <file>5.png</file>
+  </qresource>
+</RCC>
