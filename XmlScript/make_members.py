@@ -26,9 +26,8 @@ class member_maker:
         for i in range(self.member_num):
             GroupXml.append([])
 
-        for i in range(self.member_num//10):
-            for j in range(10):
-                GroupXml[i * 10 + j] = 'MyCrowd_Primitive' + str(i) + str(j)  # MyCrowd_Primitiveij来命名xml文件名
+        for i in range(self.member_num):
+            GroupXml[i] = 'MyCrowd_Primitive' + str(i).zfill(2)  # MyCrowd_Primitiveij来命名xml文件名
 
         # 创建根节点
         # resetTime=0 #重复设定连接关系的次数

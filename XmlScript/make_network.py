@@ -12,9 +12,8 @@ class network_maker:
         for i in range(self.net_scale):
             Nodes_Group.append([])  # Nodes_Group规模100
 
-        for i in range(self.net_scale//10):
-            for j in range(10):
-                Nodes_Group[i*10+j]='Node'+str(i)+str(j)#Nodes_Group每一个索引存储Nodeij
+        for i in range(self.net_scale):
+            Nodes_Group[i]='Node'+str(i).zfill(3)#加个数值位数
         # for i in range(self.net_scale):
         #     Nodes_Group[i] = 'Node' + str(i)
         Node01 = ET.SubElement(root, "Nodes")  # 网络节点
@@ -43,7 +42,7 @@ class network_maker:
                     Matr.set(Nodes_Group[i] + '-' + Nodes_Group[j],
                              str(link))  # 以set的方式追加Matrix_link属性
 
-        aa = 'MyCrowd_Network' + '.xml'  # 重写xml文件
+        aa = 'E:\\code\\PycharmProjects\\simulation\\NetWorkXml\\'+'MyCrowd_Network' + '.xml'  # 重写xml文件
         tree.write(aa)
 if __name__ == '__main__':
-    network_maker(net_scale=50).make_network()
+    network_maker(net_scale=100).make_network()
