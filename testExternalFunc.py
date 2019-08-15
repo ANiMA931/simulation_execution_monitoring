@@ -11,6 +11,3 @@ for i in range(100):
     print(mtopy().square(i))
     print(time() - a)
 
-
-
-
