@@ -3,9 +3,11 @@ from math import pi
 import xml.etree.ElementTree as ET
 import numpy as np
 
+
 class member_maker:
-    def __init__(self,member_num=100):
-        self.member_num=member_num
+    def __init__(self, member_num=100):
+        self.member_num = member_num
+
     def make_members(self):
         Network = ET.parse(
             "E:\\code\\PycharmProjects\\simulation\\NetWorkXml\\MyCrowd_Network.xml")  # 读取MyCrowd_Network.xml文件
@@ -27,7 +29,7 @@ class member_maker:
             GroupXml.append([])
 
         for i in range(self.member_num):
-            GroupXml[i] = 'MyCrowd_Primitive' + str(i).zfill(2)  # MyCrowd_Primitiveij来命名xml文件名
+            GroupXml[i] = 'MyCrowd_Primitive' + str(i).zfill(2)  # MyCrowd_Primitivei来命名xml文件名，给两个位
 
         # 创建根节点
         # resetTime=0 #重复设定连接关系的次数
@@ -111,6 +113,7 @@ class member_maker:
                 # set只能对已有的节点进行属性设置及追加，因此前文必须先创建xml文件。
             aa = 'E:\\code\\PycharmProjects\\simulation\\primitive\\' + GroupXml[k] + '.xml'
             tree.write(aa)
+
 
 if __name__ == '__main__':
     member_maker(member_num=50).make_members()

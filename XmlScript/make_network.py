@@ -1,9 +1,11 @@
 import xml.etree.ElementTree as ET
 import numpy as np
 
+
 class network_maker:
-    def __init__(self,net_scale=100):
-        self.net_scale=net_scale
+    def __init__(self, net_scale=100):
+        self.net_scale = net_scale
+
     def make_network(self):
         root = ET.Element("data")  # 创建根节点
         tree = ET.ElementTree(root)
@@ -13,15 +15,13 @@ class network_maker:
             Nodes_Group.append([])  # Nodes_Group规模100
 
         for i in range(self.net_scale):
-            Nodes_Group[i]='Node'+str(i).zfill(3)#加个数值位数
-        # for i in range(self.net_scale):
-        #     Nodes_Group[i] = 'Node' + str(i)
+            Nodes_Group[i] = 'Node' + str(i).zfill(3)  # 加个数值位数
         Node01 = ET.SubElement(root, "Nodes")  # 网络节点
 
         Rand_A = np.random.rand(self.net_scale, self.net_scale)  # 根据给定维度生成[0,1)之间的数据，包含0，不包含1
         Node02 = ET.SubElement(root, "Matrix_link")  # 连接矩阵
 
-        aa = 'MyCrowd_Network' + '.xml'  # 首先创建一个xml文件，以备描述网络连接情况
+        aa = 'E:\\code\\PycharmProjects\\simulation\\NetWorkXml\\' + 'MyCrowd_Network' + '.xml'  # 首先创建一个xml文件，以备描述网络连接情况
         tree.write(aa)
 
         for k in range(self.net_scale):
@@ -42,7 +42,9 @@ class network_maker:
                     Matr.set(Nodes_Group[i] + '-' + Nodes_Group[j],
                              str(link))  # 以set的方式追加Matrix_link属性
 
-        aa = 'E:\\code\\PycharmProjects\\simulation\\NetWorkXml\\'+'MyCrowd_Network' + '.xml'  # 重写xml文件
+        aa = 'E:\\code\\PycharmProjects\\simulation\\NetWorkXml\\' + 'MyCrowd_Network' + '.xml'  # 重写xml文件
         tree.write(aa)
+
+
 if __name__ == '__main__':
     network_maker(net_scale=100).make_network()
