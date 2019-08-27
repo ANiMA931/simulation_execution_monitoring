@@ -1,0 +1,151 @@
+<pattern>
+	<commonInformation ID="ptn-1" name="theFirst"
+		author="MA" remark="No" modifyDate="2019.04" version="0.0" />
+	<positions scale="13">
+		<position pID="p0" name="begining1" weight="549.48"
+			type="start" />
+		<position pID="p1" name="begining2" weight="519.65"
+			type="start" />
+		<position pID="p2" name="begining3" weight="243.23"
+			type="start" />
+		<position pID="p3" name="normal1" weight="742.13"
+			type="normal" />
+		<position pID="p4" name="normal2" weight="1154.13"
+			type="normal" />
+		<position pID="p5" name="normal3" weight="49.48"
+			type="normal" />
+		<position pID="p6" name="normal4" weight="-123.23"
+			type="normal" />
+		<position pID="p7" name="normal5" weight="-49.31"
+			type="normal" />
+		<position pID="p8" name="normal6" weight="72.49"
+			type="normal" />
+		<position pID="p9" name="normal7" weight="84.35"
+			type="normal" />
+		<position pID="p10" name="normal8" weight="59.46"
+			type="normal" />
+		<position pID="p11" name="normal9" weight="39.42"
+			type="normal" />
+		<position pID="p12" name="normal10" weight="43.73"
+			type="normal" />
+		<position pID="p13" name="normal11" weight="549.48"
+			type="normal" />
+		<position pID="p14" name="normal12" weight="519.65"
+			type="normal" />
+		<position pID="p15" name="normal13" weight="243.23"
+			type="normal" />
+		<position pID="p16" name="normal14" weight="742.13"
+			type="normal" />
+		<position pID="p17" name="normal15" weight="1154.13"
+			type="normal" />
+		<position pID="p18" name="normal16" weight="49.48"
+			type="normal" />
+		<position pID="p19" name="normal17" weight="-123.23"
+			type="normal" />
+		<position pID="p20" name="normal18" weight="-49.31"
+			type="normal" />
+		<position pID="p21" name="ending1" weight="72.49"
+			type="ending" />
+		<position pID="p22" name="ending2" weight="84.35"
+			type="ending" />
+		<position pID="p23" name="ending3" weight="59.46"
+			type="ending" />
+	</positions>
+	<behaviors scale="71">
+		<behavior bID="b0" before="p0" after="p3" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b1" before="p0" after="p4" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b2" before="p0" after="p5" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b3" before="p1" after="p4" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b4" before="p1" after="p5" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b5" before="p2" after="p5" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b6" before="p2" after="p6" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b7" before="p3" after="p7" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b8" before="p3" after="p9" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b9" before="p4" after="p7" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b10" before="p4" after="p8" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b11" before="p5" after="p7" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b12" before="p5" after="p8" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b13" before="p5" after="p9" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b14" before="p6" after="p8" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b15" before="p6" after="p9" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b16" before="p7" after="p10" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b17" before="p7" after="p11" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b18" before="p7" after="p12" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b19" before="p8" after="p11" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b20" before="p8" after="p11" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b21" before="p8" after="p12" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b22" before="p9" after="p11" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b23" before="p9" after="p12" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b24" before="p9" after="p13" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b25" before="p10" after="p14" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b26" before="p10" after="p15" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b27" before="p11" after="p14" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b28" before="p11" after="p15" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b29" before="p12" after="p15" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b30" before="p12" after="p16" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b31" before="p13" after="p15" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b32" before="p13" after="p16" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b33" before="p14" after="p17" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b34" before="p14" after="p18" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b35" before="p14" after="p20" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b36" before="p15" after="p18" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b37" before="p15" after="p19" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b38" before="p16" after="p18" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b39" before="p16" after="p19" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b40" before="p16" after="p20" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b41" before="p17" after="p21" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b42" before="p18" after="p21" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b43" before="p18" after="p22" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b44" before="p19" after="p22" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b45" before="p19" after="p23" weight="66.15"
+			successRate="0.98" />
+		<behavior bID="b46" before="p20" after="p23" weight="66.15"
+			successRate="0.98" />
+	</behaviors>
+	<comment></comment>
+</pattern>

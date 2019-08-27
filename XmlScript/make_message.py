@@ -22,6 +22,7 @@ class msg_maker:
             strength = round(np.random.rand(), 5)
             angle = round(np.random.rand() * pi * 2, 5)
             message.attrib = {"ID": "msg-"+str(id(message)), "topic": str(tpc), "strength": str(strength), "angle": str(angle)}
+            message.text="\0"
 
         aa = 'E:\\code\\PycharmProjects\\simulation\\MessAge\\' + 'MyCrowd_MessAge' + '.xml'  # 首先创建一个xml文件，以备描述网络连接情况
         tree.write(aa)

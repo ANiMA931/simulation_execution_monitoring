@@ -1,0 +1,8 @@
+<?xml version="1.0" ?><monitor>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="m-07" MetaModelID="p-67.258" endowment="10.38254" memberRole="monitor" memberTypeCode="3"/>
+    <pattern path="C:simulation/patterns/ptn-1.xml"/>
+    <monitoring value="b27,b32,b14,b43,b37,b0,b46,b41,b29,b28,b12"/>
+    <unitList scale="">
+    </unitList>
+</monitor>
