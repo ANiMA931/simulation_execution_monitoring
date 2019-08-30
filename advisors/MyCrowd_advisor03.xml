@@ -1,8 +1,2 @@
-<?xml version="1.0" ?><advisor>
-    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
-    <memberType ID="a-03" MetaModelID="p-67.258" endowment="4.60823" memberRole="advisor" memberTypeCode="2"/>
-    <pattern path="C:simulation/patterns/ptn-1.xml"/>
-    <preference value="p1,p5,p9,p12,p16,p18,p22"/>
-    <unitList scale="">
-    </unitList>
-</advisor>
+<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-03" MetaModelID="p-67.258" endowment="11.29026" memberRole="advisor" memberTypeCode="2"/><pattern path="C:simulation/patterns/ptn-1.xml"/><preference value="p0,p3,p9,p12,p15,p19,p22"/><unitList remaining="0.60294" scale="6">
+<unit strength="2.79456" uID="u-00"/><unit strength="2.70263" uID="u-01"/><unit strength="1.9839" uID="u-05"/><unit strength="2.53229" uID="u-11"/><unit strength="0.36123" uID="u-15"/><unit strength="0.31271" uID="u-19"/></unitList></advisor>

@@ -1,8 +1,2 @@
-<?xml version="1.0" ?><monitor>
-    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
-    <memberType ID="m-07" MetaModelID="p-67.258" endowment="10.38254" memberRole="monitor" memberTypeCode="3"/>
-    <pattern path="C:simulation/patterns/ptn-1.xml"/>
-    <monitoring value="b19,b41"/>
-    <unitList scale="">
-    </unitList>
-</monitor>
+<?xml version="1.0" ?><monitor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="m-01" MetaModelID="p-67.258" endowment="11.16538" memberRole="monitor" memberTypeCode="3"/><pattern path="C:simulation/patterns/ptn-1.xml"/><monitoring value="b3"/><unitList remaining="0.48777" scale="2">
+<unit strength="10.52728" uID="u-10"/><unit strength="0.15033" uID="u-12"/></unitList></monitor>
