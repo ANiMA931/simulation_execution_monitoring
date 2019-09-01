@@ -1,151 +1,79 @@
-<pattern>
-	<commonInformation ID="ptn-1" name="theFirst"
-		author="MA" remark="No" modifyDate="2019.04" version="0.0" />
-	<positions scale="13">
-		<position pID="p0" name="begining1" weight="549.48"
-			type="start" />
-		<position pID="p1" name="begining2" weight="519.65"
-			type="start" />
-		<position pID="p2" name="begining3" weight="243.23"
-			type="start" />
-		<position pID="p3" name="normal1" weight="742.13"
-			type="normal" />
-		<position pID="p4" name="normal2" weight="1154.13"
-			type="normal" />
-		<position pID="p5" name="normal3" weight="49.48"
-			type="normal" />
-		<position pID="p6" name="normal4" weight="-123.23"
-			type="normal" />
-		<position pID="p7" name="normal5" weight="-49.31"
-			type="normal" />
-		<position pID="p8" name="normal6" weight="72.49"
-			type="normal" />
-		<position pID="p9" name="normal7" weight="84.35"
-			type="normal" />
-		<position pID="p10" name="normal8" weight="59.46"
-			type="normal" />
-		<position pID="p11" name="normal9" weight="39.42"
-			type="normal" />
-		<position pID="p12" name="normal10" weight="43.73"
-			type="normal" />
-		<position pID="p13" name="normal11" weight="549.48"
-			type="normal" />
-		<position pID="p14" name="normal12" weight="519.65"
-			type="normal" />
-		<position pID="p15" name="normal13" weight="243.23"
-			type="normal" />
-		<position pID="p16" name="normal14" weight="742.13"
-			type="normal" />
-		<position pID="p17" name="normal15" weight="1154.13"
-			type="normal" />
-		<position pID="p18" name="normal16" weight="49.48"
-			type="normal" />
-		<position pID="p19" name="normal17" weight="-123.23"
-			type="normal" />
-		<position pID="p20" name="normal18" weight="-49.31"
-			type="normal" />
-		<position pID="p21" name="ending1" weight="72.49"
-			type="ending" />
-		<position pID="p22" name="ending2" weight="84.35"
-			type="ending" />
-		<position pID="p23" name="ending3" weight="59.46"
-			type="ending" />
+<?xml version="1.0" ?><pattern>
+	<commonInformation ID="ptn-1" author="MA" modifyDate="2019.04" name="theFirst" remark="No" version="0.0"/>
+	<positions scale="24">
+		<position name="begining1" pID="p0" type="start" weight="48.89789"/>
+		<position name="begining2" pID="p1" type="start" weight="58.77624"/>
+		<position name="begining3" pID="p2" type="start" weight="30.75665"/>
+		<position name="normal1" pID="p3" type="normal" weight="52.3147"/>
+		<position name="normal2" pID="p4" type="normal" weight="2.18152"/>
+		<position name="normal3" pID="p5" type="normal" weight="37.69328"/>
+		<position name="normal4" pID="p6" type="normal" weight="3.61525"/>
+		<position name="normal5" pID="p7" type="normal" weight="35.33455"/>
+		<position name="normal6" pID="p8" type="normal" weight="50.97295"/>
+		<position name="normal7" pID="p9" type="normal" weight="2.03284"/>
+		<position name="normal8" pID="p10" type="normal" weight="10.90894"/>
+		<position name="normal9" pID="p11" type="normal" weight="26.75224"/>
+		<position name="normal10" pID="p12" type="normal" weight="42.88121"/>
+		<position name="normal11" pID="p13" type="normal" weight="53.84267"/>
+		<position name="normal12" pID="p14" type="normal" weight="8.51372"/>
+		<position name="normal13" pID="p15" type="normal" weight="42.77132"/>
+		<position name="normal14" pID="p16" type="normal" weight="11.68647"/>
+		<position name="normal15" pID="p17" type="normal" weight="37.04584"/>
+		<position name="normal16" pID="p18" type="normal" weight="11.35463"/>
+		<position name="normal17" pID="p19" type="normal" weight="61.02916"/>
+		<position name="normal18" pID="p20" type="normal" weight="31.13302"/>
+		<position name="ending1" pID="p21" type="ending" weight="19.0585"/>
+		<position name="ending2" pID="p22" type="ending" weight="66.78006"/>
+		<position name="ending3" pID="p23" type="ending" weight="29.69736"/>
 	</positions>
 	<behaviors scale="71">
-		<behavior bID="b0" before="p0" after="p3" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b1" before="p0" after="p4" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b2" before="p0" after="p5" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b3" before="p1" after="p4" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b4" before="p1" after="p5" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b5" before="p2" after="p5" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b6" before="p2" after="p6" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b7" before="p3" after="p7" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b8" before="p3" after="p9" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b9" before="p4" after="p7" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b10" before="p4" after="p8" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b11" before="p5" after="p7" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b12" before="p5" after="p8" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b13" before="p5" after="p9" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b14" before="p6" after="p8" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b15" before="p6" after="p9" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b16" before="p7" after="p10" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b17" before="p7" after="p11" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b18" before="p7" after="p12" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b19" before="p8" after="p11" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b20" before="p8" after="p11" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b21" before="p8" after="p12" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b22" before="p9" after="p11" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b23" before="p9" after="p12" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b24" before="p9" after="p13" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b25" before="p10" after="p14" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b26" before="p10" after="p15" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b27" before="p11" after="p14" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b28" before="p11" after="p15" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b29" before="p12" after="p15" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b30" before="p12" after="p16" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b31" before="p13" after="p15" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b32" before="p13" after="p16" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b33" before="p14" after="p17" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b34" before="p14" after="p18" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b35" before="p14" after="p20" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b36" before="p15" after="p18" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b37" before="p15" after="p19" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b38" before="p16" after="p18" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b39" before="p16" after="p19" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b40" before="p16" after="p20" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b41" before="p17" after="p21" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b42" before="p18" after="p21" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b43" before="p18" after="p22" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b44" before="p19" after="p22" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b45" before="p19" after="p23" weight="66.15"
-			successRate="0.98" />
-		<behavior bID="b46" before="p20" after="p23" weight="66.15"
-			successRate="0.98" />
+		<behavior after="p3" bID="b0" before="p0" successRate="0.98" weight="42.56577"/>
+		<behavior after="p4" bID="b1" before="p0" successRate="0.98" weight="9.97048"/>
+		<behavior after="p5" bID="b2" before="p0" successRate="0.98" weight="41.25707"/>
+		<behavior after="p4" bID="b3" before="p1" successRate="0.98" weight="53.0861"/>
+		<behavior after="p5" bID="b4" before="p1" successRate="0.98" weight="34.79495"/>
+		<behavior after="p5" bID="b5" before="p2" successRate="0.98" weight="12.96708"/>
+		<behavior after="p6" bID="b6" before="p2" successRate="0.98" weight="37.55888"/>
+		<behavior after="p7" bID="b7" before="p3" successRate="0.98" weight="30.40915"/>
+		<behavior after="p9" bID="b8" before="p3" successRate="0.98" weight="37.54575"/>
+		<behavior after="p7" bID="b9" before="p4" successRate="0.98" weight="32.98615"/>
+		<behavior after="p8" bID="b10" before="p4" successRate="0.98" weight="24.66447"/>
+		<behavior after="p7" bID="b11" before="p5" successRate="0.98" weight="30.77082"/>
+		<behavior after="p8" bID="b12" before="p5" successRate="0.98" weight="2.72402"/>
+		<behavior after="p9" bID="b13" before="p5" successRate="0.98" weight="17.40359"/>
+		<behavior after="p8" bID="b14" before="p6" successRate="0.98" weight="50.86124"/>
+		<behavior after="p9" bID="b15" before="p6" successRate="0.98" weight="27.44626"/>
+		<behavior after="p10" bID="b16" before="p7" successRate="0.98" weight="44.12291"/>
+		<behavior after="p11" bID="b17" before="p7" successRate="0.98" weight="7.25604"/>
+		<behavior after="p12" bID="b18" before="p7" successRate="0.98" weight="48.66642"/>
+		<behavior after="p11" bID="b19" before="p8" successRate="0.98" weight="9.5506"/>
+		<behavior after="p11" bID="b20" before="p8" successRate="0.98" weight="11.82793"/>
+		<behavior after="p12" bID="b21" before="p8" successRate="0.98" weight="36.17865"/>
+		<behavior after="p11" bID="b22" before="p9" successRate="0.98" weight="18.65011"/>
+		<behavior after="p12" bID="b23" before="p9" successRate="0.98" weight="52.40503"/>
+		<behavior after="p13" bID="b24" before="p9" successRate="0.98" weight="7.63884"/>
+		<behavior after="p14" bID="b25" before="p10" successRate="0.98" weight="57.04375"/>
+		<behavior after="p15" bID="b26" before="p10" successRate="0.98" weight="16.75266"/>
+		<behavior after="p14" bID="b27" before="p11" successRate="0.98" weight="48.7553"/>
+		<behavior after="p15" bID="b28" before="p11" successRate="0.98" weight="42.38105"/>
+		<behavior after="p15" bID="b29" before="p12" successRate="0.98" weight="18.70501"/>
+		<behavior after="p16" bID="b30" before="p12" successRate="0.98" weight="51.42057"/>
+		<behavior after="p15" bID="b31" before="p13" successRate="0.98" weight="17.06322"/>
+		<behavior after="p16" bID="b32" before="p13" successRate="0.98" weight="30.90708"/>
+		<behavior after="p17" bID="b33" before="p14" successRate="0.98" weight="36.00607"/>
+		<behavior after="p18" bID="b34" before="p14" successRate="0.98" weight="34.81641"/>
+		<behavior after="p20" bID="b35" before="p14" successRate="0.98" weight="38.62334"/>
+		<behavior after="p18" bID="b36" before="p15" successRate="0.98" weight="40.98553"/>
+		<behavior after="p19" bID="b37" before="p15" successRate="0.98" weight="31.31214"/>
+		<behavior after="p18" bID="b38" before="p16" successRate="0.98" weight="15.62533"/>
+		<behavior after="p19" bID="b39" before="p16" successRate="0.98" weight="2.03812"/>
+		<behavior after="p20" bID="b40" before="p16" successRate="0.98" weight="22.23324"/>
+		<behavior after="p21" bID="b41" before="p17" successRate="0.98" weight="31.48354"/>
+		<behavior after="p21" bID="b42" before="p18" successRate="0.98" weight="12.62828"/>
+		<behavior after="p22" bID="b43" before="p18" successRate="0.98" weight="55.77102"/>
+		<behavior after="p22" bID="b44" before="p19" successRate="0.98" weight="11.17771"/>
+		<behavior after="p23" bID="b45" before="p19" successRate="0.98" weight="9.12957"/>
+		<behavior after="p23" bID="b46" before="p20" successRate="0.98" weight="22.06094"/>
 	</behaviors>
-	<comment></comment>
+	<comment/>
 </pattern>

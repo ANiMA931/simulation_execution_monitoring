@@ -1,5 +1,27 @@
-<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-00" MetaModelID="p-67.258" memberRole="primitive" memberTypeCode="1" resource="3931.79028"/><pattern path="C:simulation/patterns/ptn-1.xml"><target pID="p22"/><now pID=""/></pattern><effector endowment="4.90572" remain="0.00069" scale="8">
-<advisor aID="a-02" strength="0.55626"/><advisor aID="a-04" strength="4.21826"/><advisor aID="a-03" strength="0.09813"/><advisor aID="a-06" strength="0.02071"/><advisor aID="a-00" strength="0.0063"/><advisor aID="a-05" strength="0.00169"/><advisor aID="a-11" strength="0.00107"/><advisor aID="a-18" strength="0.00261"/></effector><decider depth="2" selfConfidence="5.60017" strategy="normal"><decisionList scale="0">
-</decisionList></decider><executor mutationRate="0.0005" selfDegeneration="0.04811" selfDiscipline="7.8691"><monitorList scale="4">
-<monitor mID="m-04"/><monitor mID="m-05"/><monitor mID="m-00"/><monitor mID="m-00"/></monitorList></executor><parameter endowment="16.91329" remain="2.96492" scale="5">
-<cUnit strength="1.47406" uID="u-01"/><cUnit strength="2.60582" uID="u-05"/><cUnit strength="6.41371" uID="u-07"/><cUnit strength="3.32478" uID="u-11"/><cUnit strength="0.13001" uID="u-12"/></parameter><comment>default</comment></unit>
+<?xml version="1.0" ?>
+<unit>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="4503.89677"/>
+    <pattern path="C:simulation/patterns/ptn-1.xml">
+        <target pID="p22"/>
+        <now pID=""/>
+    </pattern>
+    <effector endowment="12.31131" remain="0.15708" scale="4">
+        <advisor aID="a-05" strength="1.87598"/>
+        <advisor aID="a-16" strength="6.89677"/>
+        <advisor aID="a-12" strength="0.30571"/>
+        <advisor aID="a-04" strength="3.07577"/>
+    </effector>
+    <decider depth="5" selfConfidence="5.72351" strategy="normal">
+        <decisionList scale="0">
+        </decisionList>
+    </decider>
+    <executor mutationRate="0.0005" scale="1" selfDegeneration="0.83776" selfDiscipline="9.36975">
+        <monitor mID="m-15"/>
+    </executor>
+    <parameter endowment="12.93895" remain="0.55557" scale="2">
+        <cUnit strength="11.45245" uID="u-12"/>
+        <cUnit strength="0.93093" uID="u-14"/>
+    </parameter>
+    <comment>default</comment>
+</unit>

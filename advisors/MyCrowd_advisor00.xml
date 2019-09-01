@@ -1,2 +1,15 @@
-<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-00" MetaModelID="p-67.258" endowment="13.78891" memberRole="advisor" memberTypeCode="2"/><pattern path="C:simulation/patterns/ptn-1.xml"/><preference value="p2,p5,p9,p11,p14,p18,p21"/><unitList remaining="0.14493" scale="5">
-<unit strength="0.65362" uID="u-00"/><unit strength="11.24027" uID="u-04"/><unit strength="1.15392" uID="u-11"/><unit strength="0.31044" uID="u-13"/><unit strength="0.28573" uID="u-16"/></unitList></advisor>
+<?xml version="1.0" ?>
+<advisor>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="a-00" MetaModelID="p-67.258" endowment="4.21735" memberRole="advisor" memberTypeCode="2"/>
+    <pattern path="C:simulation/patterns/ptn-1.xml"/>
+    <preference value="p1,p4,p8,p12,p15,p18,p21"/>
+    <unitList remaining="0.01214" scale="6">
+        <unit strength="0.88532" uID="u-03"/>
+        <unit strength="1.13842" uID="u-09"/>
+        <unit strength="1.1393" uID="u-10"/>
+        <unit strength="0.44739" uID="u-14"/>
+        <unit strength="0.41364" uID="u-18"/>
+        <unit strength="0.18114" uID="u-19"/>
+    </unitList>
+</advisor>

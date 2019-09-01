@@ -14,7 +14,7 @@ class unit_maker:
         commonInformation.attrib = {"author": "MA", "remark": "No", "modifyDate": "2019.04.09", "version": "0.0"}
 
         memberType = ET.SubElement(root, 'memberType')
-        memberType.attrib = {"memberRole": "primitive", "memberTypeCode": "1", "MetaModelID": "p-67.258",
+        memberType.attrib = {"memberRole": "unit", "memberTypeCode": "1", "MetaModelID": "p-67.258",
                              "ID": "u-" + str(count).zfill(2), "resource": str(round(random.uniform(2000, 8000), 5))}
 
         pattern = ET.SubElement(root, 'pattern')
@@ -39,10 +39,8 @@ class unit_maker:
 
         executor = ET.SubElement(root, 'executor')
         executor.attrib = {"selfDiscipline": str(round(np.random.rand() * 10, 5)),
-                           "selfDegeneration": str(round(np.random.rand(), 5)), "mutationRate": "0.0005"}
-        monitorList = ET.SubElement(executor, 'monitorList')
-        monitorList.attrib = {"scale": "0"}
-        monitorList.text = "\n"
+                           "selfDegeneration": str(round(np.random.rand(), 5)), "mutationRate": "0.0005","scale": "0"}
+        executor.text = "\n"
 
         parameter = ET.SubElement(root, 'parameter')
         c_endowment=np.random.rand() * 20
@@ -54,6 +52,7 @@ class unit_maker:
         aa = 'E:\\code\\PycharmProjects\\simulation\\units\\' + 'MyCrowd_Unit' + str(
             count).zfill(2) + '.xml'
         tree.write(aa)
+
 
 
 if __name__ == '__main__':

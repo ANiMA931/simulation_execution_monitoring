@@ -31,7 +31,7 @@ class um_linker:
                 "E:\\code\\PycharmProjects\\simulation\\units\\" + "MyCrowd_Unit" + str(i).zfill(2) + ".xml")
             root = unitdom.documentElement
             unit_memberType = root.getElementsByTagName('memberType')[0]
-            monitorList = root.getElementsByTagName('monitorList')[0]
+            monitorList = root.getElementsByTagName('executor')[0]
             monitorList.setAttribute('scale', str(scale))
             m_s = list(range(20))
             shuffle(m_s)
