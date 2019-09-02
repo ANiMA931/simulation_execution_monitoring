@@ -23,7 +23,7 @@ class unit_maker:
         target.attrib = {"pID": "p22"}
 
         now_p = ET.SubElement(pattern, 'now')
-        now_p.attrib = {"pID": ""}
+        now_p.attrib = {"pID": "p24"}
 
         effector = ET.SubElement(root, 'effector')
         e_endowment=np.random.rand() * 20

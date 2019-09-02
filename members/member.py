@@ -1,34 +1,20 @@
-import xml.dom.minidom
-
-
-def read_xml(in_path):
-    '''''读取并解析xml文件
-       in_path: xml路径
-       return: ElementTree'''
-    dom = xml.dom.minidom.parse(in_path)
-    return dom
-
-
-def write_xml(path, dom):
-    try:
-        with open(path, 'w', encoding='UTF-8') as fh:
-            dom.writexml(fh)
-    except:
-        print("error")
-
+from tools import *
 
 class unit:
     def __init__(self, xml_dom):
         self.root = xml_dom.documentElement
         membertype = self.root.getElementsByTagName('memberType')[0]
         self.id = membertype.getAttribute('ID')
+        self.target=self.root.getElementsByTagName('target')[0].getAttribute('pID')
+        self.now=self.root.getElementsByTagName('now')[0].getAttribute('pID')
         self.resource = float(membertype.getAttribute('resource'))
         efctr = self.root.getElementsByTagName('effector')[0]
         advsrs = self.root.getElementsByTagName('advisor')
-        advisors = []
+        advisors = {}
         for i in advsrs:
             a = {"aID": i.getAttribute('aID'), "strength": float(i.getAttribute('strength'))}
-            advisors.append(a)
+            b={i.getAttribute('aID'):float(i.getAttribute('strength'))}
+            advisors.update(b)
         self.effector = {"endowment": float(efctr.getAttribute('endowment')),
                          "remain": float(efctr.getAttribute('remain')),
                          "scale": int(efctr.getAttribute('scale')), "advisors": advisors}
@@ -49,13 +35,17 @@ class unit:
                          "monitors": monitors}
         cprtr = self.root.getElementsByTagName('parameter')[0]
         cunts = self.root.getElementsByTagName('cUnit')
-        c_units = []
+        c_units = {}
         for i in cunts:
-            a = {"uID": i.getAttribute('uID'), "strength": float(i.getAttribute('strength'))}
-            c_units.append(a)
+            a={i.getAttribute('uID'):float(i.getAttribute('strength'))}
+            c_units.update(a)
         self.parameter = {"endowment": float(cprtr.getAttribute('endowment')),
                           "remain": float(cprtr.getAttribute('remain')),
                           "scale": int(cprtr.getAttribute('scale')), "c_units": c_units}
+    def make_decision(self,pattern):
+        pass
+    def select_decision(self,decisions):
+        pass
 
 
 class advisor:
@@ -68,13 +58,20 @@ class advisor:
         self.preference = pfrc.getAttribute('value').split(',')
         unitList = self.root.getElementsByTagName('unitList')[0]
         us = self.root.getElementsByTagName('unit')
-        units = []
+        units = {}
         for i in us:
-            a = {"uID": i.getAttribute('uID'), "strength": float(i.getAttribute('strength'))}
-            units.append(a)
+            a = {i.getAttribute('uID'): float(i.getAttribute('strength'))}
+            units.update(a)
         self.unitList = {"remain": unitList.getAttribute('remaining'), "scale": int(unitList.getAttribute('scale')),
                          "units": units}
+    def return_suggestion(self,position,pattern):
+        """
+        计算当前位置的推荐动作
+        :param position:
+        :return:
+        """
 
+        pass
 
 class monitor:
     def __init__(self, xml_dom):
@@ -83,13 +80,13 @@ class monitor:
         self.id = membertype.getAttribute('ID')
         self.endowment = float(membertype.getAttribute('endowment'))
         rspsblty = self.root.getElementsByTagName('monitoring')[0]
-        self.responsibility = rspsblty.getAttribute('value').split(',')
+        self.responsibility = rspsblty.getAttribute('value').split('|')
         unitList = self.root.getElementsByTagName('unitList')[0]
         us = self.root.getElementsByTagName('unit')
-        units = []
+        units = {}
         for i in us:
-            a = {"uID": i.getAttribute('uID'), "strength": float(i.getAttribute('strength'))}
-            units.append(a)
+            a={i.getAttribute('uID'):float(i.getAttribute('strength'))}
+            units.update(a)
         self.unitList = {"remain": float(unitList.getAttribute('remaining')),
                          "scale": int(unitList.getAttribute('scale')),
                          "units": units}

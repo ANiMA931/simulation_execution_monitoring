@@ -1,27 +1,5 @@
-<?xml version="1.0" ?>
-<unit>
-    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
-    <memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="4503.89677"/>
-    <pattern path="C:simulation/patterns/ptn-1.xml">
-        <target pID="p22"/>
-        <now pID=""/>
-    </pattern>
-    <effector endowment="12.31131" remain="0.15708" scale="4">
-        <advisor aID="a-05" strength="1.87598"/>
-        <advisor aID="a-16" strength="6.89677"/>
-        <advisor aID="a-12" strength="0.30571"/>
-        <advisor aID="a-04" strength="3.07577"/>
-    </effector>
-    <decider depth="5" selfConfidence="5.72351" strategy="normal">
-        <decisionList scale="0">
-        </decisionList>
-    </decider>
-    <executor mutationRate="0.0005" scale="1" selfDegeneration="0.83776" selfDiscipline="9.36975">
-        <monitor mID="m-15"/>
-    </executor>
-    <parameter endowment="12.93895" remain="0.55557" scale="2">
-        <cUnit strength="11.45245" uID="u-12"/>
-        <cUnit strength="0.93093" uID="u-14"/>
-    </parameter>
-    <comment>default</comment>
-</unit>
+<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="4884.75346"/><pattern path="C:simulation/patterns/ptn-1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="16.55796" remain="0.11878" scale="8">
+<advisor aID="a-08" strength="7.2042"/><advisor aID="a-05" strength="5.08961"/><advisor aID="a-02" strength="2.37207"/><advisor aID="a-10" strength="0.21158"/><advisor aID="a-15" strength="0.09028"/><advisor aID="a-04" strength="0.64415"/><advisor aID="a-00" strength="0.68577"/><advisor aID="a-13" strength="0.14152"/></effector><decider depth="0" selfConfidence="9.88646" strategy="normal"><decisionList scale="0">
+</decisionList></decider><executor mutationRate="0.0005" scale="2" selfDegeneration="0.87162" selfDiscipline="5.78566">
+<monitor mID="m-09"/><monitor mID="m-19"/></executor><parameter endowment="0.63788" remain="9e-05" scale="14">
+<cUnit strength="0.29627" uID="u-01"/><cUnit strength="0.13015" uID="u-03"/><cUnit strength="0.11008" uID="u-04"/><cUnit strength="0.04759" uID="u-05"/><cUnit strength="0.02924" uID="u-06"/><cUnit strength="0.00915" uID="u-08"/><cUnit strength="0.00575" uID="u-09"/><cUnit strength="0.00236" uID="u-10"/><cUnit strength="0.00219" uID="u-11"/><cUnit strength="0.00413" uID="u-12"/><cUnit strength="0.00012" uID="u-13"/><cUnit strength="0.00022" uID="u-14"/><cUnit strength="0.00047" uID="u-16"/><cUnit strength="8e-05" uID="u-17"/></parameter><comment>default</comment></unit>

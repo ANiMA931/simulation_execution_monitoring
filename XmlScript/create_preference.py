@@ -1,18 +1,14 @@
 import numpy as np
 from random import shuffle
-import xml.dom.minidom
+from tools import *
+
+
 class preference_creator:
     def __init__(self):
         pass
-    def creat_preference(self):
-        def read_xml(in_path):
-            '''''读取并解析xml文件
-               in_path: xml路径
-               return: ElementTree'''
-            dom = xml.dom.minidom.parse(in_path)
-            return dom
 
-        positions = np.zeros((24, 24), dtype=np.float)
+    def creat_preference(self):
+        positions = np.zeros((25, 25), dtype=np.float)
 
         ptndom = read_xml("E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml")
         root = ptndom.documentElement
@@ -48,11 +44,9 @@ class preference_creator:
             preference = root.getElementsByTagName('preference')
             pfrc = make_preference(positions)
             preference[0].setAttribute('value', pfrc)
-            try:
-                with open("E:\\code\\PycharmProjects\\simulation\\advisors\\" + "MyCrowd_advisor" + str(i).zfill(
-                        2) + ".xml", 'w', encoding='UTF-8') as fh:
-                    advsrdom.writexml(fh)
-            except:
-                print("error")
+            write_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\" + "MyCrowd_advisor" + str(i).zfill(
+                2) + ".xml", advsrdom)
+
+
 if __name__ == '__main__':
     preference_creator().creat_preference()

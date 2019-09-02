@@ -1,14 +1,2 @@
-<?xml version="1.0" ?>
-<monitor>
-    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
-    <memberType ID="m-17" MetaModelID="p-67.258" endowment="16.21764" memberRole="monitor" memberTypeCode="3"/>
-    <pattern path="C:simulation/patterns/ptn-1.xml"/>
-    <monitoring value="b40,b44"/>
-    <unitList remaining="0.15439" scale="5">
-        <unit strength="8.28476" uID="u-04"/>
-        <unit strength="4.46812" uID="u-09"/>
-        <unit strength="0.08528" uID="u-12"/>
-        <unit strength="1.07563" uID="u-16"/>
-        <unit strength="2.14946" uID="u-19"/>
-    </unitList>
-</monitor>
+<?xml version="1.0" ?><monitor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="m-01" MetaModelID="p-67.258" endowment="6.1249" memberRole="monitor" memberTypeCode="3"/><pattern path="C:simulation/patterns/ptn-1.xml"/><monitoring value="('p0', 'p4')|('p17', 'p21')|('p10', 'p15')|('p18', 'p22')|('p24', 'p0')|('p1', 'p5')|('p16', 'p20')|('p5', 'p9')|('p16', 'p19')|('p3', 'p7')|('p0', 'p5')|('p19', 'p23')|('p14', 'p18')|('p16', 'p18')"/><unitList remaining="1.56647" scale="3">
+<unit strength="2.97077" uID="u-09"/><unit strength="1.37628" uID="u-10"/><unit strength="0.21138" uID="u-12"/></unitList></monitor>

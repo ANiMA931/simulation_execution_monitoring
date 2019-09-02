@@ -1,9 +1,10 @@
 <?xml version="1.0" ?><pattern>
 	<commonInformation ID="ptn-1" author="MA" modifyDate="2019.04" name="theFirst" remark="No" version="0.0"/>
-	<positions scale="24">
-		<position name="begining1" pID="p0" type="start" weight="48.89789"/>
-		<position name="begining2" pID="p1" type="start" weight="58.77624"/>
-		<position name="begining3" pID="p2" type="start" weight="30.75665"/>
+	<positions scale="25">
+		<position name="init" pID="p24" type="start" weight="34.29412"/>
+		<position name="begining1" pID="p0" type="normal" weight="48.89789"/>
+		<position name="begining2" pID="p1" type="normal" weight="58.77624"/>
+		<position name="begining3" pID="p2" type="normal" weight="30.75665"/>
 		<position name="normal1" pID="p3" type="normal" weight="52.3147"/>
 		<position name="normal2" pID="p4" type="normal" weight="2.18152"/>
 		<position name="normal3" pID="p5" type="normal" weight="37.69328"/>
@@ -26,7 +27,10 @@
 		<position name="ending2" pID="p22" type="ending" weight="66.78006"/>
 		<position name="ending3" pID="p23" type="ending" weight="29.69736"/>
 	</positions>
-	<behaviors scale="71">
+	<behaviors scale="50">
+		<behavior after="p0" bID="b47" before="p24" successRate="0.98" weight="23.15456"/>
+		<behavior after="p1" bID="b48" before="p24" successRate="0.98" weight="31.15617"/>
+		<behavior after="p2" bID="b49" before="p24" successRate="0.98" weight="14.56944"/>
 		<behavior after="p3" bID="b0" before="p0" successRate="0.98" weight="42.56577"/>
 		<behavior after="p4" bID="b1" before="p0" successRate="0.98" weight="9.97048"/>
 		<behavior after="p5" bID="b2" before="p0" successRate="0.98" weight="41.25707"/>
