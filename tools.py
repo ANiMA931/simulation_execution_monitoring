@@ -9,8 +9,7 @@ def read_xml(in_path):
         dom = xml.dom.minidom.parse(in_path)
         return dom
     except:
-        print("file path error, press any key to exit.")
-        input()
+        input("file path error, input any key to exit.\n")
         exit()
 
 
