@@ -1,2 +1,2 @@
-<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-14" MetaModelID="p-67.258" endowment="11.41144" memberRole="advisor" memberTypeCode="2"/><pattern path="C:simulation/patterns/ptn-1.xml"/><preference value="p0,p4,p7,p11,p14,p17,p21"/><unitList remaining="3.34918" scale="2">
-<unit strength="4.46614" uID="u-09"/><unit strength="3.59612" uID="u-15"/></unitList></advisor>
+<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-14" MetaModelID="p-67.258" endowment="3.25795" memberRole="advisor" memberTypeCode="2"/><pattern path="C:simulation/patterns/ptn-1.xml"/><preference value="p0,p5,p7,p12,p16,p20,p23"/><unitList remaining="0.76981" scale="4">
+<unit strength="0.56445" uID="u-01"/><unit strength="0.1238" uID="u-07"/><unit strength="0.76951" uID="u-11"/><unit strength="1.03038" uID="u-18"/></unitList></advisor>

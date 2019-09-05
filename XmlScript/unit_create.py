@@ -32,7 +32,7 @@ class unit_maker:
 
         decider = ET.SubElement(root, 'decider')
         decider.attrib = {"selfConfidence": str(round(np.random.rand() * 10, 5)),
-                          "depth": str(np.random.randint(0, 10)), "strategy": "normal"}
+                          "depth": str(np.random.randint(1, 5)), "strategy": "normal"}
         decisionList = ET.SubElement(decider, 'decisionList')
         decisionList.attrib = {"scale": "0"}
         decisionList.text = "\n"

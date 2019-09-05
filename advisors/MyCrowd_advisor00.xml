@@ -1,16 +1,11 @@
 <?xml version="1.0" ?>
 <advisor>
     <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
-    <memberType ID="a-00" MetaModelID="p-67.258" endowment="10.16649" memberRole="advisor" memberTypeCode="2"/>
+    <memberType ID="a-00" MetaModelID="p-67.258" endowment="10.36421" memberRole="advisor" memberTypeCode="2"/>
     <pattern path="C:simulation/patterns/ptn-1.xml"/>
-    <preference value="p1,p4,p8,p11,p14,p17,p21"/>
-    <unitList remaining="0.00293" scale="7">
-        <unit strength="1.12721" uID="u-00"/>
-        <unit strength="4.70031" uID="u-05"/>
-        <unit strength="3.67239" uID="u-06"/>
-        <unit strength="0.57595" uID="u-07"/>
-        <unit strength="0.06794" uID="u-14"/>
-        <unit strength="0.01623" uID="u-15"/>
-        <unit strength="0.00353" uID="u-17"/>
+    <preference value="p2,p6,p9,p11,p14,p18,p21"/>
+    <unitList remaining="2.6942" scale="2">
+        <unit strength="4.43159" uID="u-03"/>
+        <unit strength="3.23842" uID="u-07"/>
     </unitList>
 </advisor>
