@@ -1,5 +1,40 @@
-<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="3923.60927"/><pattern path="C:simulation/patterns/ptn-1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="5.95806" remain="0.54887" scale="6">
-<advisor aID="a-13" strength="1.63824"/><advisor aID="a-07" strength="0.40245"/><advisor aID="a-10" strength="1.90458"/><advisor aID="a-01" strength="0.26511"/><advisor aID="a-16" strength="0.20731"/><advisor aID="a-05" strength="0.9915"/></effector><decider depth="2" selfConfidence="0.89617" strategy="normal"><decisionList scale="0">
-</decisionList></decider><executor mutationRate="0.0005" scale="9" selfDegeneration="0.21839" selfDiscipline="5.08934">
-<monitor mID="m-06"/><monitor mID="m-10"/><monitor mID="m-19"/><monitor mID="m-04"/><monitor mID="m-09"/><monitor mID="m-02"/><monitor mID="m-15"/><monitor mID="m-01"/><monitor mID="m-14"/></executor><parameter endowment="0.29405" remain="0.08685" scale="5">
-<cUnit strength="0.0611" uID="u-03"/><cUnit strength="0.06647" uID="u-04"/><cUnit strength="0.02906" uID="u-12"/><cUnit strength="0.0107" uID="u-13"/><cUnit strength="0.03988" uID="u-16"/></parameter><comment>default</comment></unit>
+<?xml version="1.0" ?>
+<unit>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="3923.60927"/>
+    <pattern path="C:simulation/patterns/ptn-1.xml">
+        <target pID="p22"/>
+        <now pID="p24"/>
+    </pattern>
+    <effector endowment="5.95806" remain="0.54887" scale="6">
+        <advisor aID="a-13" strength="1.63824"/>
+        <advisor aID="a-07" strength="0.40245"/>
+        <advisor aID="a-10" strength="1.90458"/>
+        <advisor aID="a-01" strength="0.26511"/>
+        <advisor aID="a-16" strength="0.20731"/>
+        <advisor aID="a-05" strength="0.9915"/>
+    </effector>
+    <decider depth="2" selfConfidence="0.89617" strategy="normal">
+        <decisionList scale="0">
+        </decisionList>
+    </decider>
+    <executor mutationRate="0.0005" scale="9" selfDegeneration="0.21839" selfDiscipline="5.08934">
+        <monitor mID="m-06"/>
+        <monitor mID="m-10"/>
+        <monitor mID="m-19"/>
+        <monitor mID="m-04"/>
+        <monitor mID="m-09"/>
+        <monitor mID="m-02"/>
+        <monitor mID="m-15"/>
+        <monitor mID="m-01"/>
+        <monitor mID="m-14"/>
+    </executor>
+    <parameter endowment="0.29405" remain="0.08685" scale="5">
+        <cUnit strength="0.0611" uID="u-03"/>
+        <cUnit strength="0.06647" uID="u-04"/>
+        <cUnit strength="0.02906" uID="u-12"/>
+        <cUnit strength="0.0107" uID="u-13"/>
+        <cUnit strength="0.03988" uID="u-16"/>
+    </parameter>
+    <comment>default</comment>
+</unit>

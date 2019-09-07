@@ -17,7 +17,6 @@ class unit:
         advsrs = self.root.getElementsByTagName('advisor')
         advisors = {}
         for i in advsrs:
-            a = {"aID": i.getAttribute('aID'), "strength": float(i.getAttribute('strength'))}
             b = {i.getAttribute('aID'): float(i.getAttribute('strength'))}
             advisors.update(b)
         self.effector = {"endowment": float(efctr.getAttribute('endowment')),
@@ -85,8 +84,39 @@ class unit:
                     over_list[a[0]].append(i)
         return over_list
 
-    def select_decision(self, decisions):
-        pass
+    def select_decision(self, decisions,pattern):
+        """
+        在诸多建议中选择一个建议
+        :param decisions:列表，每个元素是一个建议，三元组，分别存储着建议的来源即ID、建议的强度与behavior即二元组
+        :return:一个二元组
+        """
+        a_d=[]
+        weights=[]
+        for i in decisions:#去重
+            if i[2] not in a_d:
+                a_d.append(i[2])
+                for j in pattern.behaviors:
+                    for k in pattern.positions:
+                        if i[2][0]==j['before'] and i[2][1]==j['after'] and i[2][1]==k['pID']:
+                            weights.append(k['weight']-j['weight'])
+        e=[]
+        for i in a_d:#对于每条选择,先
+            ei = 0
+            for j in decisions:
+                if j[0]!=self.id:
+                    if i==j[2]:
+                        ei+=self.effector['advisors'][j[0]]+j[1]
+                else:
+                    if i ==j[2]:
+                        ei+=j[1]
+            e.append(ei)
+        #此时拿到了所有建议以及决策以及权重
+        result=[]
+        for i in range(len(a_d)):
+            result.append(e[i]*weights[i])
+        return a_d[result.index(max(result))]
+
+
 
     def do_behavior(self, pattern, behavior):
         """
@@ -109,7 +139,6 @@ class unit:
                             self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
                 else:
                     self.resource -= i['weight']
-        input()
     pass
 
     def get_para_message(self):
@@ -168,6 +197,8 @@ class monitor:
         self.endowment = float(membertype.getAttribute('endowment'))
         rspsblty = self.root.getElementsByTagName('monitoring')[0]
         self.responsibility = rspsblty.getAttribute('value').split('|')
+        for i in range(len(self.responsibility)):
+            self.responsibility[i]=eval(self.responsibility[i])
         unitList = self.root.getElementsByTagName('unitList')[0]
         us = self.root.getElementsByTagName('unit')
         units = {}
