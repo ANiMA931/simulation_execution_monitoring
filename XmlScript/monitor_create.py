@@ -14,7 +14,7 @@ class monitor_maker:
         memberType.attrib = {"memberRole": "monitor", "memberTypeCode": "3", "MetaModelID": "p-67.258",
                              "ID": "m-" + str(count).zfill(2), "endowment": str(endowment)}
         pattern = ET.SubElement(root, 'pattern')
-        pattern.attrib = {"path": "C:simulation/patterns/ptn-1.xml"}
+        pattern.attrib = {"path": "E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"}
         monitoring=ET.SubElement(root,'monitoring')
         monitoring.attrib={"value":""}
         unitList = ET.SubElement(root, 'unitList')

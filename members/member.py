@@ -11,6 +11,7 @@ class unit:
         self.id = membertype.getAttribute('ID')
         self.target = self.root.getElementsByTagName('target')[0].getAttribute('pID')
         self.now = self.root.getElementsByTagName('now')[0].getAttribute('pID')
+        self.status='active'
         self.resource = float(membertype.getAttribute('resource'))
         self.past_way = [self.now]  # 已经走过的路
         efctr = self.root.getElementsByTagName('effector')[0]
@@ -60,12 +61,17 @@ class unit:
             else:  # 没有眺望到自己的目标
                 mc = inf
                 mp = []
-                for j in over_list[self.decider['depth']]:  # 最远的position们
-                    cp = pattern.get_best_way(self.now, j)
-                    if cp[0] < mc:  # 留最小的
-                        mc = cp[0]
-                        mp = cp[1]
-                return (mp[0], mp[1])
+                mx = max(over_list.keys())
+                while not over_list[mx]:
+                    mx-=1
+                else:
+                    for j in over_list[mx]:  # 最远的position们
+                        cp = pattern.get_best_way(self.now, j)
+                        if cp[0] < mc:  # 留最小的
+                            mc = cp[0]
+                            mp = cp[1]
+                    return (mp[0], mp[1])
+
 
     def overlook(self, pattern):
         """
@@ -83,6 +89,24 @@ class unit:
                 if a is not None and a[0] <= self.decider['depth']:
                     over_list[a[0]].append(i)
         return over_list
+    def self_check(self,pattern):
+        if self.now==self.target:
+            self.status='succeed'
+        elif self.now in pattern.ending_positions and self.now!=self.target:
+            self.status='wrong'
+        elif self.now not in pattern.ending_positions and self.is_impasse(pattern):#当前所在位置，所剩资源无法进行任何动作
+            self.status='died'
+        else:
+            return
+    def is_impasse(self,pattern):
+        next_behaviors=[]
+        for p in pattern.behaviors:#此处的p是字典
+            if self.now==p['before']:
+                next_behaviors.append(p)
+        for p in next_behaviors:
+            if self.resource>=p['weight']:
+                return False
+        return True
 
     def select_decision(self, decisions,pattern):
         """
@@ -93,12 +117,18 @@ class unit:
         a_d=[]
         weights=[]
         for i in decisions:#去重
-            if i[2] not in a_d:
+            if i[2] not in a_d and i[2] is not None:
                 a_d.append(i[2])
                 for j in pattern.behaviors:
                     for k in pattern.positions:
                         if i[2][0]==j['before'] and i[2][1]==j['after'] and i[2][1]==k['pID']:
                             weights.append(k['weight']-j['weight'])
+        for i in range(len(a_d)):#把资源无法满足的选项给删掉
+            if weights[i]>self.resource:
+                a_d[i]=weights[i]=None
+        while None in a_d:
+            del a_d[a_d.index(None)]
+            del weights[weights.index(None)]
         e=[]
         for i in a_d:#对于每条选择,先
             ei = 0
@@ -133,16 +163,19 @@ class unit:
                 if r < float(i['success_rate']):
                     self.now = i['after']
                     self.resource -= i['weight']
-                    self.past_way.append(i['before'])
+                    self.past_way.append(i['after'])
                     for j in pattern.positions:
                         if j['pID'] == i['after']:
                             self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
+                            return ('success',behavior)
                 else:
                     self.resource -= i['weight']
+                    return ('fail',behavior)
     pass
 
-    def get_para_message(self):
-        print(self.id)
+    def get_para_message(self,res_unit,result):
+        print(self.id+" get a message from "+res_unit.id)
+        print(res_unit.id+" do a behavior from "+result[1][0]+" to "+result[1][1]+" on pattern.")
         pass
 
     def reset_connection(self):

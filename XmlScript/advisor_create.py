@@ -14,7 +14,7 @@ class advisor_maker:
         memberType.attrib = {"memberRole": "advisor", "memberTypeCode": "2", "MetaModelID": "p-67.258",
                              "ID": "a-" + str(count).zfill(2), "endowment": str(round(endowment, 5))}
         pattern = ET.SubElement(root, 'pattern')
-        pattern.attrib = {"path": "C:simulation/patterns/ptn-1.xml"}
+        pattern.attrib = {"path": "E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"}
         preference=ET.SubElement(root,'preference')
         preference.attrib={"value":""}
         unitList=ET.SubElement(root,'unitList')

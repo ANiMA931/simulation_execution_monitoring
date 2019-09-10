@@ -18,7 +18,7 @@ class unit_maker:
                              "ID": "u-" + str(count).zfill(2), "resource": str(round(random.uniform(2000, 8000), 5))}
 
         pattern = ET.SubElement(root, 'pattern')
-        pattern.attrib = {"path": "C:simulation/patterns/ptn-1.xml"}
+        pattern.attrib = {"path": "E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"}
         target = ET.SubElement(pattern, 'target')
         target.attrib = {"pID": "p22"}
 
