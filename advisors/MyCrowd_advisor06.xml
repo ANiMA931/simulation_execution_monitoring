@@ -1,2 +1,2 @@
-<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-06" MetaModelID="p-67.258" endowment="19.24969" memberRole="advisor" memberTypeCode="2"/><pattern path="C:simulation/patterns/ptn-1.xml"/><preference value="p0,p3,p9,p11,p15,p18,p22"/><unitList remaining="0.34559" scale="3">
-<unit strength="13.87846" uID="u-03"/><unit strength="4.82038" uID="u-06"/><unit strength="0.20526" uID="u-18"/></unitList></advisor>
+<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-06" MetaModelID="p-67.258" endowment="13.82089" memberRole="advisor" memberTypeCode="2"/><pattern path="E:\code\PycharmProjects\simulation\patterns\pattern1.xml"/><preference value="p2,p5,p8,p12,p16,p19,p22"/><unitList remaining="1.33527" scale="2">
+<unit strength="9.69204" uID="u-03"/><unit strength="2.79358" uID="u-16"/></unitList></advisor>

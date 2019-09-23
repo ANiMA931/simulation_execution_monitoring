@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>901</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="simulation_widget_layout">
+     <item>
+      <widget class="QWidget" name="simulation_widget" native="true"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>903</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_XML">
+    <property name="title">
+     <string>仿真XML</string>
+    </property>
+    <addaction name="action_XML"/>
+   </widget>
+   <addaction name="menu_XML"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_XML">
+   <property name="text">
+    <string>选择XML</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="GraphRes.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>slot_btn_set_units_path()</slot>
+ </slots>
+</ui>

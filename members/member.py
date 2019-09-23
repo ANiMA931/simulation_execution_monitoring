@@ -11,9 +11,11 @@ class unit:
         self.id = membertype.getAttribute('ID')
         self.target = self.root.getElementsByTagName('target')[0].getAttribute('pID')
         self.now = self.root.getElementsByTagName('now')[0].getAttribute('pID')
-        self.status='active'
+        self.status = 'active'
         self.resource = float(membertype.getAttribute('resource'))
+        self.init_resource = float(membertype.getAttribute('resource'))
         self.past_way = [self.now]  # 已经走过的路
+        self.ptn = self.root.getElementsByTagName('pattern')[0].getAttribute('path')
         efctr = self.root.getElementsByTagName('effector')[0]
         advsrs = self.root.getElementsByTagName('advisor')
         advisors = {}
@@ -63,7 +65,7 @@ class unit:
                 mp = []
                 mx = max(over_list.keys())
                 while not over_list[mx]:
-                    mx-=1
+                    mx -= 1
                 else:
                     for j in over_list[mx]:  # 最远的position们
                         cp = pattern.get_best_way(self.now, j)
@@ -71,7 +73,6 @@ class unit:
                             mc = cp[0]
                             mp = cp[1]
                     return (mp[0], mp[1])
-
 
     def overlook(self, pattern):
         """
@@ -89,64 +90,64 @@ class unit:
                 if a is not None and a[0] <= self.decider['depth']:
                     over_list[a[0]].append(i)
         return over_list
-    def self_check(self,pattern):
-        if self.now==self.target:
-            self.status='succeed'
-        elif self.now in pattern.ending_positions and self.now!=self.target:
-            self.status='wrong'
-        elif self.now not in pattern.ending_positions and self.is_impasse(pattern):#当前所在位置，所剩资源无法进行任何动作
-            self.status='died'
+
+    def self_check(self, pattern):
+        if self.now == self.target:
+            self.status = 'succeed'
+        elif self.now in pattern.ending_positions and self.now != self.target:
+            self.status = 'wrong'
+        elif self.now not in pattern.ending_positions and self.is_impasse(pattern):  # 当前所在位置，所剩资源无法进行任何动作
+            self.status = 'died'
         else:
             return
-    def is_impasse(self,pattern):
-        next_behaviors=[]
-        for p in pattern.behaviors:#此处的p是字典
-            if self.now==p['before']:
+
+    def is_impasse(self, pattern):
+        next_behaviors = []
+        for p in pattern.behaviors:  # 此处的p是字典
+            if self.now == p['before']:
                 next_behaviors.append(p)
         for p in next_behaviors:
-            if self.resource>=p['weight']:
+            if self.resource >= p['weight']:
                 return False
         return True
 
-    def select_decision(self, decisions,pattern):
+    def select_decision(self, decisions, pattern):
         """
         在诸多建议中选择一个建议
         :param decisions:列表，每个元素是一个建议，三元组，分别存储着建议的来源即ID、建议的强度与behavior即二元组
         :return:一个二元组
         """
-        a_d=[]
-        weights=[]
-        for i in decisions:#去重
+        a_d = []
+        weights = []
+        for i in decisions:  # 去重
             if i[2] not in a_d and i[2] is not None:
                 a_d.append(i[2])
                 for j in pattern.behaviors:
                     for k in pattern.positions:
-                        if i[2][0]==j['before'] and i[2][1]==j['after'] and i[2][1]==k['pID']:
-                            weights.append(k['weight']-j['weight'])
-        for i in range(len(a_d)):#把资源无法满足的选项给删掉
-            if weights[i]>self.resource:
-                a_d[i]=weights[i]=None
+                        if i[2][0] == j['before'] and i[2][1] == j['after'] and i[2][1] == k['pID']:
+                            weights.append(k['weight'] - j['weight'])
+        for i in range(len(a_d)):  # 把资源无法满足的选项给删掉
+            if weights[i] > self.resource:
+                a_d[i] = weights[i] = None
         while None in a_d:
             del a_d[a_d.index(None)]
             del weights[weights.index(None)]
-        e=[]
-        for i in a_d:#对于每条选择,先
+        e = []
+        for i in a_d:  # 对于每条选择,先
             ei = 0
             for j in decisions:
-                if j[0]!=self.id:
-                    if i==j[2]:
-                        ei+=self.effector['advisors'][j[0]]+j[1]
+                if j[0] != self.id:
+                    if i == j[2]:
+                        ei += self.effector['advisors'][j[0]] + j[1]
                 else:
-                    if i ==j[2]:
-                        ei+=j[1]
+                    if i == j[2]:
+                        ei += j[1]
             e.append(ei)
-        #此时拿到了所有建议以及决策以及权重
-        result=[]
+        # 此时拿到了所有建议以及决策以及权重
+        result = []
         for i in range(len(a_d)):
-            result.append(e[i]*weights[i])
+            result.append(e[i] * weights[i])
         return a_d[result.index(max(result))]
-
-
 
     def do_behavior(self, pattern, behavior):
         """
@@ -167,18 +168,32 @@ class unit:
                     for j in pattern.positions:
                         if j['pID'] == i['after']:
                             self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
-                            return ('success',behavior)
+                            return ('success', behavior)
                 else:
                     self.resource -= i['weight']
-                    return ('fail',behavior)
+                    return ('fail', behavior)
+
     pass
 
-    def get_para_message(self,res_unit,result):
-        print(self.id+" get a message from "+res_unit.id)
-        print(res_unit.id+" do a behavior from "+result[1][0]+" to "+result[1][1]+" on pattern.")
+    def get_para_message(self, res_unit, result):
+        '''log.append(
+            self.id + " get a message from " + res_unit.id + ". " + res_unit.id + " do a behavior from " + result[1][
+                0] + " to " + result[1][1] + ". " + res_unit.id + " " + result[0])'''
+        print(self.id + " get a message from " + res_unit.id + ". " + res_unit.id + " do a behavior from " + result[1][
+                0] + " to " + result[1][1] + ". " + res_unit.id + " " + result[0])
         pass
 
     def reset_connection(self):
+        length = len(self.effector['advisors']) + 1
+        upper = self.effector['endowment']
+        r, s = shatter_number(upper, length)
+        itemm = 0
+        for a in self.effector['advisors'].items():
+            self.effector['advisors'][a[0]] = r[itemm]
+            itemm += 1
+        self.effector['remain'] = r[itemm]
+
+    def re_init_unit(self):
         pass
 
 
@@ -189,6 +204,7 @@ class advisor:
         self.id = membertype.getAttribute('ID')
         self.endowment = float(membertype.getAttribute('endowment'))
         pfrc = self.root.getElementsByTagName('preference')[0]
+        self.ptn = self.root.getElementsByTagName('pattern')[0].getAttribute('path')
         self.preference = pfrc.getAttribute('value').split(',')
         unitList = self.root.getElementsByTagName('unitList')[0]
         us = self.root.getElementsByTagName('unit')
@@ -228,10 +244,11 @@ class monitor:
         membertype = self.root.getElementsByTagName('memberType')[0]
         self.id = membertype.getAttribute('ID')
         self.endowment = float(membertype.getAttribute('endowment'))
+        self.ptn = self.root.getElementsByTagName('pattern')[0].getAttribute('path')
         rspsblty = self.root.getElementsByTagName('monitoring')[0]
         self.responsibility = rspsblty.getAttribute('value').split('|')
         for i in range(len(self.responsibility)):
-            self.responsibility[i]=eval(self.responsibility[i])
+            self.responsibility[i] = eval(self.responsibility[i])
         unitList = self.root.getElementsByTagName('unitList')[0]
         us = self.root.getElementsByTagName('unit')
         units = {}
@@ -244,12 +261,13 @@ class monitor:
 
 
 if __name__ == '__main__':
-    unit = unit(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\units\\MyCrowd_Unit00.xml"))
-    advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\MyCrowd_advisor00.xml"))
-    monitor = monitor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\monitors\\MyCrowd_monitor01.xml"))
-    ptn = pattern(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"))
-    print(advisor.return_suggestion('p2', pattern=ptn))
-    a = unit.overlook(ptn)
-    b = unit.make_decision(ptn)
-    unit.do_behavior(ptn,b)
+    unit = unit(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\units\\MyCrowd_Unit05.xml"))
+    # advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\MyCrowd_advisor00.xml"))
+    # monitor = monitor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\monitors\\MyCrowd_monitor01.xml"))
+    ptn = pattern(xml_dom=read_xml(unit.ptn))
+    # print(advisor.return_suggestion('p2', pattern=ptn))
+    # a = unit.overlook(ptn)
+    # b = unit.make_decision(ptn)
+    # unit.do_behavior(ptn,b)
+    unit.reset_connection()
     pass

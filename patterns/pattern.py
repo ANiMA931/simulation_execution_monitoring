@@ -17,7 +17,7 @@ class pattern:
                  "weight": float(i.getAttribute('weight'))}
             self.positions.append(a)
             if a['type']=="ending":
-                self.ending_positions.append(a)
+                self.ending_positions.append(a["pID"])
         self.behaviors = []
         b = self.root.getElementsByTagName('behavior')
         for i in b:
@@ -47,7 +47,7 @@ class pattern:
 
         know[now] = True
         t = time()
-        while time()-t<0.2 and not know[self.topo_sort_sequence.index(target)]:  # 寻路超过0.5秒视为无法到达
+        while time()-t<0.05 and not know[self.topo_sort_sequence.index(target)]:  # 寻路超过0.5秒视为无法到达
             unknown = []
             tempd = distance.copy()
             for i in range(len(self.topo_sort_sequence)):
@@ -95,7 +95,7 @@ class pattern:
 
         know[now] = True
         t = time()
-        while time() - t < 0.2 and not know[self.topo_sort_sequence.index(target)]:  # 寻路超过1秒视为无法到达
+        while time() - t < 0.05 and not know[self.topo_sort_sequence.index(target)]:  # 寻路超过1秒视为无法到达
             unknown = []
             tempd = distance.copy()
             for i in range(len(self.topo_sort_sequence)):

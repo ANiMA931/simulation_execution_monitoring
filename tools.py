@@ -1,5 +1,7 @@
 import xml.dom.minidom
 import os
+from random import random
+
 
 def read_xml(in_path):
     '''''读取并解析xml文件
@@ -9,8 +11,7 @@ def read_xml(in_path):
         dom = xml.dom.minidom.parse(in_path)
         return dom
     except:
-        input("file path error, input any key to exit.\n")
-        exit()
+        print("file path error.\n")
 
 
 def member_file_name(path):
@@ -24,6 +25,16 @@ def member_file_name(path):
             fileList.append(f)
             # 当一个标志使用，文件夹列表第一个级别不打印
     return fileList
+
+
+def shatter_number(upper, length):
+    r = []
+    for i in range(length):
+        r.append(random())
+    a_s = upper / sum(r)
+    for i in range(len(r)):
+        r[i] *= a_s
+    return r,sum(r)
 
 
 def in_degree0(v, e):
@@ -72,7 +83,7 @@ def write_xml(path, dom):
 
 
 def printPath(level, path):
-    allFileNum=0
+    allFileNum = 0
     ''''' 
     打印一个目录下的所有文件夹和文件 
     '''

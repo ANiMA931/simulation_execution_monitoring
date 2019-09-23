@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1007</width>
-    <height>792</height>
+    <width>1219</width>
+    <height>915</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,8 +23,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1011</width>
-      <height>811</height>
+      <width>1201</width>
+      <height>771</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -2204,9 +2204,9 @@ background-color:rgb(240, 238, 255)</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1</y>
-        <width>1001</width>
-        <height>231</height>
+        <y>0</y>
+        <width>901</width>
+        <height>301</height>
        </rect>
       </property>
       <property name="toolTipDuration">
@@ -2221,60 +2221,6 @@ background-color:rgb(240, 238, 255)</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QTableWidget" name="tableWidget_8">
-       <property name="geometry">
-        <rect>
-         <x>760</x>
-         <y>34</y>
-         <width>221</width>
-         <height>171</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <row>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>4</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>属性名</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>属性值</string>
-        </property>
-       </column>
-       <item row="0" column="0">
-        <property name="text">
-         <string>迭代数</string>
-        </property>
-       </item>
-       <item row="0" column="1">
-        <property name="text">
-         <string>1000000</string>
-        </property>
-       </item>
-      </widget>
       <widget class="QLabel" name="label_216">
        <property name="geometry">
         <rect>
@@ -2288,256 +2234,12 @@ background-color:rgb(240, 238, 255)</string>
         <string>仿真信息：</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>23</x>
-         <y>32</y>
-         <width>733</width>
-         <height>138</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_19">
-          <item>
-           <widget class="QLabel" name="label_213">
-            <property name="text">
-             <string>仿真定义文件夹路径：</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="lineEdit_150">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_48">
-            <property name="text">
-             <string>浏览...</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
-          <item>
-           <widget class="QLabel" name="label_205">
-            <property name="text">
-             <string>结果记录文件夹路径：</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="lineEdit_128">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_47">
-            <property name="text">
-             <string>设置...</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="1" column="5">
-           <widget class="QComboBox" name="comboBox_16">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>Generation</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Condition</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_131">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>版本号</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLabel" name="label_210">
-            <property name="text">
-             <string>修改日期：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QDateEdit" name="dateEdit_8">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="displayFormat">
-             <string>yyyy.MM.dd</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_152">
-            <property name="text">
-             <string>仿真执行ID：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLabel" name="label_209">
-            <property name="text">
-             <string>结果记录模板ID：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_206">
-            <property name="text">
-             <string>仿真执行元模型ID：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_208">
-            <property name="text">
-             <string>仿真执行类型：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="5">
-           <widget class="QComboBox" name="comboBox_15">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>True</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>False</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="QLabel" name="label_212">
-            <property name="text">
-             <string>仿真结束方式：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_129">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>仿真执行ID</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_130">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>仿真执行元模型ID</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QLineEdit" name="lineEdit_132">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>结果记录模板ID</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_207">
-            <property name="text">
-             <string>版本号：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QLabel" name="label_211">
-            <property name="text">
-             <string>代结果处理方式：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="5">
-           <widget class="QLineEdit" name="lineEdit_135">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>50</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QLabel" name="label_214">
-            <property name="text">
-             <string>仿真记录步长：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QLineEdit" name="lineEdit_133">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-            </property>
-            <property name="text">
-             <string>结果记录模板ID</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="">
-       <property name="geometry">
-        <rect>
-         <x>22</x>
-         <y>181</y>
-         <width>731</width>
+         <x>20</x>
+         <y>260</y>
+         <width>861</width>
          <height>25</height>
         </rect>
        </property>
@@ -2590,14 +2292,264 @@ background-color:rgb(240, 238, 255)</string>
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>861</width>
+         <height>223</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="definition_dir_label">
+            <property name="text">
+             <string>仿真定义文件夹路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="definition_dir_path">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="definition_dir_filedia_btn">
+            <property name="text">
+             <string>浏览...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_215">
+            <property name="text">
+             <string>众进化原子型单元路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_134">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_49">
+            <property name="text">
+             <string>浏览...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_217">
+            <property name="text">
+             <string>众进化建议者单元路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_136">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_51">
+            <property name="text">
+             <string>浏览...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_218">
+            <property name="text">
+             <string>众进化监控者单元路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_137">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_52">
+            <property name="text">
+             <string>浏览...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_205">
+            <property name="text">
+             <string>结果记录文件夹路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEdit_128">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QPushButton" name="pushButton_47">
+            <property name="text">
+             <string>设置...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_152">
+            <property name="text">
+             <string>仿真执行ID：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_129">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string>cE-ex01</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_211">
+            <property name="text">
+             <string>代间结果处理：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="comboBox_15">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>True</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>False</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_207">
+            <property name="text">
+             <string>版本号：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_131">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string>version-0.0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_212">
+            <property name="text">
+             <string>仿真迭代数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_210">
+            <property name="text">
+             <string>修改日期：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDateEdit" name="dateEdit_8">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="displayFormat">
+             <string>yyyy.MM.dd</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="label_214">
+            <property name="text">
+             <string>仿真记录步长：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="lineEdit_135">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="lineEdit_7">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
      </widget>
      <widget class="QWidget" name="widget" native="true">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
-        <width>1001</width>
-        <height>491</height>
+        <y>310</y>
+        <width>901</width>
+        <height>281</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2608,8 +2560,8 @@ background-color:rgb(240, 238, 255)</string>
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>981</width>
-         <height>471</height>
+         <width>881</width>
+         <height>261</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -2736,7 +2688,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QSlider" name="horizontalSlider">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>150</x>
          <y>200</y>
          <width>871</width>
          <height>22</height>
@@ -3193,7 +3145,7 @@ p, li { white-space: pre-wrap; }
        <string notr="true">background-color: rgb(224, 227, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="unitTab_2">
        <attribute name="title">
@@ -4487,7 +4439,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1007</width>
+     <width>1219</width>
      <height>23</height>
     </rect>
    </property>

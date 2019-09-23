@@ -1,0 +1,27 @@
+<SimulationExecutionMetaModel>
+    <simulationExecutionMetaModelGeneralInfomation>
+        <simulationExecutionMetaModel>SimulationExecutionMetaModel</simulationExecutionMetaModel>
+        <version>1.5</version>
+        <modifyDate>2019-9-18</modifyDate>
+        <author>Jiwu Wang</author>
+        <note>xxxxxxxxxx</note>
+    </simulationExecutionMetaModelGeneralInfomation>
+    <simulationExecutionType>
+        <simulationExecutionTypeName>CrowdEvolution</simulationExecutionTypeName>
+        <simulationExecutionTypeCode>CE</simulationExecutionTypeCode>
+        <attributeConsraint>
+            <attributeName>attributeName</attributeName>
+            <attributeType>attributeName</attributeType>
+            <attributeConsraint>attributeName</attributeConsraint>
+        </attributeConsraint>
+        <memberMetaModelID></memberMetaModelID>
+        <memberDocument>
+            <filePath>C:\Users\王吉武\Desktop</filePath>
+        </memberDocument>
+        <roundMethodDefinition>
+            <roundMethodName></roundMethodName>
+            <roundMethodID></roundMethodID>
+            <roundMethod></roundMethod>
+        </roundMethodDefinition>
+    </simulationExecutionType>
+</SimulationExecutionMetaModel>

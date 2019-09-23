@@ -28,9 +28,6 @@
 		<position name="ending3" pID="p23" type="ending" weight="29.69736"/>
 	</positions>
 	<behaviors scale="50">
-		<behavior after="p0" bID="b47" before="p24" successRate="0.98" weight="23.15456"/>
-		<behavior after="p1" bID="b48" before="p24" successRate="0.98" weight="31.15617"/>
-		<behavior after="p2" bID="b49" before="p24" successRate="0.98" weight="14.56944"/>
 		<behavior after="p3" bID="b0" before="p0" successRate="0.98" weight="42.56577"/>
 		<behavior after="p4" bID="b1" before="p0" successRate="0.98" weight="9.97048"/>
 		<behavior after="p5" bID="b2" before="p0" successRate="0.98" weight="41.25707"/>
@@ -78,6 +75,9 @@
 		<behavior after="p22" bID="b44" before="p19" successRate="0.98" weight="11.17771"/>
 		<behavior after="p23" bID="b45" before="p19" successRate="0.98" weight="9.12957"/>
 		<behavior after="p23" bID="b46" before="p20" successRate="0.98" weight="22.06094"/>
+		<behavior after="p0" bID="b47" before="p24" successRate="0.98" weight="23.15456"/>
+		<behavior after="p1" bID="b48" before="p24" successRate="0.98" weight="31.15617"/>
+		<behavior after="p2" bID="b49" before="p24" successRate="0.98" weight="14.56944"/>
 	</behaviors>
 	<comment/>
 </pattern>

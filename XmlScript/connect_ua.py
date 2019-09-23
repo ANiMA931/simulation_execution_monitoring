@@ -2,16 +2,6 @@ import numpy as np
 from random import shuffle
 import xml.dom.minidom
 
-"""我们先试一试一个普通的办法
-首先第一点问题就是,ua表示unit和advisor
-两者的连接关系是笛卡尔积子集
-两者连接是双向的
-一个连接的关系的形成，要两者都能保存连接关系
-所以，随机数设定连接几个，再用shuffle函数随机确定连接具体哪几个
-写连接关系的时候，要u与a都写
-连接权重则需要写完连接关系的时候再重新分配"""
-
-
 class ua_linker:
     def __init__(self):
         pass
@@ -37,9 +27,7 @@ class ua_linker:
             a_s = list(range(20))
             shuffle(a_s)
             a_s = a_s[:scale]  # 拿到了编号
-            """拿到了下标，接下
-            来就是写关系
-            可是关系该怎么写呢？"""
+
             for j in a_s:
                 advsrdom = read_xml(
                     "E:\\code\\PycharmProjects\\simulation\\advisors\\" + "MyCrowd_advisor" + str(j).zfill(2) + ".xml")
