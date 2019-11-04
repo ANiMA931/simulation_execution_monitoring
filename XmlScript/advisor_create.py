@@ -1,3 +1,7 @@
+#advisor_create.py
+'''
+本文件用于生成建议者，属于前期生成工具，现已无用
+'''
 import xml.etree.ElementTree as ET
 import numpy as np
 class advisor_maker:
@@ -14,16 +18,16 @@ class advisor_maker:
         memberType.attrib = {"memberRole": "advisor", "memberTypeCode": "2", "MetaModelID": "p-67.258",
                              "ID": "a-" + str(count).zfill(2), "endowment": str(round(endowment, 5))}
         pattern = ET.SubElement(root, 'pattern')
-        pattern.attrib = {"path": "E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"}
+        pattern.attrib = {"path": ".\patterns\pattern1.xml"}
         preference=ET.SubElement(root,'preference')
         preference.attrib={"value":""}
         unitList=ET.SubElement(root,'unitList')
         unitList.attrib={"scale":"0","remaining":str(round(endowment, 5))}
         unitList.text="\n"
 
-        aa = 'E:\\code\\PycharmProjects\\simulation\\advisors\\' + 'MyCrowd_advisor' + str(count).zfill(2) + '.xml'  # 首先创建一个xml文件，以备描述网络连接情况
+        aa = r'..\advisors' + r'\MyCrowd_advisor' + str(count).zfill(2) + '.xml'
         tree.write(aa)
 if __name__ == '__main__':
-    am=advisor_maker(scale=20)
+    am=advisor_maker(scale=100)
     for i in range(am.scale):
         am.make_advisor(i)

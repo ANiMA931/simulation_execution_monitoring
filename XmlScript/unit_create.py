@@ -1,3 +1,7 @@
+#unit_create.py
+'''
+本文件用于生成unit的xml，前期工具，现已无用
+'''
 import xml.etree.ElementTree as ET
 import numpy as np
 import random
@@ -15,10 +19,10 @@ class unit_maker:
 
         memberType = ET.SubElement(root, 'memberType')
         memberType.attrib = {"memberRole": "unit", "memberTypeCode": "1", "MetaModelID": "p-67.258",
-                             "ID": "u-" + str(count).zfill(2), "resource": str(round(random.uniform(2000, 8000), 5))}
+                             "ID": "u-" + str(count).zfill(2), "resource": str(round(random.uniform(100, 200), 5))}
 
         pattern = ET.SubElement(root, 'pattern')
-        pattern.attrib = {"path": "E:\\code\\PycharmProjects\\simulation\\patterns\\pattern1.xml"}
+        pattern.attrib = {"path": ".\patterns\pattern1.xml"}
         target = ET.SubElement(pattern, 'target')
         target.attrib = {"pID": "p22"}
 
@@ -49,13 +53,13 @@ class unit_maker:
         comment = ET.SubElement(root, "comment")
         comment.text = "default"
 
-        aa = 'E:\\code\\PycharmProjects\\simulation\\units\\' + 'MyCrowd_Unit' + str(
+        aa = r'..\units' + r'\MyCrowd_Unit' + str(
             count).zfill(2) + '.xml'
         tree.write(aa)
 
 
 
 if __name__ == '__main__':
-    um = unit_maker(scale=20)
+    um = unit_maker(scale=100)
     for i in range(um.scale):
         um.make_unit(i)

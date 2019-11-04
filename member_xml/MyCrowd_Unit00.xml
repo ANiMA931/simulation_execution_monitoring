@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<unit>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="132.90588"/>
+    <pattern path=".\patterns\pattern1.xml">
+        <target pID="p22"/>
+        <now pID="p24"/>
+    </pattern>
+    <effector endowment="5.28312" remain="0.1888" scale="6">
+        <advisor aID="a-16" strength="3.19172"/>
+        <advisor aID="a-05" strength="0.73138"/>
+        <advisor aID="a-19" strength="0.561"/>
+        <advisor aID="a-18" strength="0.08352"/>
+        <advisor aID="a-04" strength="0.27054"/>
+        <advisor aID="a-11" strength="0.25616"/>
+    </effector>
+    <decider depth="3" selfConfidence="6.32451" strategy="normal">
+        <decisionList scale="0">
+        </decisionList>
+    </decider>
+    <executor mutationRate="0.0005" scale="2" selfDegeneration="0.68599" selfDiscipline="3.82562">
+        <monitor mID="m-13"/>
+        <monitor mID="m-01"/>
+    </executor>
+    <parameter endowment="1.56782" remain="0.79679" scale="1">
+        <cUnit strength="0.77103" uID="u-18"/>
+    </parameter>
+    <comment>default</comment>
+</unit>

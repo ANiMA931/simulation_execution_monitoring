@@ -15,6 +15,11 @@ def read_xml(in_path):
 
 
 def member_file_name(path):
+    '''
+    读取一个文件夹下的所有文件的文件名
+    :param path:
+    :return:
+    '''
     fileList = []
     # 返回一个列表，其中包含在目录条目的名称(google翻译)
     files = os.listdir(path)
@@ -28,16 +33,28 @@ def member_file_name(path):
 
 
 def shatter_number(upper, length):
+    '''
+    将一个数撕裂称为一个设定长度的随机数组
+    :param upper:要被撕裂的数
+    :param length:设定被撕裂的长度
+    :return:r被撕裂的随机数列表，sum(r)随机数列表和
+    '''
     r = []
     for i in range(length):
         r.append(random())
     a_s = upper / sum(r)
     for i in range(len(r)):
         r[i] *= a_s
-    return r,sum(r)
+    return r, sum(r)
 
 
 def in_degree0(v, e):
+    '''
+    辅拓扑排序辅助函数
+    :param v:
+    :param e:
+    :return:
+    '''
     if v == []:
         return None
     tmp = v[:]
@@ -62,6 +79,12 @@ def in_degree0(v, e):
 
 
 def topoSort(v, e):
+    '''
+    拓扑排序函数，外界复制而来，切勿乱动
+    :param v:点的集合
+    :param e:边的集合
+    :return:一个拓扑排序序列
+    '''
     result = []
     while True:
         nodes = in_degree0(v, e)
@@ -75,6 +98,12 @@ def topoSort(v, e):
 
 
 def write_xml(path, dom):
+    '''
+    xml存储函数
+    :param path:存储路径
+    :param dom:描述xml的dom对象
+    :return:no return
+    '''
     try:
         with open(path, 'w', encoding='UTF-8') as fh:
             dom.writexml(fh)
@@ -83,10 +112,14 @@ def write_xml(path, dom):
 
 
 def printPath(level, path):
-    allFileNum = 0
-    ''''' 
-    打印一个目录下的所有文件夹和文件 
     '''
+    打印一个目录下的所有文件夹和文件，外界引用而来，切勿乱动
+    :param level:
+    :param path:
+    :return:
+    '''
+    allFileNum = 0
+
     # 所有文件夹，第一个字段是次目录的级别
     dirList = []
     # 所有文件

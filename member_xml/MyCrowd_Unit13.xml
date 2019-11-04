@@ -1,0 +1,5 @@
+<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-13" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="102.1369"/><pattern path=".\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="5.61235" remain="1.38745" scale="1">
+<advisor aID="a-15" strength="4.2249"/></effector><decider depth="3" selfConfidence="9.11146" strategy="normal"><decisionList scale="0">
+</decisionList></decider><executor mutationRate="0.0005" scale="1" selfDegeneration="0.90564" selfDiscipline="1.26248">
+<monitor mID="m-10"/></executor><parameter endowment="13.66373" remain="13.66373" scale="0">
+</parameter><comment>default</comment></unit>
