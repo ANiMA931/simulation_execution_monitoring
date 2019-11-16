@@ -53,9 +53,11 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
         self.thread = None  # 初始化线程
         # 将事件与槽函数绑定
         self.units_filedialog_btn.clicked.connect(self.slot_btn_set_units_path)
-        self.advisor_filedialog_btn.clicked.connect(self.slot_btn_set_advisors_path)
-        self.monitor_filedialog_btn.clicked.connect(self.slot_btn_set_monitors_path)
         self.record_filedialog_btn.clicked.connect(self.slot_btn_set_record_path)
+        sp_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\播放按钮.ico')
+        stop_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\停止.ico')
+        self.start_or_pause_btn.setIcon(sp_btn_icon)
+        self.stop_btn.setIcon(stop_btn_icon)
         # 仿真运行状态初始化
         self.run_status = False
         # 仿真器初始化
@@ -205,5 +207,6 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = CE_simulation_Form()
+    window.setWindowTitle('simulation execution')
     window.show()
     sys.exit(app.exec_())

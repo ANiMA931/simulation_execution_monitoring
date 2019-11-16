@@ -5,11 +5,14 @@
 from tools import *  # 必要的工具
 from numpy.random import rand  # 必要的随机函数
 from math import inf  # 必要的无穷大
-from patterns.pattern import pattern  # 必要的pattern类
+from patterns.pattern import *  # 必要的pattern类
 
 
 # unit类
 class unit:
+    """
+
+    """
     def __init__(self, xml_dom):
         '''
         unit类构造函数，通过外界传入的xml的dom对象建立
@@ -210,33 +213,33 @@ class unit:
         result = []
         for i in range(len(alternative_decisions)):
             result.append(e[i] * alternative_decision_weights[i])
-        return (alternative_decisions[result.index(max(result))],alternative_decision_weights[result.index(max(result))])
+        return (
+            alternative_decisions[result.index(max(result))], alternative_decision_weights[result.index(max(result))])
 
-
-    def do_behavior(self, pattern, behavior):
-        """
-        执行动作，如果成功则更改自己的now，扣除动作的weight之后并获得动作结果对应的position的weight
-        如果失败，则不更改自己的now，并扣除动作的weight，没有任何获得
-        :param pattern:格局对象
-        :param behavior:要做的行为
-        :return:行为结果与行为
-        """
-        for i in pattern.behaviors:  # 此处的i是字典
-            if ((i['before'], i['after']) == behavior):  # 定位到了对应的behavior
-                r = rand()
-                if r < float(i['success_rate']):
-                    self.now = i['after']
-                    self.resource -= i['weight']
-                    self.past_way.append(i['after'])
-                    for j in pattern.positions:
-                        if j['pID'] == i['after']:
-                            self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
-                            self.action_sequence.append(('success', behavior))
-                            return ('success', behavior)
-                else:
-                    self.resource -= i['weight']
-                    self.action_sequence.append(('fail', behavior))
-                    return ('fail', behavior)
+    # def do_behavior(self, pattern, behavior):
+    #     """
+    #     执行动作，如果成功则更改自己的now，扣除动作的weight之后并获得动作结果对应的position的weight
+    #     如果失败，则不更改自己的now，并扣除动作的weight，没有任何获得
+    #     :param pattern:格局对象
+    #     :param behavior:要做的行为
+    #     :return:行为结果与行为
+    #     """
+    #     for i in pattern.behaviors:  # 此处的i是字典
+    #         if ((i['before'], i['after']) == behavior):  # 定位到了对应的behavior
+    #             r = rand()
+    #             if r < float(i['success_rate']):
+    #                 self.now = i['after']
+    #                 self.resource -= i['weight']
+    #                 self.past_way.append(i['after'])
+    #                 for j in pattern.positions:
+    #                     if j['pID'] == i['after']:
+    #                         self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
+    #                         self.action_sequence.append(('success', behavior))
+    #                         return ('success', behavior)
+    #             else:
+    #                 self.resource -= i['weight']
+    #                 self.action_sequence.append(('fail', behavior))
+    #                 return ('fail', behavior)
 
     def get_para_message(self, res_unit, result, round):
         '''
@@ -271,12 +274,123 @@ class unit:
             itemm += 1
         self.effector['remain'] = r[itemm]
 
-    def re_init_unit(self):
-        '''
-        重新初始化成员，以在仿真器中实现，后期会在此实现
-        :return:
-        '''
-        pass
+def do_behavior(one_unit, pattern, behavior):
+    """
+    执行动作，如果成功则更改自己的now，扣除动作的weight之后并获得动作结果对应的position的weight
+    如果失败，则不更改自己的now，并扣除动作的weight，没有任何获得
+    :param pattern:格局对象
+    :param behavior:要做的行为
+    :return:行为结果与行为
+    """
+    for i in pattern.behaviors:  # 此处的i是字典
+        if ((i['before'], i['after']) == behavior):  # 定位到了对应的behavior
+            r = rand()
+            if r < float(i['success_rate']):
+                one_unit.now = i['after']
+                one_unit.resource -= i['weight']
+                one_unit.past_way.append(i['after'])
+                for j in pattern.positions:
+                    if j['pID'] == i['after']:
+                        one_unit.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
+                        one_unit.action_sequence.append(('success', behavior))
+                        return ('success', behavior)
+            else:
+                one_unit.resource -= i['weight']
+                one_unit.action_sequence.append(('fail', behavior))
+                return ('fail', behavior)
+def overlook(one_unit, pattern):
+    """
+    眺望，看自己能看到什么地方
+    :param now: 目前的所在点
+    :param pattern: 眺望的格局
+    :return:能眺望到的点们，以字典形式呈现，item是眺望几步，value是对应几步后能到的点的列表
+    """
+    # 用dict初始化一下存储点的集合
+    overlook_dict = {}
+    # 对于能眺望的距离
+    for i in range(1, one_unit.decider['depth'] + 1):
+        # 初始化存储点的列表
+        overlook_dict.update({i: []})
+    # 对于以拓扑排序后的格局上的点的列表
+    for i in pattern.topo_sort_sequence:
+        # 排在在当前点后面的拓扑序列的点默认可达（实际上存在不可达的情况）
+        if pattern.topo_sort_sequence.index(one_unit.now) < pattern.topo_sort_sequence.index(i):
+            # 获取当前遍历的点到当前点的步数距离
+            a = points_distance(pattern, one_unit.now, i)
+            # 不为None（即不可达）并且距离小于决策器深度，则表示该点能被眺望到
+            if a is not None and a[0] <= one_unit.decider['depth']:
+                overlook_dict[a[0]].append(i)  # 依照距离存储该点
+    return overlook_dict
+
+
+def make_decision(one_unit, pattern):
+    """
+    成员自己本身根据自己所在的位置做决策
+    :param pattern:格局
+    :return:一个tuple二元组
+    """
+    # 先眺望自己能到什么地方，over_list是字典，key为眺望的距离，value是眺望该距离能到达的position
+    overlook_dict = overlook(one_unit, pattern)
+    # 对于所有的能眺望到的点
+    for i in overlook_dict:
+        if one_unit.target in overlook_dict[i]:  # 已经眺望到了自己的目标
+            c, path = get_best_way(pattern, one_unit.now, one_unit.target)  # 能眺望到自己的目标就可以用最短路径算法了
+            return (path[0], path[1])
+        else:  # 没有眺望到自己的目标
+            mc = inf
+            mp = []
+            mx = max(overlook_dict.keys())
+            while not overlook_dict[mx]:
+                mx -= 1
+            else:  # 找到了能走到的最远的position们（可能存在眺望的距离比剩下的路更长的情况，基本在一轮仿真的后期）
+                for j in overlook_dict[mx]:  # 最远的position们
+                    cp = get_best_way(pattern, one_unit.now, j)  # 相继找最好的路径
+                    if cp[0] < mc:  # 留最小的
+                        mc = cp[0]
+                        mp = cp[1]
+                return (mp[0], mp[1])
+
+
+def select_decision(one_unit, decisions, pattern):
+    """
+    在诸多建议中选择一个建议
+    :param decisions:列表，每个元素是一个建议，三元组，分别存储着建议的来源即ID、建议的强度与behavior即二元组
+    :return:一个二元组,第一个是行为子二元组，第二个是行为权重
+    :此函数需要重构
+    """
+    alternative_decisions = []
+    alternative_decision_weights = []
+    for i in decisions:  # 去重
+        if i[2] not in alternative_decisions and i[2] is not None:
+            alternative_decisions.append(i[2])
+            for j in pattern.behaviors:
+                for k in pattern.positions:
+                    if i[2][0] == j['before'] and i[2][1] == j['after'] and i[2][1] == k['pID']:
+                        alternative_decision_weights.append(k['weight'] - j['weight'])
+    # 把资源无法满足的选项给删掉
+    for i in range(len(alternative_decisions)):
+        if alternative_decision_weights[i] > one_unit.resource:
+            alternative_decisions[i] = alternative_decision_weights[i] = None
+    while None in alternative_decisions:
+        del alternative_decisions[alternative_decisions.index(None)]
+        del alternative_decision_weights[alternative_decision_weights.index(None)]
+    e = []
+    for i in alternative_decisions:  # 对于每条选择,先
+        ei = 0
+        for j in decisions:
+            if j[0] != one_unit.id:
+                if i == j[2]:
+                    ei += one_unit.effector['advisors'][j[0]] + j[1]
+            else:
+                if i == j[2]:
+                    ei += j[1]
+        e.append(ei)
+    # 此时拿到了所有建议以及决策以及权重
+    result = []
+    for i in range(len(alternative_decisions)):
+        result.append(e[i] * alternative_decision_weights[i])
+    return (
+        alternative_decisions[result.index(max(result))], alternative_decision_weights[result.index(max(result))])
 
 
 # 建议者类
@@ -339,6 +453,28 @@ class advisor:
         pass
 
 
+def return_suggestion(preference, position, pattern):
+    '''
+    计算当前位置的推荐动作
+    :param preference: 偏好路径
+    :param position: 当前位置
+    :param pattern: 整个的格局
+    :return: 一个动作二元组
+    '''
+    if position in preference:
+        return (position, preference[preference.index(position) + 1])
+    else:
+        start_point_index = pattern.topo_sort_sequence.index(position)  # START POINT
+        for i in range(start_point_index, len(pattern.topo_sort_sequence)):  # find the nearest point
+            if pattern.topo_sort_sequence[i] in preference:  # 找到拓扑序列中第一个在偏好路径上的点
+                # the best way from now to first preference position
+                cp = get_best_way(pattern, pattern.topo_sort_sequence[start_point_index], pattern.topo_sort_sequence[i])
+                if cp == None:
+                    continue
+                else:
+                    return (cp[1][0], cp[1][1])
+
+
 # 监控者类
 class monitor:
     def __init__(self, xml_dom):
@@ -384,10 +520,10 @@ class monitor:
 
 if __name__ == '__main__':
     unit = unit(xml_dom=read_xml(r"..\units\MyCrowd_Unit05.xml"))
-    # advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\MyCrowd_advisor00.xml"))
+    advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\MyCrowd_advisor00.xml"))
     # monitor = monitor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\monitors\\MyCrowd_monitor01.xml"))
-    ptn = pattern(xml_dom=read_xml(unit.ptn))
-    # print(advisor.return_suggestion('p2', pattern=ptn))
+    ptn = pattern(xml_dom=read_xml(r'E:\code\PycharmProjects\simulation\patterns\pattern1.xml'))
+    print(return_suggestion(advisor.preference, 'p2', pattern=ptn))
     # a = unit.overlook(ptn)
     # b = unit.make_decision(ptn)
     # unit.do_behavior(ptn,b)

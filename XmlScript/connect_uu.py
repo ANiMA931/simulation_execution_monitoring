@@ -75,7 +75,7 @@ class uu_linker:
 
     def link_matrix_make(self):
         for i in self.units_id:
-            rand_scale=np.random.randint(0,len(self.units_id)//5)
+            rand_scale=np.random.randint(0,len(self.units_id))
             rand_link=self.units_id.copy()
             shuffle(rand_link)
             rand_link=rand_link[:rand_scale]

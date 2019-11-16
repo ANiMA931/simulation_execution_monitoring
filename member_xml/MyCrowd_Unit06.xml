@@ -1,5 +1,5 @@
-<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-06" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="107.90532"/><pattern path=".\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="12.14617" remain="0.92197" scale="2">
-<advisor aID="a-06" strength="5.85563"/><advisor aID="a-14" strength="5.36857"/></effector><decider depth="3" selfConfidence="2.96548" strategy="normal"><decisionList scale="0">
-</decisionList></decider><executor mutationRate="0.0005" scale="4" selfDegeneration="0.42267" selfDiscipline="6.30831">
-<monitor mID="m-05"/><monitor mID="m-00"/><monitor mID="m-17"/><monitor mID="m-15"/></executor><parameter endowment="15.05699" remain="15.04753" scale="1">
-<cUnit strength="0.00946" uID="u-18"/></parameter><comment>default</comment></unit>
+<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-06" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="180.62708"/><pattern path=".\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="11.80114" remain="11.80114" scale="0">
+</effector><decider depth="1" selfConfidence="2.98088" strategy="normal"><decisionList scale="0">
+</decisionList></decider><executor mutationRate="0.0005" scale="4" selfDegeneration="0.22495" selfDiscipline="6.61006">
+<monitor mID="m-11"/><monitor mID="m-18"/><monitor mID="m-16"/><monitor mID="m-03"/></executor><parameter endowment="14.50371" remain="0.00012" scale="13">
+<cUnit strength="9.43384" uID="u-00"/><cUnit strength="3.93328" uID="u-01"/><cUnit strength="0.25535" uID="u-03"/><cUnit strength="0.70077" uID="u-04"/><cUnit strength="0.0476" uID="u-05"/><cUnit strength="0.11749" uID="u-07"/><cUnit strength="0.00209" uID="u-08"/><cUnit strength="0.00765" uID="u-09"/><cUnit strength="0.00266" uID="u-11"/><cUnit strength="0.00132" uID="u-12"/><cUnit strength="0.00101" uID="u-15"/><cUnit strength="0.00034" uID="u-17"/><cUnit strength="0.0002" uID="u-18"/></parameter><comment>default</comment></unit>

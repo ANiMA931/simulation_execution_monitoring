@@ -1,5 +1,5 @@
-<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-11" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="188.29107"/><pattern path=".\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="14.03548" remain="0.02471" scale="5">
-<advisor aID="a-09" strength="12.62258"/><advisor aID="a-10" strength="0.31084"/><advisor aID="a-15" strength="0.17117"/><advisor aID="a-02" strength="0.41675"/><advisor aID="a-01" strength="0.48943"/></effector><decider depth="4" selfConfidence="6.11648" strategy="normal"><decisionList scale="0">
-</decisionList></decider><executor mutationRate="0.0005" scale="0" selfDegeneration="0.57961" selfDiscipline="1.77064">
-</executor><parameter endowment="18.53469" remain="18.53469" scale="0">
-</parameter><comment>default</comment></unit>
+<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-11" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="153.07869"/><pattern path=".\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="4.54946" remain="0.1942" scale="4">
+<advisor aID="a-10" strength="2.40687"/><advisor aID="a-04" strength="1.49996"/><advisor aID="a-09" strength="0.42642"/><advisor aID="a-14" strength="0.02201"/></effector><decider depth="1" selfConfidence="1.81967" strategy="normal"><decisionList scale="0">
+</decisionList></decider><executor mutationRate="0.0005" scale="4" selfDegeneration="0.48498" selfDiscipline="4.33136">
+<monitor mID="m-14"/><monitor mID="m-08"/><monitor mID="m-15"/><monitor mID="m-03"/></executor><parameter endowment="3.22893" remain="0.00017" scale="7">
+<cUnit strength="0.18745" uID="u-00"/><cUnit strength="0.2794" uID="u-01"/><cUnit strength="1.89817" uID="u-03"/><cUnit strength="0.18935" uID="u-04"/><cUnit strength="0.62507" uID="u-05"/><cUnit strength="0.04789" uID="u-06"/><cUnit strength="0.00142" uID="u-08"/></parameter><comment>default</comment></unit>

@@ -14,9 +14,11 @@ class random_starter:
         self.um=um
         self.mm=mm
         self.am=am
-        for i in range(20):
+        for i in range(um.scale):
             self.um.make_unit(i)
+        for i in range(am.scale):
             self.am.make_advisor(i)
+        for i in range(mm.scale):
             self.mm.make_monitor(i)
     def init_random(self):
         responsibility_creator().create_responsibility()

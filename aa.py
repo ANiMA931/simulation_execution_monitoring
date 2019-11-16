@@ -1,105 +1,35 @@
-# -*- coding: utf-8 -*-
-import ctypes
+import sys
+import threading
+import queue
 
-from PyQt5.QtCore import QThread, pyqtSignal
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QProgressBar, QPushButton
-import win32con
-from win32process import SuspendThread, ResumeThread
+q = queue.Queue()
 
 
-class Worker(QThread):
-    valueChanged = pyqtSignal(int)  # 值变化信号
-    handle = -1
-
-    def run(self):
-        try:
-            # 这个目前我没弄明白这里写法
-            self.handle = ctypes.windll.kernel32.OpenThread(  # @UndefinedVariable
-                win32con.PROCESS_ALL_ACCESS, False, int(QThread.currentThreadId()))
-        except Exception as e:
-            print('get thread handle failed', e)
-        print('thread id', int(QThread.currentThreadId()))
-        # 循环发送信号
-        for i in range(1, 101):
-            print('value', i)
-            self.valueChanged.emit(i)
-            QThread.sleep(1)
+def worker1(x, y):
+    func_name = sys._getframe().f_code.co_name
+    print("%s run ..." % func_name)
+    q.put((x + y, func_name))
 
 
-class Window(QWidget):
-
-    def __init__(self, *args, **kwargs):
-        super(Window, self).__init__(*args, **kwargs)
-        # 垂直布局
-        layout = QVBoxLayout(self)
-        self.progressBar = QProgressBar(self)
-        self.progressBar.setRange(0, 100)
-        layout.addWidget(self.progressBar)
-        self.startButton = QPushButton('开启线程', self, clicked=self.onStart)
-        layout.addWidget(self.startButton)
-        self.suspendButton = QPushButton('挂起线程', self, clicked=self.onSuspendThread, enabled=False)
-        layout.addWidget(self.suspendButton)
-        self.resumeButton = QPushButton('恢复线程', self, clicked=self.onResumeThread, enabled=False)
-        layout.addWidget(self.resumeButton)
-        self.stopButton = QPushButton('终止线程', self, clicked=self.onStopThread, enabled=False)
-        layout.addWidget(self.stopButton)
-
-        # 当前线程id
-        print('main id', int(QThread.currentThreadId()))
-
-        # 子线程
-        self.thread = Worker(self)
-        self.thread.finished.connect(self.thread.deleteLater)
-        self.thread.valueChanged.connect(self.progressBar.setValue)
-
-    def onStart(self):
-        print('main id', int(QThread.currentThreadId()))
-        self.thread.start()  # 启动线程
-        self.startButton.setEnabled(False)
-        self.suspendButton.setEnabled(True)
-        self.stopButton.setEnabled(True)
-
-    def onSuspendThread(self):
-        if self.thread.handle == -1:
-            return print('handle is wrong')
-        ret = SuspendThread(self.thread.handle)
-        print('挂起线程', self.thread.handle, ret)
-        self.suspendButton.setEnabled(False)
-        self.resumeButton.setEnabled(True)
-
-    def onResumeThread(self):
-        if self.thread.handle == -1:
-            return print('handle is wrong')
-        ret = ResumeThread(self.thread.handle)
-        print('恢复线程', self.thread.handle, ret)
-        self.suspendButton.setEnabled(True)
-        self.resumeButton.setEnabled(False)
-
-    def onStopThread(self):
-        self.startButton.setEnabled(False)
-        self.suspendButton.setEnabled(False)
-        self.resumeButton.setEnabled(False)
-        ret = ctypes.windll.kernel32.TerminateThread(self.thread.handle, 0)
-        print('终止线程', self.thread.handle, ret)
-        self.stopButton.setEnabled(False)
-
-    def closeEvent(self, event):
-        if self.thread.isRunning():
-            self.thread.quit()
-            # 强制
-            # self.thread.terminate()
-        del self.thread
-        super(Window, self).closeEvent(event)
+def worker2(x, y):
+    func_name = sys._getframe().f_code.co_name
+    print("%s run ...." % func_name)
+    q.put((x - y, func_name))
 
 
 if __name__ == '__main__':
-    import sys
-    import os
-
-    print('pid', os.getpid())
-    from PyQt5.QtWidgets import QApplication
-
-    app = QApplication(sys.argv)
-    w = Window()
-    w.show()
-    sys.exit(app.exec_())
+    result = list()
+    t1 = threading.Thread(target=worker1, name='thread1', args=(10, 5,))
+    t2 = threading.Thread(target=worker2, name='thread2', args=(20, 1,))
+    print('-' * 50)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    while not q.empty():
+        result.append(q.get())
+    for item in result:
+        if item[1] == worker1.__name__:
+            print("%s 's return value is : %s" % (item[1], item[0]))
+        elif item[1] == worker2.__name__:
+            print("%s 's return value is : %s" % (item[1], item[0]))

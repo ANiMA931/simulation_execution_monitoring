@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1219</width>
-    <height>915</height>
+    <height>784</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="pattern">
      <attribute name="title">
@@ -2588,7 +2588,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1</y>
+        <y>0</y>
         <width>1200</width>
         <height>241</height>
        </rect>
@@ -3145,7 +3145,7 @@ p, li { white-space: pre-wrap; }
        <string notr="true">background-color: rgb(224, 227, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="unitTab_2">
        <attribute name="title">
