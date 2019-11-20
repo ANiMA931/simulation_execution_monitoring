@@ -6,7 +6,7 @@ import sys
 import threading
 from math import pi, atan  # 仿真需要的反函数与圆周率
 from members.cE_member import *  # 众进化仿真成员
-from tools import *  # 一些必要的工具
+from my_tools import *  # 一些必要的工具
 from random import shuffle  # 必要的随机排列函数
 from numpy.random import rand  # 随机数函数
 from xml.dom import minidom  # 生成xml文件时的工具

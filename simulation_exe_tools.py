@@ -4,7 +4,7 @@
 '''
 from UI.coEvolution_exe import Ui_MainWindow  # 用pyUIC生成的界面类
 from cE_simulation_tool import CE_simulation_Form  # 自己写的某类仿真的界面
-from tools import *  # 自己写的一些必要的工具
+from my_tools import *  # 自己写的一些必要的工具
 from PyQt5 import QtCore, QtGui, QtWidgets  # pyqt5必要的一些组件
 import sys  # 运行界面必要的包
 

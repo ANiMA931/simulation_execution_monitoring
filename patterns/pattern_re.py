@@ -1,7 +1,7 @@
 # pattern.py
 from math import inf  # 必要的无穷大
 
-from tools import *  # 必要的部分工具
+from my_tools import *  # 必要的部分工具
 
 
 # 格局类

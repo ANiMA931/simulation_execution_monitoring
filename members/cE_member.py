@@ -2,7 +2,7 @@
 '''
 本文件是众进化仿真成员的类文件
 '''
-from tools import *  # 必要的工具
+from my_tools import *  # 必要的工具
 from numpy.random import rand  # 必要的随机函数
 from math import inf  # 必要的无穷大
 from patterns.pattern import *  # 必要的pattern类

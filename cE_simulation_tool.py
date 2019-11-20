@@ -3,6 +3,7 @@
 本文件是写的界面与后台仿真线程，目前尚不可用
 '''
 from UI.coEvolution_child import Ui_Form  # pyUIC自动生成的pyqt5界面
+from UI.simulation_exe_monitor_1 import Ui_Form as uf
 from PyQt5 import QtCore, QtGui, QtWidgets  # 一些必要的qt包
 from simulators import cE_simulator  # 自己写的众进化仿真类
 import ctypes  # 线程挂起恢复必要的包
@@ -44,7 +45,10 @@ class Run_thread(QtCore.QThread):
         self._signal.emit(100.0)
         self.wait()  # 仿真结束设置线程状态
 
-
+class uf_Form(QtWidgets.QWidget,uf):
+    def __init__(self):
+        super(uf_Form,self).__init__()
+        self.setupUi(self)
 # 界面类，用于显示界面
 class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
@@ -54,7 +58,7 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
         # 将事件与槽函数绑定
         self.units_filedialog_btn.clicked.connect(self.slot_btn_set_units_path)
         self.record_filedialog_btn.clicked.connect(self.slot_btn_set_record_path)
-        sp_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\播放按钮.ico')
+        sp_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\暂停.ico')
         stop_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\停止.ico')
         self.start_or_pause_btn.setIcon(sp_btn_icon)
         self.stop_btn.setIcon(stop_btn_icon)
@@ -206,7 +210,7 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    window = CE_simulation_Form()
-    window.setWindowTitle('simulation execution')
+    window = uf_Form()
+    window.setWindowTitle('Simulation Result')
     window.show()
     sys.exit(app.exec_())

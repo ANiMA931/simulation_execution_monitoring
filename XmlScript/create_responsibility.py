@@ -5,7 +5,7 @@
 '''
 import numpy as np
 from random import shuffle
-from tools import *
+from my_tools import *
 
 
 class responsibility_creator:

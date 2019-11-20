@@ -5,7 +5,7 @@
 import numpy as np
 from random import shuffle
 import xml.dom.minidom
-from tools import *
+from my_tools import *
 
 
 class ua_linker:

@@ -3,8 +3,7 @@
 # 本文件写各种仿真对应的仿真类
 
 import sys
-import threading
-import multiprocessing
+from multiprocessing import Process, Lock, Manager
 import numpy as np
 import pandas as pd
 from time import time, sleep
@@ -16,9 +15,10 @@ from numpy.random import rand  # 随机数函数
 from xml.dom import minidom  # 生成xml文件时的工具
 
 
-class UnitProcess(multiprocessing.Process):
-    def __init__(self, the_unit, extypal_advisors, extypal_monitors):
+class UnitProcess(Process):
+    def __init__(self, ns, the_unit, extypal_advisors, extypal_monitors):
         super(UnitProcess, self).__init__()
+        self.ns = ns
         self.unit = the_unit
         self.extypal_advisors = extypal_advisors
         self.extypal_momitors = extypal_monitors
@@ -26,30 +26,11 @@ class UnitProcess(multiprocessing.Process):
 
     def run(self):
         while self.unit.status == 'active':
-            res = re_one_unit_run_on_pattern(self.unit, self.extypal_advisors, self.extypal_momitors)
+            res = re_one_unit_run_on_pattern(self.ns, self.unit, self.extypal_advisors, self.extypal_momitors)
             self.result_sequence.append(res)
-        global thread_result_pool
         processing_lock.acquire()
-        thread_result_pool.append((self.unit.id, self.result_sequence))
+        self.ns.thread_result_pool.append((self.unit.id, self.result_sequence))
         processing_lock.release()
-
-
-class UnitThread(threading.Thread):
-    def __init__(self, the_unit, extypal_advisors, extypal_monitors):
-        super(UnitThread, self).__init__()
-        self.unit = the_unit
-        self.extypal_advisors = extypal_advisors
-        self.extypal_momitors = extypal_monitors
-        self.result_sequence = []
-
-    def run(self):
-        while self.unit.status == 'active':
-            res = re_one_unit_run_on_pattern(self.unit, self.extypal_advisors, self.extypal_momitors)
-            self.result_sequence.append(res)
-        global thread_result_pool
-        threading_lock.acquire()
-        thread_result_pool.append((self.unit.id, self.result_sequence))
-        threading_lock.release()
 
 
 def read_members(member_file_names, members_path):
@@ -96,7 +77,7 @@ def read_members(member_file_names, members_path):
     return units, advisors, monitors, member_count, the_ptn
 
 
-def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
+def re_one_unit_run_on_pattern(ns, one_unit, ectypal_advisors, ectypal_monitors):
     """
     线程函数，一个unit在格局上从头走到尾的具体流程
     :param one_unit: 当前的unit
@@ -110,19 +91,18 @@ def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
         # 声明 一个保存外部监督强度的变量
         sum_of_external_monitoring = float(0)
         for adv in ectypal_advisors.keys():
-            global advisors_units_relationship, the_pattern
-            dec_list.append((adv, advisors_units_relationship[adv][one_unit.id],
-                             return_suggestion(ectypal_advisors[adv], one_unit.now, the_pattern)))
+            dec_list.append((adv, ns.advisors_units_relationship[adv][one_unit.id],
+                             return_suggestion(ectypal_advisors[adv], one_unit.now, ns.the_pattern)))
 
-        dec_list.append((one_unit.id, one_unit.decider['selfConfidence'], make_decision(one_unit, the_pattern)))
-        selected_decision = select_decision(one_unit, dec_list, the_pattern)
+        dec_list.append((one_unit.id, one_unit.decider['selfConfidence'], make_decision(one_unit, ns.the_pattern)))
+        selected_decision = select_decision(one_unit, dec_list, ns.the_pattern)
 
         for mon in ectypal_monitors.keys():
             if selected_decision[0] in ectypal_monitors[mon]:
                 global units_monitors_relationship
                 sum_of_external_monitoring += units_monitors_relationship[one_unit.id][mon]
         alternative_behaviors = []
-        for b in the_pattern.behaviors:
+        for b in ns.the_pattern.behaviors:
             if one_unit.now == b['before'] and one_unit.resource >= b['weight']:
                 alternative_behaviors.append(b)
         min_behavior = {}
@@ -143,20 +123,20 @@ def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
             if rand() < one_unit.executor['mutationRate']:
                 shuffle(alternative_behaviors)
                 final_decision = (alternative_behaviors[0]['before'], alternative_behaviors[0]['after'])
-                result = do_behavior(one_unit, the_pattern, final_decision)
+                result = do_behavior(one_unit, ns.the_pattern, final_decision)
             else:
-                result = do_behavior(one_unit, the_pattern, (min_behavior['before'], min_behavior['after']))
+                result = do_behavior(one_unit, ns.the_pattern, (min_behavior['before'], min_behavior['after']))
         # 如果当前境地weight最小的behavior吸引力更大
         else:
             # 如果发生了突变，那么就在当前境地下随便选一个behavior执行
             if rand() < one_unit.executor['mutationRate']:
                 shuffle(alternative_behaviors)
                 final_decision = (alternative_behaviors[0]['before'], alternative_behaviors[0]['after'])
-                result = do_behavior(one_unit, the_pattern, final_decision)
+                result = do_behavior(one_unit, ns.the_pattern, final_decision)
             # 没发生突变就正常执行被选择出来的behavior
             else:
-                result = do_behavior(one_unit, the_pattern, selected_decision[0])
-        one_unit.self_check(the_pattern)
+                result = do_behavior(one_unit, ns.the_pattern, selected_decision[0])
+        one_unit.self_check(ns.the_pattern)
         print(one_unit.id, result)
         return result
 
@@ -191,7 +171,7 @@ def all_end(units):
     return False
 
 
-def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_path):
+def re_simulate(units, advisors, monitors, ns, now_round, success_rate_list, record_path):
     """
 
     :param units:
@@ -202,7 +182,6 @@ def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_
     :param record_path:
     :return:
     """
-    thread_list = []
     process_list = []
     for one_unit in units.keys():
         ectypal_advisors = {}
@@ -211,26 +190,20 @@ def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_
             ectypal_advisors.update({advisors[adv].id: advisors[adv].preference})
         for mon in units[one_unit].executor['monitors']:
             ectypal_monitors.update({monitors[mon['mID']].id: monitors[mon['mID']].responsibility})
-        unit_thread = UnitThread(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
-        thread_list.append(unit_thread)
-        unit_thread.start()
-        # unit_process = UnitProcess(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
-        # process_list.append(unit_process)
-        # unit_process.start()
+        unit_process = UnitProcess(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
+        process_list.append(unit_process)
+        unit_process.start()
 
-    for t in thread_list:
-        t.join()
-    # for p in process_list:
-    #     p.join()
+    for p in process_list:
+        p.join()
     # make_round_record(units, now_round, success_rate_list, record_path)
-    global thread_result_pool
-    result_list = thread_result_pool.copy()
-    thread_result_pool.clear()
+    result_list = ns.thread_result_pool.copy()
+    ns.thread_result_pool.clear()
     for one_unit in units.keys():
         units[one_unit].reset_connection()
     for one_unit in units.keys():
         units[one_unit].status = 'active'
-        units[one_unit].now = the_pattern.init_position
+        units[one_unit].now = ns.the_pattern.init_position
         units[one_unit].past_way.clear()
         units[one_unit].resource = units[one_unit].init_resource
         units[one_unit].action_sequence.clear()
@@ -414,14 +387,12 @@ def main():
         :ex_id:仿真的id
     :return: no return
     """
-    generation = 100
+    generation = 5
     record_path = 'record'
     members_path = 'member_xml'
     version = '0.0'
     ex_id = 'cE_ex01'
 
-    global units_relationship, units_advisors_relationship
-    global advisors_units_relationship, units_monitors_relationship, the_pattern
     member_file_names = member_file_name(members_path)
     units, advisors, monitors, member_count, the_pattern = read_members(member_file_names, members_path)
 
@@ -466,19 +437,22 @@ def main():
         for one_monitor in units[one_unit].executor['monitors']:
             units_monitors_relationship[one_unit][one_monitor['mID']] = monitors[one_monitor['mID']].unitList['units'][
                 one_unit]
-
+    mgr = Manager()
+    ns = mgr.Namespace()
+    ns.units_monitors_relationship = units_monitors_relationship
+    ns.advisors_units_relationship = advisors_units_relationship
+    ns.the_pattern = the_pattern
+    process_result_pool = []
+    ns.process_result_pool = process_result_pool
     start_time = time()
     success_rate_list = []
     for g in range(generation):
-        re_simulate(units, advisors, monitors, g, success_rate_list, record_path)
+        re_simulate(units, advisors, monitors, ns, g, success_rate_list, record_path)
     b = time() - start_time
     print('\n', '本次仿真共计{}代，共花费时间{}秒'.format(generation, b))
     # cs.make_simulate_result(generation)
 
 
 if __name__ == '__main__':
-    global units_relationship, units_advisors_relationship, thread_result_pool
-    global advisors_units_relationship, units_monitors_relationship, the_pattern
-    thread_result_pool = []
-    threading_lock = threading.Lock()
+    processing_lock = Lock()
     main()

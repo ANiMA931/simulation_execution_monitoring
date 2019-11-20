@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from random import shuffle
 import xml.dom.minidom
-from tools import *
+from my_tools import *
 """与同类相连，该用什么办法呢？
 相连的方法是对称的
 先把谁会和谁相连写清楚"""

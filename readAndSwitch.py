@@ -1,5 +1,5 @@
 # 我的第一个Python程序
-from tools import read_xml
+from my_tools import read_xml
 
 
 def read_simulation_def_meta_model_code(path,nameStr):

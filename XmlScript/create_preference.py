@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from random import shuffle
 from patterns.pattern import pattern
-from tools import *
+from my_tools import *
 
 
 class preference_creator:

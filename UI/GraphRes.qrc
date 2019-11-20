@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="chart">
+    <file>12.png</file>
     <file>10.png</file>
     <file>9.png</file>
     <file>7.png</file>
@@ -22,6 +23,7 @@
     <file>暂停.ico</file>
   </qresource>
   <qresource prefix="patterns">
+    <file>13.png</file>
     <file>11.png</file>
     <file>6.png</file>
     <file>5.png</file>
