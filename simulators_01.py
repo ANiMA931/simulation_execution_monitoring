@@ -4,7 +4,6 @@
 
 import sys
 import threading
-import multiprocessing
 import numpy as np
 import pandas as pd
 from time import time, sleep
@@ -16,24 +15,6 @@ from numpy.random import rand  # 随机数函数
 from xml.dom import minidom  # 生成xml文件时的工具
 
 
-class UnitProcess(multiprocessing.Process):
-    def __init__(self, the_unit, extypal_advisors, extypal_monitors):
-        super(UnitProcess, self).__init__()
-        self.unit = the_unit
-        self.extypal_advisors = extypal_advisors
-        self.extypal_momitors = extypal_monitors
-        self.result_sequence = []
-
-    def run(self):
-        while self.unit.status == 'active':
-            res = re_one_unit_run_on_pattern(self.unit, self.extypal_advisors, self.extypal_momitors)
-            self.result_sequence.append(res)
-        global thread_result_pool
-        processing_lock.acquire()
-        thread_result_pool.append((self.unit.id, self.result_sequence))
-        processing_lock.release()
-
-
 class UnitThread(threading.Thread):
     def __init__(self, the_unit, extypal_advisors, extypal_monitors):
         super(UnitThread, self).__init__()
@@ -43,9 +24,11 @@ class UnitThread(threading.Thread):
         self.result_sequence = []
 
     def run(self):
+        print('start')
         while self.unit.status == 'active':
             res = re_one_unit_run_on_pattern(self.unit, self.extypal_advisors, self.extypal_momitors)
             self.result_sequence.append(res)
+        print('end')
         global thread_result_pool
         threading_lock.acquire()
         thread_result_pool.append((self.unit.id, self.result_sequence))
@@ -104,10 +87,11 @@ def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
     :param ectypal_monitors: 与当前unit连接的monitor们连接的副本
     :return:
     """
+    sleep(0.1)
     if one_unit.status == 'active':
         # 声明一个保存建议的表
         dec_list = []
-        # 声明 一个保存外部监督强度的变量
+        # 声明一个保存外部监督强度的变量
         sum_of_external_monitoring = float(0)
         for adv in ectypal_advisors.keys():
             global advisors_units_relationship, the_pattern
@@ -203,7 +187,6 @@ def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_
     :return:
     """
     thread_list = []
-    process_list = []
     for one_unit in units.keys():
         ectypal_advisors = {}
         ectypal_monitors = {}
@@ -214,27 +197,27 @@ def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_
         unit_thread = UnitThread(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
         thread_list.append(unit_thread)
         unit_thread.start()
-        # unit_process = UnitProcess(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
-        # process_list.append(unit_process)
-        # unit_process.start()
 
     for t in thread_list:
         t.join()
-    # for p in process_list:
-    #     p.join()
-    # make_round_record(units, now_round, success_rate_list, record_path)
+
     global thread_result_pool
+    # 保存一下，然后清空
     result_list = thread_result_pool.copy()
+    # 生成本轮次的仿真记录
     thread_result_pool.clear()
+    # make_round_record(units, now_round, success_rate_list, record_path)
+    # 重设连接关系此段内容也要改为线程
     for one_unit in units.keys():
         units[one_unit].reset_connection()
+    # 重新初始化所有成员的状态准备下一轮的仿真
     for one_unit in units.keys():
         units[one_unit].status = 'active'
         units[one_unit].now = the_pattern.init_position
         units[one_unit].past_way.clear()
         units[one_unit].resource = units[one_unit].init_resource
         units[one_unit].action_sequence.clear()
-    pass
+
 
 
 def calc_success_rate(units):
@@ -414,7 +397,7 @@ def main():
         :ex_id:仿真的id
     :return: no return
     """
-    generation = 100
+    generation = 5
     record_path = 'record'
     members_path = 'member_xml'
     version = '0.0'

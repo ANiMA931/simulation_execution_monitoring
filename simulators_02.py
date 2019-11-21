@@ -1,5 +1,5 @@
-# simulators.py
-
+# simulators02.py
+# 进程版仿真推进，速度远慢于线程版
 # 本文件写各种仿真对应的仿真类
 
 import sys
@@ -29,7 +29,7 @@ class UnitProcess(Process):
             res = re_one_unit_run_on_pattern(self.ns, self.unit, self.extypal_advisors, self.extypal_momitors)
             self.result_sequence.append(res)
         processing_lock.acquire()
-        self.ns.thread_result_pool.append((self.unit.id, self.result_sequence))
+        self.ns.process_result_pool.append((self.unit.id, self.result_sequence))
         processing_lock.release()
 
 
@@ -100,7 +100,7 @@ def re_one_unit_run_on_pattern(ns, one_unit, ectypal_advisors, ectypal_monitors)
         for mon in ectypal_monitors.keys():
             if selected_decision[0] in ectypal_monitors[mon]:
                 global units_monitors_relationship
-                sum_of_external_monitoring += units_monitors_relationship[one_unit.id][mon]
+                sum_of_external_monitoring += ns.units_monitors_relationship[one_unit.id][mon]
         alternative_behaviors = []
         for b in ns.the_pattern.behaviors:
             if one_unit.now == b['before'] and one_unit.resource >= b['weight']:
@@ -190,15 +190,14 @@ def re_simulate(units, advisors, monitors, ns, now_round, success_rate_list, rec
             ectypal_advisors.update({advisors[adv].id: advisors[adv].preference})
         for mon in units[one_unit].executor['monitors']:
             ectypal_monitors.update({monitors[mon['mID']].id: monitors[mon['mID']].responsibility})
-        unit_process = UnitProcess(units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
+        unit_process = UnitProcess(ns,units[one_unit], ectypal_advisors.copy(), ectypal_monitors.copy())
         process_list.append(unit_process)
         unit_process.start()
-
     for p in process_list:
         p.join()
-    # make_round_record(units, now_round, success_rate_list, record_path)
-    result_list = ns.thread_result_pool.copy()
-    ns.thread_result_pool.clear()
+    # make_round_record(units, now_round, success_rate_list, record_path)#记录本轮仿真的所有内容
+    result_list = ns.process_result_pool.copy()
+    ns.process_result_pool.clear()
     for one_unit in units.keys():
         units[one_unit].reset_connection()
     for one_unit in units.keys():
@@ -387,7 +386,7 @@ def main():
         :ex_id:仿真的id
     :return: no return
     """
-    generation = 5
+    generation = 10
     record_path = 'record'
     members_path = 'member_xml'
     version = '0.0'
@@ -448,11 +447,11 @@ def main():
     success_rate_list = []
     for g in range(generation):
         re_simulate(units, advisors, monitors, ns, g, success_rate_list, record_path)
+
     b = time() - start_time
     print('\n', '本次仿真共计{}代，共花费时间{}秒'.format(generation, b))
     # cs.make_simulate_result(generation)
 
-
+processing_lock = Lock()
 if __name__ == '__main__':
-    processing_lock = Lock()
     main()

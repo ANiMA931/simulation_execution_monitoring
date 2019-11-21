@@ -11,7 +11,7 @@ from my_tools import *
 import os
 import shutil
 class random_starter:
-    def __init__(self,pattern_dom,um=unit_maker(scale=20),mm=monitor_maker(scale=20),am=advisor_maker(scale=20)):
+    def __init__(self,pattern_dom,um=unit_maker(scale=50),mm=monitor_maker(scale=20),am=advisor_maker(scale=20)):
         self.pattern=pattern(xml_dom=pattern_dom)
         self.um=um
         self.mm=mm
