@@ -154,3 +154,12 @@ def printPath(level, path):
         print('-' * (int(dirList[0])), fl)
         # 随便计算一下有多少个文件
         allFileNum = allFileNum + 1
+
+
+def floyd_with_path(weight_matrix, path_matrix):
+    for k in weight_matrix.columns:
+        for i in weight_matrix.columns:
+            for j in weight_matrix.index:
+                if weight_matrix[i][j] > weight_matrix[i][k] + weight_matrix[k][j]:
+                    weight_matrix[i][j] = weight_matrix[i][k] + weight_matrix[k][j]
+                    path_matrix[i][j] = k

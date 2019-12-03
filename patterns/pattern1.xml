@@ -1,7 +1,7 @@
 <?xml version="1.0" ?><pattern>
 	<commonInformation ID="ptn-1" author="MA" modifyDate="2019.04" name="theFirst" remark="No" version="0.0"/>
 	<positions scale="25">
-		<position name="init" pID="p24" type="start" weight="34.29412"/>
+		<position name="init" pID="p24" type="start" weight="0"/>
 		<position name="begining1" pID="p0" type="normal" weight="48.89789"/>
 		<position name="begining2" pID="p1" type="normal" weight="58.77624"/>
 		<position name="begining3" pID="p2" type="normal" weight="30.75665"/>

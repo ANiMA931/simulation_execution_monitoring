@@ -87,7 +87,7 @@ def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
     :param ectypal_monitors: 与当前unit连接的monitor们连接的副本
     :return:
     """
-    sleep(0.1)
+    # sleep(0.001)
     if one_unit.status == 'active':
         # 声明一个保存建议的表
         dec_list = []
@@ -397,7 +397,7 @@ def main():
         :ex_id:仿真的id
     :return: no return
     """
-    generation = 5
+    generation = 100
     record_path = 'record'
     members_path = 'member_xml'
     version = '0.0'
