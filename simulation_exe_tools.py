@@ -27,6 +27,8 @@ class main_exe_window(QtWidgets.QMainWindow, Ui_MainWindow):
         # 获取仿真定义文件中的仿真类型代码
         simulation_code = self.read_simulation_def_meta_model_code(simu_def_XML_path[0], 'simulationExecutionTypeCode')
         # 进行代码比对，由于目前只开发了一种仿真，所以只有一种
+        # 此处的下方就是仿真大循环要写的位置。
+        
         if simulation_code == 'CE':
             # 读取成功后在预留的布局上添加widget，但首先要移除旧widget
             self.simulation_widget_layout.removeWidget(self.simulation_widget)

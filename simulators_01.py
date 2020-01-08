@@ -4,8 +4,7 @@
 
 import sys
 import threading
-import numpy as np
-import pandas as pd
+
 from time import time, sleep
 from math import pi, atan  # 仿真需要的反函数与圆周率
 from members.cE_member import *  # 众进化仿真成员
@@ -16,7 +15,7 @@ from xml.dom import minidom  # 生成xml文件时的工具
 
 
 class UnitThread(threading.Thread):
-    def __init__(self, the_unit, extypal_advisors, extypal_monitors):
+    def __init__(self, the_unit: unit, extypal_advisors, extypal_monitors):
         super(UnitThread, self).__init__()
         self.unit = the_unit
         self.extypal_advisors = extypal_advisors
@@ -79,7 +78,7 @@ def read_members(member_file_names, members_path):
     return units, advisors, monitors, member_count, the_ptn
 
 
-def re_one_unit_run_on_pattern(one_unit, ectypal_advisors, ectypal_monitors):
+def re_one_unit_run_on_pattern(one_unit:unit, ectypal_advisors, ectypal_monitors):
     """
     线程函数，一个unit在格局上从头走到尾的具体流程
     :param one_unit: 当前的unit
@@ -219,7 +218,6 @@ def re_simulate(units, advisors, monitors, now_round, success_rate_list, record_
         units[one_unit].action_sequence.clear()
 
 
-
 def calc_success_rate(units):
     """
     计算本次迭代的成功率
@@ -236,7 +234,7 @@ def calc_success_rate(units):
     return count / len(units)
 
 
-def make_round_record(units, the_round, success_rate_list, record_path):
+def make_round_record(units: dict, the_round, success_rate_list, record_path):
     """
     生成某一迭代的记录
     :param units:
@@ -397,7 +395,7 @@ def main():
         :ex_id:仿真的id
     :return: no return
     """
-    generation = 100
+    generation = 1000
     record_path = 'record'
     members_path = 'member_xml'
     version = '0.0'
@@ -464,4 +462,5 @@ if __name__ == '__main__':
     global advisors_units_relationship, units_monitors_relationship, the_pattern
     thread_result_pool = []
     threading_lock = threading.Lock()
+    gl=globals()
     main()

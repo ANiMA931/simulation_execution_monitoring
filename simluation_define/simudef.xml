@@ -1,0 +1,33 @@
+<simulationDefinition>
+    <simulationExecutionMetaModelGeneralInfomation>
+        <simulationExecutionMetaModel>生态结构演化仿真</simulationExecutionMetaModel>
+        <version>2.1</version>
+        <modifyDate>2019-12-18</modifyDate>
+        <author>王吉武</author>
+        <note></note>
+        <memberMetaModelDocument>
+            <memberMetaModelFilePath>D:\</memberMetaModelFilePath>
+        </memberMetaModelDocument>
+        <memberModelDocument>
+            <memberModelFilePath>C:\Users\王吉武\Desktop\英语复习资料</memberModelFilePath>
+        </memberModelDocument>
+    </simulationExecutionMetaModelGeneralInfomation>
+    <simulationExecutionType>
+        <simulationExecutionTypeName>divisionEvolution</simulationExecutionTypeName>
+        <simulationExecutionTypeCode>DE</simulationExecutionTypeCode>
+        <roundMethodDefinition>
+            <roundMethodName>轮方法</roundMethodName>
+            <roundMethodID>lun</roundMethodID>
+            <globalAttributeRecursionMethod globalAttributeID="p零售价格" globalAttributeType="string"
+                                            globalAttributeValueRange="{&lt;字符&gt;}">
+                <recursiveFunctionName>sd</recursiveFunctionName>
+                <filePath>C:\Users\王吉武\Desktop\英语复习资料</filePath>
+            </globalAttributeRecursionMethod>
+            <globalAttributeRecursionMethod globalAttributeID="Q批发数量" globalAttributeType="string"
+                                            globalAttributeValueRange="{&lt;字符&gt;}">
+                <recursiveFunctionName>sfsd</recursiveFunctionName>
+                <filePath>D:\MatLab 2016a</filePath>
+            </globalAttributeRecursionMethod>
+        </roundMethodDefinition>
+    </simulationExecutionType>
+</simulationDefinition>
