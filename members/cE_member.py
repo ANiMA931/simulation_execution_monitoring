@@ -20,6 +20,7 @@ class unit:
         '''
         # 获得dom文件的根节点
         self.root = xml_dom.documentElement
+        print(xml_dom.__class__)
         member_type = self.root.getElementsByTagName('memberType')[0]
         self.id = member_type.getAttribute('ID')
         self.target = self.root.getElementsByTagName('target')[0].getAttribute('pID')
@@ -50,7 +51,7 @@ class unit:
         # 初始化unit的影响器，endowment为受影响禀赋，remain为禀赋剩余，scale为连接建议者的个数，advisors为建议者们的字典，通过id访问
         self.effector = {"endowment": float(effector_label.getAttribute('endowment')),
                          "remain": float(effector_label.getAttribute('remain')),
-                         "scale": int(effector_label.getAttribute('scale')), "advisors": advisors}
+                         "scale": int(effector_label.getAttribute('scale')), "cE_advisors": advisors}
         # 获得xml中decider标签
         decider_label = self.root.getElementsByTagName('decider')[0]
         # 初始化unit的决策器，depth是unit能在pattern上眺望的距离，selfConfidence是unit的自信程度，本质与advisors里的strength相同，
@@ -75,7 +76,7 @@ class unit:
         self.executor = {"mutationRate": float(executor_label.getAttribute('mutationRate')),
                          "selfDegeneration": float(executor_label.getAttribute('selfDegeneration')),
                          "selfDiscipline": float(executor_label.getAttribute('selfDiscipline')),
-                         "scale": int(executor_label.getAttribute('scale')), "monitors": monitors}
+                         "scale": int(executor_label.getAttribute('scale')), "cE_monitors": monitors}
         # 获得xml中parameter标签
         parameter_label = self.root.getElementsByTagName('parameter')[0]
         # 获得所有的cUnit标签
@@ -204,7 +205,7 @@ class unit:
             for j in decisions:
                 if j[0] != self.id:
                     if i == j[2]:
-                        ei += self.effector['advisors'][j[0]] + j[1]
+                        ei += self.effector['cE_advisors'][j[0]] + j[1]
                 else:
                     if i == j[2]:
                         ei += j[1]
@@ -216,30 +217,6 @@ class unit:
         return (
             alternative_decisions[result.index(max(result))], alternative_decision_weights[result.index(max(result))])
 
-    # def do_behavior(self, pattern, behavior):
-    #     """
-    #     执行动作，如果成功则更改自己的now，扣除动作的weight之后并获得动作结果对应的position的weight
-    #     如果失败，则不更改自己的now，并扣除动作的weight，没有任何获得
-    #     :param pattern:格局对象
-    #     :param behavior:要做的行为
-    #     :return:行为结果与行为
-    #     """
-    #     for i in pattern.behaviors:  # 此处的i是字典
-    #         if ((i['before'], i['after']) == behavior):  # 定位到了对应的behavior
-    #             r = rand()
-    #             if r < float(i['success_rate']):
-    #                 self.now = i['after']
-    #                 self.resource -= i['weight']
-    #                 self.past_way.append(i['after'])
-    #                 for j in pattern.positions:
-    #                     if j['pID'] == i['after']:
-    #                         self.resource += j['weight']  # 在position上得到的权重被视为能够加进unit的resource里面
-    #                         self.action_sequence.append(('success', behavior))
-    #                         return ('success', behavior)
-    #             else:
-    #                 self.resource -= i['weight']
-    #                 self.action_sequence.append(('fail', behavior))
-    #                 return ('fail', behavior)
 
     def get_para_message(self, res_unit, result, round):
         '''
@@ -265,12 +242,12 @@ class unit:
         目前仅仅是随机设置重连，而非有算法地重连。
         :return:
         '''
-        length = len(self.effector['advisors']) + 1
+        length = len(self.effector['cE_advisors']) + 1
         upper = self.effector['endowment']
         r, s = shatter_number(upper, length)
         itemm = 0
-        for a in self.effector['advisors'].items():
-            self.effector['advisors'][a[0]] = r[itemm]
+        for a in self.effector['cE_advisors'].items():
+            self.effector['cE_advisors'][a[0]] = r[itemm]
             itemm += 1
         self.effector['remain'] = r[itemm]
 
@@ -380,7 +357,7 @@ def select_decision(one_unit, decisions, pattern):
         for j in decisions:
             if j[0] != one_unit.id:
                 if i == j[2]:
-                    ei += one_unit.effector['advisors'][j[0]] + j[1]
+                    ei += one_unit.effector['cE_advisors'][j[0]] + j[1]
             else:
                 if i == j[2]:
                     ei += j[1]
@@ -428,7 +405,7 @@ class advisor:
             units.update(a)
         # 初始化建议者的unitList
         self.unitList = {"remain": unit_List.getAttribute('remaining'), "scale": int(unit_List.getAttribute('scale')),
-                         "units": units}
+                         "cE_units": units}
 
     def return_suggestion(self, position, pattern):
         """
@@ -515,13 +492,13 @@ class monitor:
         # 初始化监控者的unitList
         self.unitList = {"remain": float(unit_List.getAttribute('remaining')),
                          "scale": int(unit_List.getAttribute('scale')),
-                         "units": units}
+                         "cE_units": units}
 
 
 if __name__ == '__main__':
-    unit = unit(xml_dom=read_xml(r"..\units\MyCrowd_Unit05.xml"))
-    advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\advisors\\MyCrowd_advisor00.xml"))
-    # monitor = monitor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\monitors\\MyCrowd_monitor01.xml"))
+    unit = unit(xml_dom=read_xml(r"../cE_units\MyCrowd_Unit05.xml"))
+    advisor = advisor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\cE_advisors\\MyCrowd_advisor00.xml"))
+    # monitor = monitor(xml_dom=read_xml("E:\\code\\PycharmProjects\\simulation\\cE_monitors\\MyCrowd_monitor01.xml"))
     ptn = pattern(xml_dom=read_xml(r'E:\code\PycharmProjects\simulation\patterns\pattern1.xml'))
     print(return_suggestion(advisor.preference, 'p2', pattern=ptn))
     # a = unit.overlook(ptn)

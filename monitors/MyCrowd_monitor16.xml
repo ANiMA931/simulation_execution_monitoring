@@ -1,2 +1,0 @@
-<?xml version="1.0" ?><monitor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="m-16" MetaModelID="p-67.258" endowment="6.32218" memberRole="monitor" memberTypeCode="3"/><pattern path=".\patterns\pattern1.xml"/><monitoring scale="9" value="('p7', 'p12')|('p24', 'p2')|('p9', 'p12')|('p9', 'p13')|('p15', 'p18')|('p16', 'p18')|('p8', 'p12')|('p5', 'p7')|('p10', 'p15')"/><unitList remaining="0.41597" scale="2">
-<unit strength="5.53558" uID="u-09"/><unit strength="0.37063" uID="u-10"/></unitList></monitor>

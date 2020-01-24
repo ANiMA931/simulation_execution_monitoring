@@ -710,7 +710,7 @@ class Ui_Form(object):
         self.label_110.setText(_translate("Form", "Visual size:"))
         self.label_114.setText(_translate("Form", "Monitors:"))
         self.label_111.setText(_translate("Form", "Affected endowment:"))
-        self.label_117.setText(_translate("Form", "Conn units:"))
+        self.label_117.setText(_translate("Form", "Conn cE_units:"))
         self.label_112.setText(_translate("Form", "Decision strategy:"))
         self.label_108.setText(_translate("Form", "Self Degeneration:"))
         self.label_115.setText(_translate("Form", "Position sequence:"))

@@ -1,0 +1,2 @@
+<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-06" MetaModelID="p-67.258" endowment="19.72556" memberRole="advisor" memberTypeCode="2"/><pattern path="..\patterns\pattern1.xml"/><preference value="p24,p0,p3,p9,p12,p15,p19,p23"/><unitList remaining="0.06741" scale="5">
+<unit strength="10.76714" uID="u-00"/><unit strength="4.94132" uID="u-01"/><unit strength="2.95354" uID="u-06"/><unit strength="0.97438" uID="u-08"/><unit strength="0.02177" uID="u-12"/></unitList></advisor>

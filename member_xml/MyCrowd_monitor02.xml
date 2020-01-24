@@ -1,2 +1,0 @@
-<?xml version="1.0" ?><monitor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="m-02" MetaModelID="p-67.258" endowment="15.46001" memberRole="monitor" memberTypeCode="3"/><pattern path=".\patterns\pattern1.xml"/><monitoring scale="3" value="('p1', 'p4')|('p11', 'p15')|('p16', 'p18')"/><unitList remaining="0.28563" scale="3">
-<unit strength="5.19755" uID="u-05"/><unit strength="8.62547" uID="u-08"/><unit strength="1.35136" uID="u-18"/></unitList></monitor>

@@ -1,0 +1,820 @@
+<memberGeneration>
+    <members>
+        <member 原子型成员数量="20" 集合型成员数量="0" 原子-监控者成员数量="20" 建议者成员数量="20" 监控者成员数量="20" 原子-建议者成员数量="20" 建议-监控者数量="20"
+                集合-监控者数量="0" 原子-监控-建议者成员数量="0"/>
+        <mumberInfos>
+            <mumberInfo 成员ID="memberID-0" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-1" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-2" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-3" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-4" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-5" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-6" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-7" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-8" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-9" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-10" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-11" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-12" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-13" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-14" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-15" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-16" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-17" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-18" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-19" 成员类型="原子型成员" 成员模型="MetaModelID - 1"/>
+            <mumberInfo 成员ID="memberID-20" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-21" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-22" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-23" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-24" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-25" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-26" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-27" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-28" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-29" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-30" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-31" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-32" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-33" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-34" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-35" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-36" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-37" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-38" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-39" 成员类型="建议者成员" 成员模型="MetaModelID - 3"/>
+            <mumberInfo 成员ID="memberID-40" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-41" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-42" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-43" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-44" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-45" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-46" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-47" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-48" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-49" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-50" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-51" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-52" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-53" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-54" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-55" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-56" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-57" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-58" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-59" 成员类型="监控者成员" 成员模型="MetaModelID - 4"/>
+            <mumberInfo 成员ID="memberID-60" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-61" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-62" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-63" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-64" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-65" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-66" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-67" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-68" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-69" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-70" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-71" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-72" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-73" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-74" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-75" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-76" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-77" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-78" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-79" 成员类型="原子-监控成员" 成员模型="MetaModelID - 5"/>
+            <mumberInfo 成员ID="memberID-80" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-81" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-82" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-83" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-84" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-85" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-86" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-87" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-88" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-89" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-90" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-91" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-92" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-93" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-94" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-95" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-96" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-97" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-98" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-99" 成员类型="原子-建议成员" 成员模型="MetaModelID - 6"/>
+            <mumberInfo 成员ID="memberID-100" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-101" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-102" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-103" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-104" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-105" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-106" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-107" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-108" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-109" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-110" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-111" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-112" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-113" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-114" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-115" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-116" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-117" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-118" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+            <mumberInfo 成员ID="memberID-119" 成员类型="建议-监控成员" 成员模型="MetaModelID - 7"/>
+        </mumberInfos>
+    </members>
+    <advisors>
+        <advisor 外部函数路径="11" 建议禀赋期望="5" 建议禀赋方差="0.4"/>
+        <advisorInfos>
+            <advisorInfo 建议者ID="memberID-20" 成员模型="MetaModelID - 3" 建议禀赋="4.63" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-21" 成员模型="MetaModelID - 3" 建议禀赋="5.48" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-22" 成员模型="MetaModelID - 3" 建议禀赋="5.46" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-23" 成员模型="MetaModelID - 3" 建议禀赋="5.40" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-24" 成员模型="MetaModelID - 3" 建议禀赋="4.35" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-25" 成员模型="MetaModelID - 3" 建议禀赋="4.66" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-26" 成员模型="MetaModelID - 3" 建议禀赋="5.35" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-27" 成员模型="MetaModelID - 3" 建议禀赋="5.12" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-28" 成员模型="MetaModelID - 3" 建议禀赋="4.69" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-29" 成员模型="MetaModelID - 3" 建议禀赋="5.07" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-30" 成员模型="MetaModelID - 3" 建议禀赋="4.37" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-31" 成员模型="MetaModelID - 3" 建议禀赋="4.98" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-32" 成员模型="MetaModelID - 3" 建议禀赋="4.71" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-33" 成员模型="MetaModelID - 3" 建议禀赋="6.16" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-34" 成员模型="MetaModelID - 3" 建议禀赋="4.42" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-35" 成员模型="MetaModelID - 3" 建议禀赋="4.48" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-36" 成员模型="MetaModelID - 3" 建议禀赋="5.18" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-37" 成员模型="MetaModelID - 3" 建议禀赋="5.11" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-38" 成员模型="MetaModelID - 3" 建议禀赋="4.91" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-39" 成员模型="MetaModelID - 3" 建议禀赋="3.34" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-80" 成员模型="MetaModelID - 6" 建议禀赋="5.06" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-81" 成员模型="MetaModelID - 6" 建议禀赋="4.65" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-82" 成员模型="MetaModelID - 6" 建议禀赋="4.92" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-83" 成员模型="MetaModelID - 6" 建议禀赋="4.01" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-84" 成员模型="MetaModelID - 6" 建议禀赋="4.84" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-85" 成员模型="MetaModelID - 6" 建议禀赋="5.25" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-86" 成员模型="MetaModelID - 6" 建议禀赋="5.09" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-87" 成员模型="MetaModelID - 6" 建议禀赋="5.80" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-88" 成员模型="MetaModelID - 6" 建议禀赋="5.54" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-89" 成员模型="MetaModelID - 6" 建议禀赋="4.33" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-90" 成员模型="MetaModelID - 6" 建议禀赋="5.04" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-91" 成员模型="MetaModelID - 6" 建议禀赋="5.14" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-92" 成员模型="MetaModelID - 6" 建议禀赋="5.04" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-93" 成员模型="MetaModelID - 6" 建议禀赋="5.87" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-94" 成员模型="MetaModelID - 6" 建议禀赋="5.98" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-95" 成员模型="MetaModelID - 6" 建议禀赋="6.46" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-96" 成员模型="MetaModelID - 6" 建议禀赋="4.43" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-97" 成员模型="MetaModelID - 6" 建议禀赋="5.20" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-98" 成员模型="MetaModelID - 6" 建议禀赋="4.55" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-99" 成员模型="MetaModelID - 6" 建议禀赋="5.45" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-100" 成员模型="MetaModelID - 7" 建议禀赋="3.98" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-101" 成员模型="MetaModelID - 7" 建议禀赋="4.35" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-102" 成员模型="MetaModelID - 7" 建议禀赋="4.58" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-103" 成员模型="MetaModelID - 7" 建议禀赋="5.09" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-104" 成员模型="MetaModelID - 7" 建议禀赋="5.80" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-105" 成员模型="MetaModelID - 7" 建议禀赋="5.75" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-106" 成员模型="MetaModelID - 7" 建议禀赋="4.48" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-107" 成员模型="MetaModelID - 7" 建议禀赋="5.06" 建议路径="改变连接强度"/>
+            <advisorInfo 建议者ID="memberID-108" 成员模型="MetaModelID - 7" 建议禀赋="3.96" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-109" 成员模型="MetaModelID - 7" 建议禀赋="4.88" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-110" 成员模型="MetaModelID - 7" 建议禀赋="5.65" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-111" 成员模型="MetaModelID - 7" 建议禀赋="4.43" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-112" 成员模型="MetaModelID - 7" 建议禀赋="5.53" 建议路径="静默"/>
+            <advisorInfo 建议者ID="memberID-113" 成员模型="MetaModelID - 7" 建议禀赋="4.03" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-114" 成员模型="MetaModelID - 7" 建议禀赋="4.90" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-115" 成员模型="MetaModelID - 7" 建议禀赋="4.61" 建议路径="减弱信息强度"/>
+            <advisorInfo 建议者ID="memberID-116" 成员模型="MetaModelID - 7" 建议禀赋="4.52" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-117" 成员模型="MetaModelID - 7" 建议禀赋="5.24" 建议路径="群发"/>
+            <advisorInfo 建议者ID="memberID-118" 成员模型="MetaModelID - 7" 建议禀赋="5.18" 建议路径="转发"/>
+            <advisorInfo 建议者ID="memberID-119" 成员模型="MetaModelID - 7" 建议禀赋="5.22" 建议路径="静默"/>
+        </advisorInfos>
+    </advisors>
+    <primitives>
+        <primitive 自律水平期望="0.8" 自律水平方差="0.01" 建议规模期望="50" 建议规模方差="10" 浏览禀赋期望="4" 浏览禀赋方差="0.3" 信息接收禀赋期望="20"
+                   信息接收禀赋方差="3.5" 自信水平期望="0.7" 自信水平方差="0.01" 信息存储禀赋期望="300" 信息存储禀赋方差="30"/>
+        <primitiveInfos>
+            <primitiveInfo 原子型成员ID="memberID-0" 成员模型="MetaModelID - 1" 信息接收禀赋="11.20" 信息存储禀赋="290.55"
+                           个人自信水平="0.92" 自律水平="0.82" 建议规模="49.79" 浏览禀赋="3.59" 格局="pattern-3" 影响器="affectorID-12"
+                           决策器="deciderID-0" 执行器="executorID-19" 监控器="monitorID-4" 联接器="connectorID-4"/>
+            <primitiveInfo 原子型成员ID="memberID-1" 成员模型="MetaModelID - 1" 信息接收禀赋="20.87" 信息存储禀赋="304.67"
+                           个人自信水平="0.73" 自律水平="0.87" 建议规模="50.19" 浏览禀赋="2.75" 格局="pattern-3" 影响器="affectorID-13"
+                           决策器="deciderID-8" 执行器="executorID-14" 监控器="monitorID-2" 联接器="connectorID-2"/>
+            <primitiveInfo 原子型成员ID="memberID-2" 成员模型="MetaModelID - 1" 信息接收禀赋="14.60" 信息存储禀赋="304.32"
+                           个人自信水平="0.74" 自律水平="0.67" 建议规模="52.45" 浏览禀赋="3.76" 格局="pattern-1" 影响器="affectorID-1"
+                           决策器="deciderID-17" 执行器="executorID-16" 监控器="monitorID-12" 联接器="connectorID-12"/>
+            <primitiveInfo 原子型成员ID="memberID-3" 成员模型="MetaModelID - 1" 信息接收禀赋="16.29" 信息存储禀赋="290.24"
+                           个人自信水平="0.56" 自律水平="0.97" 建议规模="53.14" 浏览禀赋="3.89" 格局="pattern-3" 影响器="affectorID-10"
+                           决策器="deciderID-3" 执行器="executorID-1" 监控器="monitorID-0" 联接器="connectorID-0"/>
+            <primitiveInfo 原子型成员ID="memberID-4" 成员模型="MetaModelID - 1" 信息接收禀赋="20.77" 信息存储禀赋="295.10"
+                               个人自信水平="0.76" 自律水平="0.70" 建议规模="46.87" 浏览禀赋="3.67" 格局="pattern-1" 影响器="affectorID-2"
+                           决策器="deciderID-6" 执行器="executorID-9" 监控器="monitorID-14" 联接器="connectorID-14"/>
+            <primitiveInfo 原子型成员ID="memberID-5" 成员模型="MetaModelID - 1" 信息接收禀赋="20.63" 信息存储禀赋="302.60"
+                           个人自信水平="0.63" 自律水平="0.88" 建议规模="49.64" 浏览禀赋="4.46" 格局="pattern-1" 影响器="affectorID-18"
+                           决策器="deciderID-10" 执行器="executorID-7" 监控器="monitorID-6" 联接器="connectorID-6"/>
+            <primitiveInfo 原子型成员ID="memberID-6" 成员模型="MetaModelID - 1" 信息接收禀赋="20.58" 信息存储禀赋="305.27"
+                           个人自信水平="0.62" 自律水平="0.57" 建议规模="48.66" 浏览禀赋="3.81" 格局="pattern-3" 影响器="affectorID-13"
+                           决策器="deciderID-12" 执行器="executorID-14" 监控器="monitorID-10" 联接器="connectorID-10"/>
+            <primitiveInfo 原子型成员ID="memberID-7" 成员模型="MetaModelID - 1" 信息接收禀赋="19.91" 信息存储禀赋="300.18"
+                           个人自信水平="0.88" 自律水平="0.94" 建议规模="41.10" 浏览禀赋="3.68" 格局="pattern-2" 影响器="affectorID-16"
+                           决策器="deciderID-2" 执行器="executorID-11" 监控器="monitorID-6" 联接器="connectorID-6"/>
+            <primitiveInfo 原子型成员ID="memberID-8" 成员模型="MetaModelID - 1" 信息接收禀赋="24.46" 信息存储禀赋="308.28"
+                           个人自信水平="0.65" 自律水平="0.77" 建议规模="50.91" 浏览禀赋="3.76" 格局="pattern-2" 影响器="affectorID-4"
+                           决策器="deciderID-8" 执行器="executorID-5" 监控器="monitorID-14" 联接器="connectorID-14"/>
+            <primitiveInfo 原子型成员ID="memberID-9" 成员模型="MetaModelID - 1" 信息接收禀赋="20.83" 信息存储禀赋="305.52"
+                           个人自信水平="0.62" 自律水平="0.77" 建议规模="50.84" 浏览禀赋="3.43" 格局="pattern-1" 影响器="affectorID-16"
+                           决策器="deciderID-11" 执行器="executorID-14" 监控器="monitorID-17" 联接器="connectorID-17"/>
+            <primitiveInfo 原子型成员ID="memberID-10" 成员模型="MetaModelID - 1" 信息接收禀赋="9.95" 信息存储禀赋="305.41"
+                           个人自信水平="0.60" 自律水平="0.70" 建议规模="48.90" 浏览禀赋="4.29" 格局="pattern-3" 影响器="affectorID-18"
+                           决策器="deciderID-4" 执行器="executorID-3" 监控器="monitorID-15" 联接器="connectorID-15"/>
+            <primitiveInfo 原子型成员ID="memberID-11" 成员模型="MetaModelID - 1" 信息接收禀赋="19.89" 信息存储禀赋="294.66"
+                           个人自信水平="0.75" 自律水平="0.73" 建议规模="49.31" 浏览禀赋="4.53" 格局="pattern-2" 影响器="affectorID-3"
+                           决策器="deciderID-13" 执行器="executorID-8" 监控器="monitorID-2" 联接器="connectorID-2"/>
+            <primitiveInfo 原子型成员ID="memberID-12" 成员模型="MetaModelID - 1" 信息接收禀赋="20.22" 信息存储禀赋="302.26"
+                           个人自信水平="0.80" 自律水平="0.84" 建议规模="47.88" 浏览禀赋="3.59" 格局="pattern-3" 影响器="affectorID-12"
+                           决策器="deciderID-16" 执行器="executorID-9" 监控器="monitorID-5" 联接器="connectorID-5"/>
+            <primitiveInfo 原子型成员ID="memberID-13" 成员模型="MetaModelID - 1" 信息接收禀赋="17.32" 信息存储禀赋="315.23"
+                           个人自信水平="0.66" 自律水平="0.76" 建议规模="53.23" 浏览禀赋="4.18" 格局="pattern-3" 影响器="affectorID-9"
+                           决策器="deciderID-11" 执行器="executorID-2" 监控器="monitorID-5" 联接器="connectorID-5"/>
+            <primitiveInfo 原子型成员ID="memberID-14" 成员模型="MetaModelID - 1" 信息接收禀赋="22.83" 信息存储禀赋="302.47"
+                           个人自信水平="0.74" 自律水平="0.78" 建议规模="46.66" 浏览禀赋="3.92" 格局="pattern-3" 影响器="affectorID-0"
+                           决策器="deciderID-12" 执行器="executorID-18" 监控器="monitorID-11" 联接器="connectorID-11"/>
+            <primitiveInfo 原子型成员ID="memberID-15" 成员模型="MetaModelID - 1" 信息接收禀赋="23.80" 信息存储禀赋="293.40"
+                           个人自信水平="0.75" 自律水平="0.91" 建议规模="48.04" 浏览禀赋="4.03" 格局="pattern-3" 影响器="affectorID-15"
+                           决策器="deciderID-19" 执行器="executorID-18" 监控器="monitorID-15" 联接器="connectorID-15"/>
+            <primitiveInfo 原子型成员ID="memberID-16" 成员模型="MetaModelID - 1" 信息接收禀赋="20.10" 信息存储禀赋="295.43"
+                           个人自信水平="0.79" 自律水平="0.69" 建议规模="48.60" 浏览禀赋="3.38" 格局="pattern-1" 影响器="affectorID-15"
+                           决策器="deciderID-12" 执行器="executorID-18" 监控器="monitorID-7" 联接器="connectorID-7"/>
+            <primitiveInfo 原子型成员ID="memberID-17" 成员模型="MetaModelID - 1" 信息接收禀赋="18.58" 信息存储禀赋="286.09"
+                           个人自信水平="0.48" 自律水平="0.74" 建议规模="47.76" 浏览禀赋="5.43" 格局="pattern-1" 影响器="affectorID-9"
+                           决策器="deciderID-15" 执行器="executorID-12" 监控器="monitorID-13" 联接器="connectorID-13"/>
+            <primitiveInfo 原子型成员ID="memberID-18" 成员模型="MetaModelID - 1" 信息接收禀赋="21.03" 信息存储禀赋="295.89"
+                           个人自信水平="0.87" 自律水平="0.95" 建议规模="46.35" 浏览禀赋="4.94" 格局="pattern-1" 影响器="affectorID-10"
+                           决策器="deciderID-7" 执行器="executorID-2" 监控器="monitorID-4" 联接器="connectorID-4"/>
+            <primitiveInfo 原子型成员ID="memberID-19" 成员模型="MetaModelID - 1" 信息接收禀赋="18.08" 信息存储禀赋="302.86"
+                           个人自信水平="0.93" 自律水平="0.95" 建议规模="48.62" 浏览禀赋="4.03" 格局="pattern-3" 影响器="affectorID-18"
+                           决策器="deciderID-16" 执行器="executorID-7" 监控器="monitorID-3" 联接器="connectorID-3"/>
+            <primitiveInfo 原子型成员ID="memberID-60" 成员模型="MetaModelID - 5" 信息接收禀赋="24.97" 信息存储禀赋="302.34"
+                           个人自信水平="0.97" 自律水平="0.71" 建议规模="49.01" 浏览禀赋="4.43" 格局="pattern-1" 影响器="affectorID-17"
+                           决策器="deciderID-5" 执行器="executorID-15" 监控器="monitorID-13" 联接器="connectorID-13"/>
+            <primitiveInfo 原子型成员ID="memberID-61" 成员模型="MetaModelID - 5" 信息接收禀赋="14.88" 信息存储禀赋="292.85"
+                           个人自信水平="0.57" 自律水平="0.68" 建议规模="53.61" 浏览禀赋="3.54" 格局="pattern-1" 影响器="affectorID-3"
+                           决策器="deciderID-13" 执行器="executorID-7" 监控器="monitorID-13" 联接器="connectorID-13"/>
+            <primitiveInfo 原子型成员ID="memberID-62" 成员模型="MetaModelID - 5" 信息接收禀赋="15.87" 信息存储禀赋="309.31"
+                           个人自信水平="0.62" 自律水平="0.93" 建议规模="44.27" 浏览禀赋="3.71" 格局="pattern-1" 影响器="affectorID-11"
+                           决策器="deciderID-11" 执行器="executorID-7" 监控器="monitorID-12" 联接器="connectorID-12"/>
+            <primitiveInfo 原子型成员ID="memberID-63" 成员模型="MetaModelID - 5" 信息接收禀赋="18.55" 信息存储禀赋="299.80"
+                           个人自信水平="0.71" 自律水平="0.65" 建议规模="57.36" 浏览禀赋="3.75" 格局="pattern-3" 影响器="affectorID-0"
+                           决策器="deciderID-8" 执行器="executorID-16" 监控器="monitorID-7" 联接器="connectorID-7"/>
+            <primitiveInfo 原子型成员ID="memberID-64" 成员模型="MetaModelID - 5" 信息接收禀赋="29.50" 信息存储禀赋="302.21"
+                           个人自信水平="0.80" 自律水平="0.66" 建议规模="49.44" 浏览禀赋="4.63" 格局="pattern-3" 影响器="affectorID-10"
+                           决策器="deciderID-13" 执行器="executorID-10" 监控器="monitorID-0" 联接器="connectorID-0"/>
+            <primitiveInfo 原子型成员ID="memberID-65" 成员模型="MetaModelID - 5" 信息接收禀赋="16.82" 信息存储禀赋="300.95"
+                           个人自信水平="0.61" 自律水平="0.83" 建议规模="51.24" 浏览禀赋="4.32" 格局="pattern-2" 影响器="affectorID-7"
+                           决策器="deciderID-8" 执行器="executorID-3" 监控器="monitorID-1" 联接器="connectorID-1"/>
+            <primitiveInfo 原子型成员ID="memberID-66" 成员模型="MetaModelID - 5" 信息接收禀赋="20.78" 信息存储禀赋="298.09"
+                           个人自信水平="0.72" 自律水平="0.68" 建议规模="48.03" 浏览禀赋="4.08" 格局="pattern-1" 影响器="affectorID-9"
+                           决策器="deciderID-14" 执行器="executorID-2" 监控器="monitorID-8" 联接器="connectorID-8"/>
+            <primitiveInfo 原子型成员ID="memberID-67" 成员模型="MetaModelID - 5" 信息接收禀赋="19.23" 信息存储禀赋="308.43"
+                           个人自信水平="0.7" 自律水平="0.91" 建议规模="48.33" 浏览禀赋="3.67" 格局="pattern-3" 影响器="affectorID-18"
+                           决策器="deciderID-3" 执行器="executorID-12" 监控器="monitorID-10" 联接器="connectorID-10"/>
+            <primitiveInfo 原子型成员ID="memberID-68" 成员模型="MetaModelID - 5" 信息接收禀赋="16.42" 信息存储禀赋="303.32"
+                           个人自信水平="0.70" 自律水平="0.84" 建议规模="44.99" 浏览禀赋="4.04" 格局="pattern-1" 影响器="affectorID-2"
+                           决策器="deciderID-10" 执行器="executorID-9" 监控器="monitorID-6" 联接器="connectorID-6"/>
+            <primitiveInfo 原子型成员ID="memberID-69" 成员模型="MetaModelID - 5" 信息接收禀赋="14.18" 信息存储禀赋="305.83"
+                           个人自信水平="0.73" 自律水平="0.96" 建议规模="54.70" 浏览禀赋="5.32" 格局="pattern-3" 影响器="affectorID-3"
+                           决策器="deciderID-0" 执行器="executorID-18" 监控器="monitorID-4" 联接器="connectorID-4"/>
+            <primitiveInfo 原子型成员ID="memberID-70" 成员模型="MetaModelID - 5" 信息接收禀赋="17.74" 信息存储禀赋="302.89"
+                           个人自信水平="0.72" 自律水平="0.72" 建议规模="53.89" 浏览禀赋="4.59" 格局="pattern-3" 影响器="affectorID-7"
+                           决策器="deciderID-13" 执行器="executorID-0" 监控器="monitorID-19" 联接器="connectorID-19"/>
+            <primitiveInfo 原子型成员ID="memberID-71" 成员模型="MetaModelID - 5" 信息接收禀赋="25.18" 信息存储禀赋="301.30"
+                           个人自信水平="0.91" 自律水平="0.86" 建议规模="50.21" 浏览禀赋="3.91" 格局="pattern-2" 影响器="affectorID-3"
+                           决策器="deciderID-8" 执行器="executorID-0" 监控器="monitorID-17" 联接器="connectorID-17"/>
+            <primitiveInfo 原子型成员ID="memberID-72" 成员模型="MetaModelID - 5" 信息接收禀赋="18.99" 信息存储禀赋="300.48"
+                           个人自信水平="0.66" 自律水平="0.84" 建议规模="51.79" 浏览禀赋="3.79" 格局="pattern-1" 影响器="affectorID-7"
+                           决策器="deciderID-18" 执行器="executorID-19" 监控器="monitorID-18" 联接器="connectorID-18"/>
+            <primitiveInfo 原子型成员ID="memberID-73" 成员模型="MetaModelID - 5" 信息接收禀赋="28.03" 信息存储禀赋="303.55"
+                           个人自信水平="0.67" 自律水平="0.65" 建议规模="42.74" 浏览禀赋="3.78" 格局="pattern-1" 影响器="affectorID-10"
+                           决策器="deciderID-17" 执行器="executorID-2" 监控器="monitorID-7" 联接器="connectorID-7"/>
+            <primitiveInfo 原子型成员ID="memberID-74" 成员模型="MetaModelID - 5" 信息接收禀赋="17.84" 信息存储禀赋="306.94"
+                           个人自信水平="0.81" 自律水平="0.76" 建议规模="51.17" 浏览禀赋="4.50" 格局="pattern-1" 影响器="affectorID-15"
+                           决策器="deciderID-18" 执行器="executorID-14" 监控器="monitorID-19" 联接器="connectorID-19"/>
+            <primitiveInfo 原子型成员ID="memberID-75" 成员模型="MetaModelID - 5" 信息接收禀赋="15.04" 信息存储禀赋="299.09"
+                           个人自信水平="0.69" 自律水平="0.75" 建议规模="47.63" 浏览禀赋="4.03" 格局="pattern-2" 影响器="affectorID-4"
+                           决策器="deciderID-11" 执行器="executorID-2" 监控器="monitorID-14" 联接器="connectorID-14"/>
+            <primitiveInfo 原子型成员ID="memberID-76" 成员模型="MetaModelID - 5" 信息接收禀赋="21.62" 信息存储禀赋="299.66"
+                           个人自信水平="0.58" 自律水平="0.84" 建议规模="50.85" 浏览禀赋="4.39" 格局="pattern-1" 影响器="affectorID-5"
+                           决策器="deciderID-17" 执行器="executorID-8" 监控器="monitorID-8" 联接器="connectorID-8"/>
+            <primitiveInfo 原子型成员ID="memberID-77" 成员模型="MetaModelID - 5" 信息接收禀赋="19.87" 信息存储禀赋="308.94"
+                           个人自信水平="0.75" 自律水平="0.79" 建议规模="47.46" 浏览禀赋="2.69" 格局="pattern-2" 影响器="affectorID-2"
+                           决策器="deciderID-1" 执行器="executorID-6" 监控器="monitorID-1" 联接器="connectorID-1"/>
+            <primitiveInfo 原子型成员ID="memberID-78" 成员模型="MetaModelID - 5" 信息接收禀赋="17.81" 信息存储禀赋="290.83"
+                           个人自信水平="0.71" 自律水平="0.76" 建议规模="47.26" 浏览禀赋="4.02" 格局="pattern-1" 影响器="affectorID-14"
+                           决策器="deciderID-3" 执行器="executorID-14" 监控器="monitorID-7" 联接器="connectorID-7"/>
+            <primitiveInfo 原子型成员ID="memberID-79" 成员模型="MetaModelID - 5" 信息接收禀赋="16.55" 信息存储禀赋="290.68"
+                           个人自信水平="0.63" 自律水平="0.90" 建议规模="50.36" 浏览禀赋="3.29" 格局="pattern-1" 影响器="affectorID-16"
+                           决策器="deciderID-5" 执行器="executorID-4" 监控器="monitorID-5" 联接器="connectorID-5"/>
+            <primitiveInfo 原子型成员ID="memberID-80" 成员模型="MetaModelID - 6" 信息接收禀赋="16.07" 信息存储禀赋="294.45"
+                           个人自信水平="0.53" 自律水平="0.98" 建议规模="49.04" 浏览禀赋="3.57" 格局="pattern-2" 影响器="affectorID-2"
+                           决策器="deciderID-9" 执行器="executorID-9" 监控器="monitorID-16" 联接器="connectorID-16"/>
+            <primitiveInfo 原子型成员ID="memberID-81" 成员模型="MetaModelID - 6" 信息接收禀赋="26.97" 信息存储禀赋="306.93"
+                           个人自信水平="0.75" 自律水平="0.82" 建议规模="53.39" 浏览禀赋="3.48" 格局="pattern-1" 影响器="affectorID-7"
+                           决策器="deciderID-4" 执行器="executorID-6" 监控器="monitorID-14" 联接器="connectorID-14"/>
+            <primitiveInfo 原子型成员ID="memberID-82" 成员模型="MetaModelID - 6" 信息接收禀赋="23.14" 信息存储禀赋="300.52"
+                           个人自信水平="0.86" 自律水平="0.92" 建议规模="47.03" 浏览禀赋="3.50" 格局="pattern-2" 影响器="affectorID-19"
+                           决策器="deciderID-1" 执行器="executorID-1" 监控器="monitorID-19" 联接器="connectorID-19"/>
+            <primitiveInfo 原子型成员ID="memberID-83" 成员模型="MetaModelID - 6" 信息接收禀赋="23.97" 信息存储禀赋="291.70"
+                           个人自信水平="0.91" 自律水平="0.92" 建议规模="52.13" 浏览禀赋="3.86" 格局="pattern-3" 影响器="affectorID-16"
+                           决策器="deciderID-8" 执行器="executorID-14" 监控器="monitorID-0" 联接器="connectorID-0"/>
+            <primitiveInfo 原子型成员ID="memberID-84" 成员模型="MetaModelID - 6" 信息接收禀赋="17.62" 信息存储禀赋="306.36"
+                           个人自信水平="0.80" 自律水平="0.81" 建议规模="47.46" 浏览禀赋="3.17" 格局="pattern-1" 影响器="affectorID-18"
+                           决策器="deciderID-9" 执行器="executorID-2" 监控器="monitorID-5" 联接器="connectorID-5"/>
+            <primitiveInfo 原子型成员ID="memberID-85" 成员模型="MetaModelID - 6" 信息接收禀赋="25.92" 信息存储禀赋="290.40"
+                           个人自信水平="0.71" 自律水平="0.83" 建议规模="49.87" 浏览禀赋="3.90" 格局="pattern-2" 影响器="affectorID-7"
+                           决策器="deciderID-1" 执行器="executorID-3" 监控器="monitorID-6" 联接器="connectorID-6"/>
+            <primitiveInfo 原子型成员ID="memberID-86" 成员模型="MetaModelID - 6" 信息接收禀赋="18.16" 信息存储禀赋="306.91"
+                           个人自信水平="0.73" 自律水平="0.84" 建议规模="50.49" 浏览禀赋="3.22" 格局="pattern-1" 影响器="affectorID-12"
+                           决策器="deciderID-12" 执行器="executorID-6" 监控器="monitorID-19" 联接器="connectorID-19"/>
+            <primitiveInfo 原子型成员ID="memberID-87" 成员模型="MetaModelID - 6" 信息接收禀赋="13.69" 信息存储禀赋="291.94"
+                           个人自信水平="0.64" 自律水平="0.85" 建议规模="49.29" 浏览禀赋="3.78" 格局="pattern-2" 影响器="affectorID-4"
+                           决策器="deciderID-8" 执行器="executorID-2" 监控器="monitorID-15" 联接器="connectorID-15"/>
+            <primitiveInfo 原子型成员ID="memberID-88" 成员模型="MetaModelID - 6" 信息接收禀赋="18.64" 信息存储禀赋="292.14"
+                           个人自信水平="0.64" 自律水平="0.78" 建议规模="48.78" 浏览禀赋="3.99" 格局="pattern-1" 影响器="affectorID-18"
+                           决策器="deciderID-15" 执行器="executorID-0" 监控器="monitorID-8" 联接器="connectorID-8"/>
+            <primitiveInfo 原子型成员ID="memberID-89" 成员模型="MetaModelID - 6" 信息接收禀赋="19.21" 信息存储禀赋="303.79"
+                           个人自信水平="0.64" 自律水平="0.73" 建议规模="48.55" 浏览禀赋="3.91" 格局="pattern-2" 影响器="affectorID-4"
+                           决策器="deciderID-7" 执行器="executorID-13" 监控器="monitorID-11" 联接器="connectorID-11"/>
+            <primitiveInfo 原子型成员ID="memberID-90" 成员模型="MetaModelID - 6" 信息接收禀赋="19.83" 信息存储禀赋="305.79"
+                           个人自信水平="0.77" 自律水平="0.79" 建议规模="48.56" 浏览禀赋="3.76" 格局="pattern-3" 影响器="affectorID-2"
+                           决策器="deciderID-4" 执行器="executorID-14" 监控器="monitorID-18" 联接器="connectorID-18"/>
+            <primitiveInfo 原子型成员ID="memberID-91" 成员模型="MetaModelID - 6" 信息接收禀赋="27.09" 信息存储禀赋="299.07"
+                           个人自信水平="0.71" 自律水平="0.82" 建议规模="54.18" 浏览禀赋="4.11" 格局="pattern-3" 影响器="affectorID-7"
+                           决策器="deciderID-16" 执行器="executorID-9" 监控器="monitorID-8" 联接器="connectorID-8"/>
+            <primitiveInfo 原子型成员ID="memberID-92" 成员模型="MetaModelID - 6" 信息接收禀赋="18.22" 信息存储禀赋="315.77"
+                           个人自信水平="0.85" 自律水平="0.82" 建议规模="54.38" 浏览禀赋="4.31" 格局="pattern-2" 影响器="affectorID-0"
+                           决策器="deciderID-9" 执行器="executorID-0" 监控器="monitorID-9" 联接器="connectorID-9"/>
+            <primitiveInfo 原子型成员ID="memberID-93" 成员模型="MetaModelID - 6" 信息接收禀赋="22.69" 信息存储禀赋="300.65"
+                           个人自信水平="0.65" 自律水平="0.77" 建议规模="50.48" 浏览禀赋="3.86" 格局="pattern-3" 影响器="affectorID-6"
+                           决策器="deciderID-15" 执行器="executorID-18" 监控器="monitorID-4" 联接器="connectorID-4"/>
+            <primitiveInfo 原子型成员ID="memberID-94" 成员模型="MetaModelID - 6" 信息接收禀赋="13.07" 信息存储禀赋="294.97"
+                           个人自信水平="0.77" 自律水平="0.80" 建议规模="52.93" 浏览禀赋="4.61" 格局="pattern-2" 影响器="affectorID-2"
+                           决策器="deciderID-7" 执行器="executorID-15" 监控器="monitorID-18" 联接器="connectorID-18"/>
+            <primitiveInfo 原子型成员ID="memberID-95" 成员模型="MetaModelID - 6" 信息接收禀赋="16.51" 信息存储禀赋="300.92"
+                           个人自信水平="0.76" 自律水平="0.87" 建议规模="51.12" 浏览禀赋="4.17" 格局="pattern-1" 影响器="affectorID-10"
+                           决策器="deciderID-18" 执行器="executorID-18" 监控器="monitorID-4" 联接器="connectorID-4"/>
+            <primitiveInfo 原子型成员ID="memberID-96" 成员模型="MetaModelID - 6" 信息接收禀赋="19.43" 信息存储禀赋="295.08"
+                           个人自信水平="0.54" 自律水平="0.75" 建议规模="41.71" 浏览禀赋="3.63" 格局="pattern-2" 影响器="affectorID-17"
+                           决策器="deciderID-10" 执行器="executorID-16" 监控器="monitorID-14" 联接器="connectorID-14"/>
+            <primitiveInfo 原子型成员ID="memberID-97" 成员模型="MetaModelID - 6" 信息接收禀赋="16.51" 信息存储禀赋="303.61"
+                           个人自信水平="0.75" 自律水平="0.90" 建议规模="52.62" 浏览禀赋="3.87" 格局="pattern-1" 影响器="affectorID-10"
+                           决策器="deciderID-9" 执行器="executorID-19" 监控器="monitorID-0" 联接器="connectorID-0"/>
+            <primitiveInfo 原子型成员ID="memberID-98" 成员模型="MetaModelID - 6" 信息接收禀赋="24.11" 信息存储禀赋="303.10"
+                           个人自信水平="0.76" 自律水平="0.70" 建议规模="60.70" 浏览禀赋="4.57" 格局="pattern-3" 影响器="affectorID-7"
+                           决策器="deciderID-4" 执行器="executorID-17" 监控器="monitorID-7" 联接器="connectorID-7"/>
+            <primitiveInfo 原子型成员ID="memberID-99" 成员模型="MetaModelID - 6" 信息接收禀赋="17.61" 信息存储禀赋="311.36"
+                           个人自信水平="0.69" 自律水平="0.73" 建议规模="48.72" 浏览禀赋="3.88" 格局="pattern-1" 影响器="affectorID-11"
+                           决策器="deciderID-4" 执行器="executorID-8" 监控器="monitorID-11" 联接器="connectorID-11"/>
+        </primitiveInfos>
+    </primitives>
+    <vactors>
+        <areaInfos>
+            <areaInfo 领域名称="计算机" 领域ID="areaID-1"/>
+            <areaInfo 领域名称="java" 领域ID="areaID-2"/>
+            <areaInfo 领域名称="Python" 领域ID="areaID-3"/>
+            <areaInfo 领域名称="c#" 领域ID="areaID-4"/>
+        </areaInfos>
+        <preferenceInfos>
+            <preferenceInfo 偏好ID="preferenceID0" 所属领域ID="areaID-1" 偏好大小="0.41" 偏好方向="28-165"/>
+            <preferenceInfo 偏好ID="preferenceID1" 所属领域ID="areaID-2" 偏好大小="0.48" 偏好方向="82-263"/>
+            <preferenceInfo 偏好ID="preferenceID2" 所属领域ID="areaID-1" 偏好大小="0.32" 偏好方向="208-257"/>
+            <preferenceInfo 偏好ID="preferenceID3" 所属领域ID="areaID-3" 偏好大小="0.47" 偏好方向="157-165"/>
+            <preferenceInfo 偏好ID="preferenceID4" 所属领域ID="areaID-3" 偏好大小="0.56" 偏好方向="237-326"/>
+            <preferenceInfo 偏好ID="preferenceID5" 所属领域ID="areaID-2" 偏好大小="0.47" 偏好方向="272-339"/>
+            <preferenceInfo 偏好ID="preferenceID6" 所属领域ID="areaID-2" 偏好大小="0.41" 偏好方向="331-354"/>
+            <preferenceInfo 偏好ID="preferenceID7" 所属领域ID="areaID-1" 偏好大小="0.54" 偏好方向="22-217"/>
+            <preferenceInfo 偏好ID="preferenceID8" 所属领域ID="areaID-3" 偏好大小="0.60" 偏好方向="129-355"/>
+            <preferenceInfo 偏好ID="preferenceID9" 所属领域ID="areaID-3" 偏好大小="0.59" 偏好方向="297-310"/>
+            <preferenceInfo 偏好ID="preferenceID10" 所属领域ID="areaID-4" 偏好大小="0.48" 偏好方向="299-314"/>
+            <preferenceInfo 偏好ID="preferenceID11" 所属领域ID="areaID-4" 偏好大小="0.60" 偏好方向="102-269"/>
+            <preferenceInfo 偏好ID="preferenceID12" 所属领域ID="areaID-4" 偏好大小="0.70" 偏好方向="7-198"/>
+            <preferenceInfo 偏好ID="preferenceID13" 所属领域ID="areaID-4" 偏好大小="0.50" 偏好方向="40-64"/>
+            <preferenceInfo 偏好ID="preferenceID14" 所属领域ID="areaID-1" 偏好大小="0.42" 偏好方向="321-345"/>
+            <preferenceInfo 偏好ID="preferenceID15" 所属领域ID="areaID-3" 偏好大小="0.50" 偏好方向="50-271"/>
+            <preferenceInfo 偏好ID="preferenceID16" 所属领域ID="areaID-2" 偏好大小="0.53" 偏好方向="224-227"/>
+            <preferenceInfo 偏好ID="preferenceID17" 所属领域ID="areaID-4" 偏好大小="0.65" 偏好方向="174-281"/>
+            <preferenceInfo 偏好ID="preferenceID18" 所属领域ID="areaID-4" 偏好大小="0.54" 偏好方向="248-267"/>
+            <preferenceInfo 偏好ID="preferenceID19" 所属领域ID="areaID-1" 偏好大小="0.46" 偏好方向="25-204"/>
+        </preferenceInfos>
+        <messageInfos>
+            <messageInfo 信息ID="messageID0" 所属领域ID="areaID-4" 信息大小="0.37" 信息方向="318-350"/>
+            <messageInfo 信息ID="messageID1" 所属领域ID="areaID-4" 信息大小="0.47" 信息方向="171-255"/>
+            <messageInfo 信息ID="messageID2" 所属领域ID="areaID-2" 信息大小="0.50" 信息方向="258-316"/>
+            <messageInfo 信息ID="messageID3" 所属领域ID="areaID-2" 信息大小="0.52" 信息方向="271-356"/>
+            <messageInfo 信息ID="messageID4" 所属领域ID="areaID-3" 信息大小="0.44" 信息方向="81-150"/>
+            <messageInfo 信息ID="messageID5" 所属领域ID="areaID-3" 信息大小="0.41" 信息方向="21-354"/>
+            <messageInfo 信息ID="messageID6" 所属领域ID="areaID-4" 信息大小="0.35" 信息方向="45-154"/>
+            <messageInfo 信息ID="messageID7" 所属领域ID="areaID-4" 信息大小="0.24" 信息方向="349-353"/>
+            <messageInfo 信息ID="messageID8" 所属领域ID="areaID-1" 信息大小="0.51" 信息方向="64-159"/>
+            <messageInfo 信息ID="messageID9" 所属领域ID="areaID-1" 信息大小="0.50" 信息方向="195-259"/>
+            <messageInfo 信息ID="messageID10" 所属领域ID="areaID-1" 信息大小="0.34" 信息方向="93-117"/>
+            <messageInfo 信息ID="messageID11" 所属领域ID="areaID-4" 信息大小="0.38" 信息方向="113-316"/>
+            <messageInfo 信息ID="messageID12" 所属领域ID="areaID-1" 信息大小="0.39" 信息方向="144-344"/>
+            <messageInfo 信息ID="messageID13" 所属领域ID="areaID-2" 信息大小="0.43" 信息方向="76-231"/>
+            <messageInfo 信息ID="messageID14" 所属领域ID="areaID-4" 信息大小="0.56" 信息方向="55-171"/>
+            <messageInfo 信息ID="messageID15" 所属领域ID="areaID-2" 信息大小="0.44" 信息方向="183-248"/>
+            <messageInfo 信息ID="messageID16" 所属领域ID="areaID-1" 信息大小="0.44" 信息方向="249-295"/>
+            <messageInfo 信息ID="messageID17" 所属领域ID="areaID-2" 信息大小="0.33" 信息方向="258-330"/>
+            <messageInfo 信息ID="messageID18" 所属领域ID="areaID-3" 信息大小="0.44" 信息方向="204-268"/>
+            <messageInfo 信息ID="messageID19" 所属领域ID="areaID-2" 信息大小="0.40" 信息方向="119-306"/>
+            <messageInfo 信息ID="messageID20" 所属领域ID="areaID-2" 信息大小="0.30" 信息方向="256-300"/>
+            <messageInfo 信息ID="messageID21" 所属领域ID="areaID-1" 信息大小="0.36" 信息方向="309-355"/>
+            <messageInfo 信息ID="messageID22" 所属领域ID="areaID-2" 信息大小="0.41" 信息方向="275-338"/>
+            <messageInfo 信息ID="messageID23" 所属领域ID="areaID-4" 信息大小="0.33" 信息方向="272-317"/>
+            <messageInfo 信息ID="messageID24" 所属领域ID="areaID-2" 信息大小="0.41" 信息方向="142-184"/>
+            <messageInfo 信息ID="messageID25" 所属领域ID="areaID-4" 信息大小="0.34" 信息方向="122-349"/>
+            <messageInfo 信息ID="messageID26" 所属领域ID="areaID-1" 信息大小="0.44" 信息方向="284-297"/>
+            <messageInfo 信息ID="messageID27" 所属领域ID="areaID-3" 信息大小="0.45" 信息方向="16-290"/>
+            <messageInfo 信息ID="messageID28" 所属领域ID="areaID-1" 信息大小="0.23" 信息方向="163-292"/>
+            <messageInfo 信息ID="messageID29" 所属领域ID="areaID-2" 信息大小="0.40" 信息方向="13-287"/>
+            <messageInfo 信息ID="messageID30" 所属领域ID="areaID-3" 信息大小="0.31" 信息方向="128-177"/>
+            <messageInfo 信息ID="messageID31" 所属领域ID="areaID-2" 信息大小="0.35" 信息方向="289-349"/>
+            <messageInfo 信息ID="messageID32" 所属领域ID="areaID-3" 信息大小="0.20" 信息方向="262-330"/>
+            <messageInfo 信息ID="messageID33" 所属领域ID="areaID-2" 信息大小="0.25" 信息方向="103-285"/>
+            <messageInfo 信息ID="messageID34" 所属领域ID="areaID-3" 信息大小="0.34" 信息方向="224-260"/>
+            <messageInfo 信息ID="messageID35" 所属领域ID="areaID-3" 信息大小="0.44" 信息方向="286-343"/>
+            <messageInfo 信息ID="messageID36" 所属领域ID="areaID-3" 信息大小="0.49" 信息方向="355-359"/>
+            <messageInfo 信息ID="messageID37" 所属领域ID="areaID-2" 信息大小="0.38" 信息方向="241-340"/>
+            <messageInfo 信息ID="messageID38" 所属领域ID="areaID-2" 信息大小="0.32" 信息方向="81-192"/>
+            <messageInfo 信息ID="messageID39" 所属领域ID="areaID-4" 信息大小="0.43" 信息方向="20-244"/>
+            <messageInfo 信息ID="messageID40" 所属领域ID="areaID-3" 信息大小="0.44" 信息方向="60-269"/>
+            <messageInfo 信息ID="messageID41" 所属领域ID="areaID-2" 信息大小="0.22" 信息方向="54-348"/>
+            <messageInfo 信息ID="messageID42" 所属领域ID="areaID-4" 信息大小="0.23" 信息方向="13-207"/>
+            <messageInfo 信息ID="messageID43" 所属领域ID="areaID-4" 信息大小="0.47" 信息方向="205-288"/>
+            <messageInfo 信息ID="messageID44" 所属领域ID="areaID-4" 信息大小="0.27" 信息方向="132-341"/>
+            <messageInfo 信息ID="messageID45" 所属领域ID="areaID-3" 信息大小="0.30" 信息方向="90-337"/>
+            <messageInfo 信息ID="messageID46" 所属领域ID="areaID-4" 信息大小="0.35" 信息方向="133-256"/>
+            <messageInfo 信息ID="messageID47" 所属领域ID="areaID-3" 信息大小="0.46" 信息方向="150-256"/>
+            <messageInfo 信息ID="messageID48" 所属领域ID="areaID-2" 信息大小="0.32" 信息方向="220-223"/>
+            <messageInfo 信息ID="messageID49" 所属领域ID="areaID-1" 信息大小="0.45" 信息方向="67-89"/>
+        </messageInfos>
+    </vactors>
+    <affectors>
+        <affector 影响器数量="20" 连接成员数量期望="20" 连接成员数量方差="3" 平均影响强度期望="0.6" 平均影响强度方差="0.01"
+                  外部函数路径="20"/>
+        <affectorInfos>
+            <affectorInfo 影响器ID="affectorID-0" 连接成员数量="20" 平均影响强度="0.63"/>
+            <affectorInfo 影响器ID="affectorID-1" 连接成员数量="20" 平均影响强度="0.39"/>
+            <affectorInfo 影响器ID="affectorID-2" 连接成员数量="18" 平均影响强度="0.51"/>
+            <affectorInfo 影响器ID="affectorID-3" 连接成员数量="18" 平均影响强度="0.63"/>
+            <affectorInfo 影响器ID="affectorID-4" 连接成员数量="16" 平均影响强度="0.52"/>
+            <affectorInfo 影响器ID="affectorID-5" 连接成员数量="22" 平均影响强度="0.43"/>
+            <affectorInfo 影响器ID="affectorID-6" 连接成员数量="24" 平均影响强度="0.59"/>
+            <affectorInfo 影响器ID="affectorID-7" 连接成员数量="21" 平均影响强度="0.47"/>
+            <affectorInfo 影响器ID="affectorID-8" 连接成员数量="19" 平均影响强度="0.55"/>
+            <affectorInfo 影响器ID="affectorID-9" 连接成员数量="19" 平均影响强度="0.62"/>
+            <affectorInfo 影响器ID="affectorID-10" 连接成员数量="17" 平均影响强度="0.50"/>
+            <affectorInfo 影响器ID="affectorID-11" 连接成员数量="18" 平均影响强度="0.62"/>
+            <affectorInfo 影响器ID="affectorID-12" 连接成员数量="18" 平均影响强度="0.58"/>
+            <affectorInfo 影响器ID="affectorID-13" 连接成员数量="20" 平均影响强度="0.66"/>
+            <affectorInfo 影响器ID="affectorID-14" 连接成员数量="20" 平均影响强度="0.65"/>
+            <affectorInfo 影响器ID="affectorID-15" 连接成员数量="21" 平均影响强度="0.72"/>
+            <affectorInfo 影响器ID="affectorID-16" 连接成员数量="19" 平均影响强度="0.42"/>
+            <affectorInfo 影响器ID="affectorID-17" 连接成员数量="20" 平均影响强度="0.78"/>
+            <affectorInfo 影响器ID="affectorID-18" 连接成员数量="20" 平均影响强度="0.31"/>
+            <affectorInfo 影响器ID="affectorID-19" 连接成员数量="18" 平均影响强度="0.78"/>
+        </affectorInfos>
+    </affectors>
+    <deciders>
+        <decider 决策器数量="0.5" 转发阈值期望="0.8" 转发阈值方差="0.04" 改变连接结构阈值期望="0.2" 改变连接结构阈值方差="0.02" 群发阈值期望="0.6" 群发阈值方差="0.03"
+                 减弱信息强度阈值期望="0.3" 减弱信息强度阈值方差="0.01" 指示器期望="0.05" 指示器方差="30"/>
+        <deciderInfos>
+            <deciderInfo 决策器ID="deciderID-0" 指示器="0.49" 转发阈值="0.59" 群发阈值="0.52" 改变连接结构阈值="0.35" 减弱信息强度阈值="0.32"
+                         偏好矢量="preferenceID2" 信息矢量="messageID21"/>
+            <deciderInfo 决策器ID="deciderID-1" 指示器="0.31" 转发阈值="0.65" 群发阈值="0.67" 改变连接结构阈值="0.14" 减弱信息强度阈值="0.40"
+                         偏好矢量="preferenceID3" 信息矢量="messageID19"/>
+            <deciderInfo 决策器ID="deciderID-2" 指示器="0.45" 转发阈值="0.91" 群发阈值="0.89" 改变连接结构阈值="0.11" 减弱信息强度阈值="0.18"
+                         偏好矢量="preferenceID7" 信息矢量="messageID11"/>
+            <deciderInfo 决策器ID="deciderID-3" 指示器="0.55" 转发阈值="0.78" 群发阈值="0.62" 改变连接结构阈值="0.12" 减弱信息强度阈值="0.23"
+                         偏好矢量="preferenceID14" 信息矢量="messageID23"/>
+            <deciderInfo 决策器ID="deciderID-4" 指示器="0.91" 转发阈值="0.79" 群发阈值="0.35" 改变连接结构阈值="0.56" 减弱信息强度阈值="0.39"
+                         偏好矢量="preferenceID7" 信息矢量="messageID30"/>
+            <deciderInfo 决策器ID="deciderID-5" 指示器="0.73" 转发阈值="0.83" 群发阈值="0.71" 改变连接结构阈值="0.12" 减弱信息强度阈值="0.41"
+                         偏好矢量="preferenceID0" 信息矢量="messageID30"/>
+            <deciderInfo 决策器ID="deciderID-6" 指示器="0.57" 转发阈值="0.94" 群发阈值="0.59" 改变连接结构阈值="0.18" 减弱信息强度阈值="0.28"
+                         偏好矢量="preferenceID14" 信息矢量="messageID23"/>
+            <deciderInfo 决策器ID="deciderID-7" 指示器="0.78" 转发阈值="0.86" 群发阈值="0.41" 改变连接结构阈值="0.36" 减弱信息强度阈值="0.04"
+                         偏好矢量="preferenceID7" 信息矢量="messageID7"/>
+            <deciderInfo 决策器ID="deciderID-8" 指示器="0.41" 转发阈值="0.84" 群发阈值="0.48" 改变连接结构阈值="0.14" 减弱信息强度阈值="0.39"
+                         偏好矢量="preferenceID9" 信息矢量="messageID24"/>
+            <deciderInfo 决策器ID="deciderID-9" 指示器="0.29" 转发阈值="0.82" 群发阈值="0.51" 改变连接结构阈值="0.36" 减弱信息强度阈值="0.43"
+                         偏好矢量="preferenceID18" 信息矢量="messageID33"/>
+            <deciderInfo 决策器ID="deciderID-10" 指示器="0.47" 转发阈值="0.89" 群发阈值="0.91" 改变连接结构阈值="0.25" 减弱信息强度阈值="0.23"
+                         偏好矢量="preferenceID19" 信息矢量="messageID20"/>
+            <deciderInfo 决策器ID="deciderID-11" 指示器="0.37" 转发阈值="0.76" 群发阈值="0.40" 改变连接结构阈值="0.10" 减弱信息强度阈值="0.21"
+                         偏好矢量="preferenceID0" 信息矢量="messageID27"/>
+            <deciderInfo 决策器ID="deciderID-12" 指示器="0.76" 转发阈值="0.74" 群发阈值="0.67" 改变连接结构阈值="0.16" 减弱信息强度阈值="0.33"
+                         偏好矢量="preferenceID16" 信息矢量="messageID34"/>
+            <deciderInfo 决策器ID="deciderID-13" 指示器="0.37" 转发阈值="0.89" 群发阈值="0.56" 改变连接结构阈值="0.31" 减弱信息强度阈值="0.27"
+                         偏好矢量="preferenceID7" 信息矢量="messageID13"/>
+            <deciderInfo 决策器ID="deciderID-14" 指示器="0.14" 转发阈值="0.88" 群发阈值="0.61" 改变连接结构阈值="0.20" 减弱信息强度阈值="0.41"
+                         偏好矢量="preferenceID14" 信息矢量="messageID32"/>
+            <deciderInfo 决策器ID="deciderID-15" 指示器="0.51" 转发阈值="0.79" 群发阈值="0.55" 改变连接结构阈值="0.10" 减弱信息强度阈值="0.42"
+                         偏好矢量="preferenceID1" 信息矢量="messageID2"/>
+            <deciderInfo 决策器ID="deciderID-16" 指示器="0.90" 转发阈值="0.92" 群发阈值="0.90" 改变连接结构阈值="0.17" 减弱信息强度阈值="0.25"
+                         偏好矢量="preferenceID12" 信息矢量="messageID12"/>
+            <deciderInfo 决策器ID="deciderID-17" 指示器="0.58" 转发阈值="0.94" 群发阈值="0.73" 改变连接结构阈值="0.39" 减弱信息强度阈值="0.24"
+                         偏好矢量="preferenceID16" 信息矢量="messageID7"/>
+            <deciderInfo 决策器ID="deciderID-18" 指示器="0.52" 转发阈值="0.87" 群发阈值="0.65" 改变连接结构阈值="0.37" 减弱信息强度阈值="0.27"
+                         偏好矢量="preferenceID15" 信息矢量="messageID22"/>
+            <deciderInfo 决策器ID="deciderID-19" 指示器="0.53" 转发阈值="0.98" 群发阈值="0.47" 改变连接结构阈值="0.37" 减弱信息强度阈值="0.31"
+                         偏好矢量="preferenceID19" 信息矢量="messageID4"/>
+            <deciderInfo 决策器ID="deciderID-20" 指示器="0.38" 转发阈值="0.59" 群发阈值="0.59" 改变连接结构阈值="0.15" 减弱信息强度阈值="0.29"
+                         偏好矢量="preferenceID15" 信息矢量="messageID10"/>
+            <deciderInfo 决策器ID="deciderID-21" 指示器="0.43" 转发阈值="0.93" 群发阈值="0.96" 改变连接结构阈值="0.10" 减弱信息强度阈值="0.23"
+                         偏好矢量="preferenceID18" 信息矢量="messageID27"/>
+            <deciderInfo 决策器ID="deciderID-22" 指示器="0.44" 转发阈值="0.99" 群发阈值="0.47" 改变连接结构阈值="0.04" 减弱信息强度阈值="0.37"
+                         偏好矢量="preferenceID8" 信息矢量="messageID25"/>
+            <deciderInfo 决策器ID="deciderID-23" 指示器="0.59" 转发阈值="0.65" 群发阈值="0.75" 改变连接结构阈值="0.26" 减弱信息强度阈值="0.25"
+                         偏好矢量="preferenceID7" 信息矢量="messageID0"/>
+            <deciderInfo 决策器ID="deciderID-24" 指示器="0.61" 转发阈值="0.65" 群发阈值="0.50" 改变连接结构阈值="0.02" 减弱信息强度阈值="0.28"
+                         偏好矢量="preferenceID16" 信息矢量="messageID13"/>
+            <deciderInfo 决策器ID="deciderID-25" 指示器="0.46" 转发阈值="0.77" 群发阈值="0.42" 改变连接结构阈值="0.04" 减弱信息强度阈值="0.23"
+                         偏好矢量="preferenceID1" 信息矢量="messageID11"/>
+            <deciderInfo 决策器ID="deciderID-26" 指示器="0.55" 转发阈值="0.84" 群发阈值="0.47" 改变连接结构阈值="0.21" 减弱信息强度阈值="0.34"
+                         偏好矢量="preferenceID6" 信息矢量="messageID5"/>
+            <deciderInfo 决策器ID="deciderID-27" 指示器="0.35" 转发阈值="0.80" 群发阈值="0.76" 改变连接结构阈值="0.17" 减弱信息强度阈值="0.31"
+                         偏好矢量="preferenceID4" 信息矢量="messageID24"/>
+            <deciderInfo 决策器ID="deciderID-28" 指示器="0.78" 转发阈值="0.87" 群发阈值="0.71" 改变连接结构阈值="0.03" 减弱信息强度阈值="0.35"
+                         偏好矢量="preferenceID10" 信息矢量="messageID20"/>
+            <deciderInfo 决策器ID="deciderID-29" 指示器="0.50" 转发阈值="0.81" 群发阈值="0.40" 改变连接结构阈值="0.20" 减弱信息强度阈值="0.29"
+                         偏好矢量="preferenceID13" 信息矢量="messageID20"/>
+        </deciderInfos>
+    </deciders>
+    <monitors>
+        <monitor 监控器数量="20" 监控强度期望="0.6" 监控强度方差="0.01" 外部函数路径="11"/>
+        <monitorInfos>
+            <monitorInfo 监控器ID="monitorID-0" 监控强度="0.64"/>
+            <monitorInfo 监控器ID="monitorID-1" 监控强度="0.53"/>
+            <monitorInfo 监控器ID="monitorID-2" 监控强度="0.79"/>
+            <monitorInfo 监控器ID="monitorID-3" 监控强度="0.75"/>
+            <monitorInfo 监控器ID="monitorID-4" 监控强度="0.48"/>
+            <monitorInfo 监控器ID="monitorID-5" 监控强度="0.45"/>
+            <monitorInfo 监控器ID="monitorID-6" 监控强度="0.66"/>
+            <monitorInfo 监控器ID="monitorID-7" 监控强度="0.63"/>
+            <monitorInfo 监控器ID="monitorID-8" 监控强度="0.65"/>
+            <monitorInfo 监控器ID="monitorID-9" 监控强度="0.71"/>
+            <monitorInfo 监控器ID="monitorID-10" 监控强度="0.50"/>
+            <monitorInfo 监控器ID="monitorID-11" 监控强度="0.58"/>
+            <monitorInfo 监控器ID="monitorID-12" 监控强度="0.66"/>
+            <monitorInfo 监控器ID="monitorID-13" 监控强度="0.81"/>
+            <monitorInfo 监控器ID="monitorID-14" 监控强度="0.58"/>
+            <monitorInfo 监控器ID="monitorID-15" 监控强度="0.46"/>
+            <monitorInfo 监控器ID="monitorID-16" 监控强度="0.54"/>
+            <monitorInfo 监控器ID="monitorID-17" 监控强度="0.80"/>
+            <monitorInfo 监控器ID="monitorID-18" 监控强度="0.72"/>
+            <monitorInfo 监控器ID="monitorID-19" 监控强度="0.76"/>
+        </monitorInfos>
+        <monitorAreas>
+            <monitorArea 监控领域="c#" 屏蔽范围="289-291"/>
+            <monitorArea 监控领域="Python" 屏蔽范围="205-315"/>
+            <monitorArea 监控领域="java" 屏蔽范围="157-273"/>
+            <monitorArea 监控领域="computer" 屏蔽范围="50-328"/>
+        </monitorAreas>
+    </monitors>
+    <monitorMembers>
+        <monitorMember 监控强度期望="0.7" 监控强度方差="0.01" 监控禀赋期望="5" 监控禀赋方差="0.3"/>
+        <monitorMemberInfos>
+            <monitorMemberInfo 监控者ID="memberID-40" 成员模型="MetaModelID - 4" 监控强度="0.76" 监控禀赋="4.85" 监控领域="areaID-1"
+                               监控范围="224-348"/>
+            <monitorMemberInfo 监控者ID="memberID-41" 成员模型="MetaModelID - 4" 监控强度="0.72" 监控禀赋="5.64" 监控领域="areaID-4"
+                               监控范围="306-350"/>
+            <monitorMemberInfo 监控者ID="memberID-42" 成员模型="MetaModelID - 4" 监控强度="0.66" 监控禀赋="5.24" 监控领域="areaID-4"
+                               监控范围="36-310"/>
+            <monitorMemberInfo 监控者ID="memberID-43" 成员模型="MetaModelID - 4" 监控强度="0.79" 监控禀赋="5.35" 监控领域="areaID-1"
+                               监控范围="152-291"/>
+            <monitorMemberInfo 监控者ID="memberID-44" 成员模型="MetaModelID - 4" 监控强度="0.74" 监控禀赋="4.71" 监控领域="areaID-1"
+                               监控范围="314-337"/>
+            <monitorMemberInfo 监控者ID="memberID-45" 成员模型="MetaModelID - 4" 监控强度="0.79" 监控禀赋="5.85" 监控领域="areaID-1"
+                               监控范围="162-210"/>
+            <monitorMemberInfo 监控者ID="memberID-46" 成员模型="MetaModelID - 4" 监控强度="0.74" 监控禀赋="5.21" 监控领域="areaID-2"
+                               监控范围="275-354"/>
+            <monitorMemberInfo 监控者ID="memberID-47" 成员模型="MetaModelID - 4" 监控强度="0.59" 监控禀赋="6.31" 监控领域="areaID-2"
+                               监控范围="247-284"/>
+            <monitorMemberInfo 监控者ID="memberID-48" 成员模型="MetaModelID - 4" 监控强度="0.65" 监控禀赋="5.49" 监控领域="areaID-4"
+                               监控范围="58-81"/>
+            <monitorMemberInfo 监控者ID="memberID-49" 成员模型="MetaModelID - 4" 监控强度="0.79" 监控禀赋="5.36" 监控领域="areaID-1"
+                               监控范围="287-306"/>
+            <monitorMemberInfo 监控者ID="memberID-50" 成员模型="MetaModelID - 4" 监控强度="0.65" 监控禀赋="4.97" 监控领域="areaID-3"
+                               监控范围="52-238"/>
+            <monitorMemberInfo 监控者ID="memberID-51" 成员模型="MetaModelID - 4" 监控强度="0.59" 监控禀赋="5.21" 监控领域="areaID-4"
+                               监控范围="233-330"/>
+            <monitorMemberInfo 监控者ID="memberID-52" 成员模型="MetaModelID - 4" 监控强度="0.80" 监控禀赋="6.13" 监控领域="areaID-3"
+                               监控范围="37-297"/>
+            <monitorMemberInfo 监控者ID="memberID-53" 成员模型="MetaModelID - 4" 监控强度="0.61" 监控禀赋="4.67" 监控领域="areaID-1"
+                               监控范围="307-310"/>
+            <monitorMemberInfo 监控者ID="memberID-54" 成员模型="MetaModelID - 4" 监控强度="0.66" 监控禀赋="5.18" 监控领域="areaID-2"
+                               监控范围="73-327"/>
+            <monitorMemberInfo 监控者ID="memberID-55" 成员模型="MetaModelID - 4" 监控强度="0.67" 监控禀赋="5.48" 监控领域="areaID-1"
+                               监控范围="243-313"/>
+            <monitorMemberInfo 监控者ID="memberID-56" 成员模型="MetaModelID - 4" 监控强度="0.78" 监控禀赋="5.87" 监控领域="areaID-3"
+                               监控范围="133-226"/>
+            <monitorMemberInfo 监控者ID="memberID-57" 成员模型="MetaModelID - 4" 监控强度="0.67" 监控禀赋="5.53" 监控领域="areaID-4"
+                               监控范围="286-297"/>
+            <monitorMemberInfo 监控者ID="memberID-58" 成员模型="MetaModelID - 4" 监控强度="0.76" 监控禀赋="5.25" 监控领域="areaID-4"
+                               监控范围="316-357"/>
+            <monitorMemberInfo 监控者ID="memberID-59" 成员模型="MetaModelID - 4" 监控强度="0.85" 监控禀赋="5.52" 监控领域="areaID-3"
+                               监控范围="54-265"/>
+            <monitorMemberInfo 监控者ID="memberID-60" 成员模型="MetaModelID - 5" 监控强度="0.69" 监控禀赋="2.15" 监控领域="areaID-3"
+                               监控范围="204-251"/>
+            <monitorMemberInfo 监控者ID="memberID-61" 成员模型="MetaModelID - 5" 监控强度="0.80" 监控禀赋="2.28" 监控领域="areaID-3"
+                               监控范围="197-243"/>
+            <monitorMemberInfo 监控者ID="memberID-62" 成员模型="MetaModelID - 5" 监控强度="0.67" 监控禀赋="2.73" 监控领域="areaID-1"
+                               监控范围="95-155"/>
+            <monitorMemberInfo 监控者ID="memberID-63" 成员模型="MetaModelID - 5" 监控强度="0.70" 监控禀赋="2.62" 监控领域="areaID-3"
+                               监控范围="208-261"/>
+            <monitorMemberInfo 监控者ID="memberID-64" 成员模型="MetaModelID - 5" 监控强度="0.68" 监控禀赋="2.25" 监控领域="areaID-2"
+                               监控范围="134-339"/>
+            <monitorMemberInfo 监控者ID="memberID-65" 成员模型="MetaModelID - 5" 监控强度="0.75" 监控禀赋="2.86" 监控领域="areaID-4"
+                               监控范围="340-350"/>
+            <monitorMemberInfo 监控者ID="memberID-66" 成员模型="MetaModelID - 5" 监控强度="0.81" 监控禀赋="2.01" 监控领域="areaID-2"
+                               监控范围="231-294"/>
+            <monitorMemberInfo 监控者ID="memberID-67" 成员模型="MetaModelID - 5" 监控强度="0.71" 监控禀赋="2.73" 监控领域="areaID-2"
+                               监控范围="185-260"/>
+            <monitorMemberInfo 监控者ID="memberID-68" 成员模型="MetaModelID - 5" 监控强度="0.74" 监控禀赋="2.65" 监控领域="areaID-4"
+                               监控范围="259-294"/>
+            <monitorMemberInfo 监控者ID="memberID-69" 成员模型="MetaModelID - 5" 监控强度="0.71" 监控禀赋="2.25" 监控领域="areaID-2"
+                               监控范围="25-282"/>
+            <monitorMemberInfo 监控者ID="memberID-70" 成员模型="MetaModelID - 5" 监控强度="0.81" 监控禀赋="2.43" 监控领域="areaID-4"
+                               监控范围="330-358"/>
+            <monitorMemberInfo 监控者ID="memberID-71" 成员模型="MetaModelID - 5" 监控强度="0.74" 监控禀赋="2.29" 监控领域="areaID-1"
+                               监控范围="122-191"/>
+            <monitorMemberInfo 监控者ID="memberID-72" 成员模型="MetaModelID - 5" 监控强度="0.78" 监控禀赋="2.14" 监控领域="areaID-4"
+                               监控范围="263-326"/>
+            <monitorMemberInfo 监控者ID="memberID-73" 成员模型="MetaModelID - 5" 监控强度="0.81" 监控禀赋="2.49" 监控领域="areaID-3"
+                               监控范围="34-169"/>
+            <monitorMemberInfo 监控者ID="memberID-74" 成员模型="MetaModelID - 5" 监控强度="0.65" 监控禀赋="2.12" 监控领域="areaID-2"
+                               监控范围="354-358"/>
+            <monitorMemberInfo 监控者ID="memberID-75" 成员模型="MetaModelID - 5" 监控强度="0.72" 监控禀赋="2.62" 监控领域="areaID-1"
+                               监控范围="152-240"/>
+            <monitorMemberInfo 监控者ID="memberID-76" 成员模型="MetaModelID - 5" 监控强度="0.59" 监控禀赋="2.32" 监控领域="areaID-1"
+                               监控范围="342-358"/>
+            <monitorMemberInfo 监控者ID="memberID-77" 成员模型="MetaModelID - 5" 监控强度="0.61" 监控禀赋="2.91" 监控领域="areaID-2"
+                               监控范围="54-210"/>
+            <monitorMemberInfo 监控者ID="memberID-78" 成员模型="MetaModelID - 5" 监控强度="0.85" 监控禀赋="2.41" 监控领域="areaID-1"
+                               监控范围="92-106"/>
+            <monitorMemberInfo 监控者ID="memberID-79" 成员模型="MetaModelID - 5" 监控强度="0.79" 监控禀赋="2.42" 监控领域="areaID-4"
+                               监控范围="262-343"/>
+            <monitorMemberInfo 监控者ID="memberID-80" 成员模型="MetaModelID - 6" 监控强度="0.58" 监控禀赋="2.30" 监控领域="areaID-4"
+                               监控范围="215-244"/>
+            <monitorMemberInfo 监控者ID="memberID-81" 成员模型="MetaModelID - 6" 监控强度="0.59" 监控禀赋="2.83" 监控领域="areaID-2"
+                               监控范围="323-347"/>
+            <monitorMemberInfo 监控者ID="memberID-82" 成员模型="MetaModelID - 6" 监控强度="0.73" 监控禀赋="2.38" 监控领域="areaID-2"
+                               监控范围="114-123"/>
+            <monitorMemberInfo 监控者ID="memberID-83" 成员模型="MetaModelID - 6" 监控强度="0.68" 监控禀赋="2.66" 监控领域="areaID-3"
+                               监控范围="41-110"/>
+            <monitorMemberInfo 监控者ID="memberID-84" 成员模型="MetaModelID - 6" 监控强度="0.72" 监控禀赋="2.39" 监控领域="areaID-4"
+                               监控范围="298-332"/>
+            <monitorMemberInfo 监控者ID="memberID-85" 成员模型="MetaModelID - 6" 监控强度="0.71" 监控禀赋="2.17" 监控领域="areaID-1"
+                               监控范围="37-208"/>
+            <monitorMemberInfo 监控者ID="memberID-86" 成员模型="MetaModelID - 6" 监控强度="0.66" 监控禀赋="2.54" 监控领域="areaID-3"
+                               监控范围="283-306"/>
+            <monitorMemberInfo 监控者ID="memberID-87" 成员模型="MetaModelID - 6" 监控强度="0.67" 监控禀赋="2.27" 监控领域="areaID-4"
+                               监控范围="84-116"/>
+            <monitorMemberInfo 监控者ID="memberID-88" 成员模型="MetaModelID - 6" 监控强度="0.56" 监控禀赋="2.46" 监控领域="areaID-4"
+                               监控范围="137-308"/>
+            <monitorMemberInfo 监控者ID="memberID-89" 成员模型="MetaModelID - 6" 监控强度="0.71" 监控禀赋="2.81" 监控领域="areaID-2"
+                               监控范围="326-329"/>
+            <monitorMemberInfo 监控者ID="memberID-90" 成员模型="MetaModelID - 6" 监控强度="0.85" 监控禀赋="2.45" 监控领域="areaID-1"
+                               监控范围="318-319"/>
+            <monitorMemberInfo 监控者ID="memberID-91" 成员模型="MetaModelID - 6" 监控强度="0.69" 监控禀赋="2.44" 监控领域="areaID-4"
+                               监控范围="242-300"/>
+            <monitorMemberInfo 监控者ID="memberID-92" 成员模型="MetaModelID - 6" 监控强度="0.80" 监控禀赋="2.09" 监控领域="areaID-1"
+                               监控范围="329-332"/>
+            <monitorMemberInfo 监控者ID="memberID-93" 成员模型="MetaModelID - 6" 监控强度="0.69" 监控禀赋="2.59" 监控领域="areaID-1"
+                               监控范围="240-253"/>
+            <monitorMemberInfo 监控者ID="memberID-94" 成员模型="MetaModelID - 6" 监控强度="0.85" 监控禀赋="2.51" 监控领域="areaID-2"
+                               监控范围="218-337"/>
+            <monitorMemberInfo 监控者ID="memberID-95" 成员模型="MetaModelID - 6" 监控强度="0.71" 监控禀赋="2.55" 监控领域="areaID-3"
+                               监控范围="222-266"/>
+            <monitorMemberInfo 监控者ID="memberID-96" 成员模型="MetaModelID - 6" 监控强度="0.84" 监控禀赋="2.25" 监控领域="areaID-4"
+                               监控范围="47-95"/>
+            <monitorMemberInfo 监控者ID="memberID-97" 成员模型="MetaModelID - 6" 监控强度="0.77" 监控禀赋="2.45" 监控领域="areaID-3"
+                               监控范围="83-344"/>
+            <monitorMemberInfo 监控者ID="memberID-98" 成员模型="MetaModelID - 6" 监控强度="0.65" 监控禀赋="2.70" 监控领域="areaID-3"
+                               监控范围="2-133"/>
+            <monitorMemberInfo 监控者ID="memberID-99" 成员模型="MetaModelID - 6" 监控强度="0.78" 监控禀赋="2.39" 监控领域="areaID-1"
+                               监控范围="222-293"/>
+            <monitorMemberInfo 监控者ID="memberID-100" 成员模型="MetaModelID - 7" 监控强度="0.78" 监控禀赋="2.72"
+                               监控领域="areaID-4"
+                               监控范围="340-348"/>
+            <monitorMemberInfo 监控者ID="memberID-101" 成员模型="MetaModelID - 7" 监控强度="0.83" 监控禀赋="2.77"
+                               监控领域="areaID-4"
+                               监控范围="137-188"/>
+            <monitorMemberInfo 监控者ID="memberID-102" 成员模型="MetaModelID - 7" 监控强度="0.71" 监控禀赋="2.93"
+                               监控领域="areaID-1"
+                               监控范围="0-57"/>
+            <monitorMemberInfo 监控者ID="memberID-103" 成员模型="MetaModelID - 7" 监控强度="0.71" 监控禀赋="2.87"
+                               监控领域="areaID-1"
+                               监控范围="307-317"/>
+            <monitorMemberInfo 监控者ID="memberID-104" 成员模型="MetaModelID - 7" 监控强度="0.65" 监控禀赋="3.01"
+                               监控领域="areaID-2"
+                               监控范围="180-202"/>
+            <monitorMemberInfo 监控者ID="memberID-105" 成员模型="MetaModelID - 7" 监控强度="0.60" 监控禀赋="2.17"
+                               监控领域="areaID-1"
+                               监控范围="190-296"/>
+            <monitorMemberInfo 监控者ID="memberID-106" 成员模型="MetaModelID - 7" 监控强度="0.62" 监控禀赋="2.39"
+                               监控领域="areaID-2"
+                               监控范围="42-285"/>
+            <monitorMemberInfo 监控者ID="memberID-107" 成员模型="MetaModelID - 7" 监控强度="0.61" 监控禀赋="2.74"
+                               监控领域="areaID-2"
+                               监控范围="173-318"/>
+            <monitorMemberInfo 监控者ID="memberID-108" 成员模型="MetaModelID - 7" 监控强度="0.62" 监控禀赋="2.60"
+                               监控领域="areaID-4"
+                               监控范围="256-324"/>
+            <monitorMemberInfo 监控者ID="memberID-109" 成员模型="MetaModelID - 7" 监控强度="0.78" 监控禀赋="2.57"
+                               监控领域="areaID-1"
+                               监控范围="108-276"/>
+            <monitorMemberInfo 监控者ID="memberID-110" 成员模型="MetaModelID - 7" 监控强度="0.75" 监控禀赋="2.16"
+                               监控领域="areaID-1"
+                               监控范围="49-143"/>
+            <monitorMemberInfo 监控者ID="memberID-111" 成员模型="MetaModelID - 7" 监控强度="0.68" 监控禀赋="2.24"
+                               监控领域="areaID-3"
+                               监控范围="87-284"/>
+            <monitorMemberInfo 监控者ID="memberID-112" 成员模型="MetaModelID - 7" 监控强度="0.68" 监控禀赋="2.80"
+                               监控领域="areaID-3"
+                               监控范围="157-203"/>
+            <monitorMemberInfo 监控者ID="memberID-113" 成员模型="MetaModelID - 7" 监控强度="0.49" 监控禀赋="2.21"
+                               监控领域="areaID-3"
+                               监控范围="182-292"/>
+            <monitorMemberInfo 监控者ID="memberID-114" 成员模型="MetaModelID - 7" 监控强度="0.75" 监控禀赋="2.47"
+                               监控领域="areaID-1"
+                               监控范围="325-335"/>
+            <monitorMemberInfo 监控者ID="memberID-115" 成员模型="MetaModelID - 7" 监控强度="0.72" 监控禀赋="2.22"
+                               监控领域="areaID-4"
+                               监控范围="29-271"/>
+            <monitorMemberInfo 监控者ID="memberID-116" 成员模型="MetaModelID - 7" 监控强度="0.82" 监控禀赋="2.30"
+                               监控领域="areaID-4"
+                               监控范围="118-233"/>
+            <monitorMemberInfo 监控者ID="memberID-117" 成员模型="MetaModelID - 7" 监控强度="0.84" 监控禀赋="2.43"
+                               监控领域="areaID-3"
+                               监控范围="287-324"/>
+            <monitorMemberInfo 监控者ID="memberID-118" 成员模型="MetaModelID - 7" 监控强度="0.80" 监控禀赋="3.05"
+                               监控领域="areaID-4"
+                               监控范围="157-251"/>
+            <monitorMemberInfo 监控者ID="memberID-119" 成员模型="MetaModelID - 7" 监控强度="0.83" 监控禀赋="2.50"
+                               监控领域="areaID-3"
+                               监控范围="7-242"/>
+        </monitorMemberInfos>
+    </monitorMembers>
+    <executors>
+        <executor 执行器数量="20" 外部函数路径="11" 突变率期望="0.0001" 突变率方差="0.00001" 传播阈值期望="0.6" 传播阈值方差="0.01"/>
+        <executorInfos>
+            <!-- 信息矢量中已有信息强度，为何还有一个信息强度条目？得到的消息是信息强度不要 -->
+            <executorInfo 执行器ID="executorID-0" 突变率="0.000000" 传播阈值="0.72" 偏好行为="静默" 信息矢量="messageID34" 信息强度="0.34"/>
+            <executorInfo 执行器ID="executorID-1" 突变率="0.001291" 传播阈值="0.53" 偏好行为="静默" 信息矢量="messageID38" 信息强度="0.32"/>
+            <executorInfo 执行器ID="executorID-2" 突变率="0.000402" 传播阈值="0.61" 偏好行为="群发" 信息矢量="messageID29" 信息强度="0.40"/>
+            <executorInfo 执行器ID="executorID-3" 突变率="0.000000" 传播阈值="0.47" 偏好行为="减弱信息强度" 信息矢量="messageID34" 信息强度="0.34"/>
+            <executorInfo 执行器ID="executorID-4" 突变率="0.000000" 传播阈值="0.68" 偏好行为="改变连接强度" 信息矢量="messageID11" 信息强度="0.38"/>
+            <executorInfo 执行器ID="executorID-5" 突变率="0.000000" 传播阈值="0.60" 偏好行为="转发" 信息矢量="messageID28" 信息强度="0.23"/>
+            <executorInfo 执行器ID="executorID-6" 突变率="0.000000" 传播阈值="0.72" 偏好行为="减弱信息强度" 信息矢量="messageID9" 信息强度="0.50"/>
+            <executorInfo 执行器ID="executorID-7" 突变率="0.001266" 传播阈值="0.58" 偏好行为="减弱信息强度" 信息矢量="messageID7" 信息强度="0.24"/>
+            <executorInfo 执行器ID="executorID-8" 突变率="0.001063" 传播阈值="0.60" 偏好行为="减弱信息强度" 信息矢量="messageID24" 信息强度="0.41"/>
+            <executorInfo 执行器ID="executorID-9" 突变率="0.001187" 传播阈值="0.63" 偏好行为="转发" 信息矢量="messageID21" 信息强度="0.36"/>
+            <executorInfo 执行器ID="executorID-10" 突变率="0.002864" 传播阈值="0.59" 偏好行为="转发" 信息矢量="messageID25" 信息强度="0.34"/>
+            <executorInfo 执行器ID="executorID-11" 突变率="0.000000" 传播阈值="0.51" 偏好行为="群发" 信息矢量="messageID40" 信息强度="0.44"/>
+            <executorInfo 执行器ID="executorID-12" 突变率="0.000000" 传播阈值="0.59" 偏好行为="群发" 信息矢量="messageID36" 信息强度="0.49"/>
+            <executorInfo 执行器ID="executorID-13" 突变率="0.002863" 传播阈值="0.54" 偏好行为="静默" 信息矢量="messageID44" 信息强度="0.27"/>
+            <executorInfo 执行器ID="executorID-14" 突变率="0.000000" 传播阈值="0.65" 偏好行为="减弱信息强度" 信息矢量="messageID17" 信息强度="0.33"/>
+            <executorInfo 执行器ID="executorID-15" 突变率="0.000536" 传播阈值="0.63" 偏好行为="转发" 信息矢量="messageID38" 信息强度="0.32"/>
+            <executorInfo 执行器ID="executorID-16" 突变率="0.000000" 传播阈值="0.53" 偏好行为="减弱信息强度" 信息矢量="messageID23" 信息强度="0.33"/>
+            <executorInfo 执行器ID="executorID-17" 突变率="0.000000" 传播阈值="0.66" 偏好行为="群发" 信息矢量="messageID4" 信息强度="0.44"/>
+            <executorInfo 执行器ID="executorID-18" 突变率="0.000000" 传播阈值="0.45" 偏好行为="改变连接强度" 信息矢量="messageID42" 信息强度="0.23"/>
+            <executorInfo 执行器ID="executorID-19" 突变率="0.005286" 传播阈值="0.51" 偏好行为="改变连接强度" 信息矢量="messageID5" 信息强度="0.41"/>
+        </executorInfos>
+    </executors>
+    <connectors>
+        <connector 外部函数路径="11" 联接器数量="20" 成员数量期望="20" 成员数量方差="3" 连接强度期望="0.6" 连接强度方差="0.01"/>
+        <connectorInfos>
+            <connectorInfo 联接器ID="connectorID-0" 连接成员数量="22" 平均连接强度="0.76"/>
+            <connectorInfo 联接器ID="connectorID-1" 连接成员数量="17" 平均连接强度="0.61"/>
+            <connectorInfo 联接器ID="connectorID-2" 连接成员数量="24" 平均连接强度="0.57"/>
+            <connectorInfo 联接器ID="connectorID-3" 连接成员数量="18" 平均连接强度="0.58"/>
+            <connectorInfo 联接器ID="connectorID-4" 连接成员数量="21" 平均连接强度="0.63"/>
+            <connectorInfo 联接器ID="connectorID-5" 连接成员数量="17" 平均连接强度="0.62"/>
+            <connectorInfo 联接器ID="connectorID-6" 连接成员数量="20" 平均连接强度="0.70"/>
+            <connectorInfo 联接器ID="connectorID-7" 连接成员数量="20" 平均连接强度="0.64"/>
+            <connectorInfo 联接器ID="connectorID-8" 连接成员数量="18" 平均连接强度="0.40"/>
+            <connectorInfo 联接器ID="connectorID-9" 连接成员数量="17" 平均连接强度="0.77"/>
+            <connectorInfo 联接器ID="connectorID-10" 连接成员数量="17" 平均连接强度="0.39"/>
+            <connectorInfo 联接器ID="connectorID-11" 连接成员数量="21" 平均连接强度="0.68"/>
+            <connectorInfo 联接器ID="connectorID-12" 连接成员数量="22" 平均连接强度="0.65"/>
+            <connectorInfo 联接器ID="connectorID-13" 连接成员数量="20" 平均连接强度="0.69"/>
+            <connectorInfo 联接器ID="connectorID-14" 连接成员数量="19" 平均连接强度="0.61"/>
+            <connectorInfo 联接器ID="connectorID-15" 连接成员数量="19" 平均连接强度="0.69"/>
+            <connectorInfo 联接器ID="connectorID-16" 连接成员数量="19" 平均连接强度="0.64"/>
+            <connectorInfo 联接器ID="connectorID-17" 连接成员数量="21" 平均连接强度="0.62"/>
+            <connectorInfo 联接器ID="connectorID-18" 连接成员数量="19" 平均连接强度="0.55"/>
+            <connectorInfo 联接器ID="connectorID-19" 连接成员数量="18" 平均连接强度="0.69"/>
+        </connectorInfos>
+    </connectors>
+</memberGeneration>

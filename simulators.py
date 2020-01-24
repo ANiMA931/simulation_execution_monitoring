@@ -64,10 +64,10 @@ def one_unit_run_on_pattern(cE_simulator, one_unit):
         # 声明 一个保存外部监督强度的变量
         sum_of_external_monitoring = float(0)
         # 向one_unit的advisor们寻求建议
-        for a in one_unit[1].effector['advisors'].items():
+        for a in one_unit[1].effector['cE_advisors'].items():
             # 建议的结构是一个tuple三元组，第一个是建议者的id，第二个是建议者对该unit的建议强度，第三个是建议
             dec_list.append(
-                (cE_simulator.advisors[a[0]].id, cE_simulator.advisors[a[0]].unitList['units'][one_unit[1].id],
+                (cE_simulator.advisors[a[0]].id, cE_simulator.advisors[a[0]].unitList['cE_units'][one_unit[1].id],
                  cE_simulator.advisors[a[0]].return_suggestion(one_unit[1].now, cE_simulator.ptn)))
         # 然后unit根据自己在格局上的位置用自己的方法make一个决策出来
         dec_list.append(
@@ -75,10 +75,10 @@ def one_unit_run_on_pattern(cE_simulator, one_unit):
         # 从自己的决策与建议者们的建议挑一个要执行的方案
         selected_decision = one_unit[1].select_decision(dec_list, cE_simulator.ptn)
         # 挑出来之后，遍历这个执行方案是不是在与该unit连接的监控者的监控范围内
-        for m in one_unit[1].executor['monitors']:  # 此处的m是monitor的字典
+        for m in one_unit[1].executor['cE_monitors']:  # 此处的m是monitor的字典
             # 当要执行的方案动作是被监控者m监控的，那么就累加它的外部的监督强度
             if selected_decision[0] in cE_simulator.monitors[m['mID']].responsibility:
-                sum_of_external_monitoring += cE_simulator.monitors[m['mID']].unitList['units'][one_unit[1].id]
+                sum_of_external_monitoring += cE_simulator.monitors[m['mID']].unitList['cE_units'][one_unit[1].id]
         # 外部监控权重+自律水平对抗自身的自退化水平以及突变，通过代价计算将要执行的动作
         # 声明一个临时存储当前能有的所有behavior集合
         tmp_b = []
@@ -127,7 +127,7 @@ def one_unit_run_on_pattern(cE_simulator, one_unit):
                 cE_simulator.units[c_u].get_para_message(one_unit[1], result, round))
         # 此处会有一段根据获得信息更改自己与其他单位的连接权重的代码
 
-        # units[c_u].reset_connection()
+        # cE_units[c_u].reset_connection()
 
         # 执行结束之后检查当前unit的状态
         one_unit[1].self_check(cE_simulator.ptn)
@@ -315,9 +315,9 @@ class cE_simulator:
             # 设置标签unit
             units_node = dom.createElement('unit')
             # 设置标签advisors
-            advisors_node = dom.createElement('advisors')
+            advisors_node = dom.createElement('cE_advisors')
             # 设置标签monitors
-            monitors_node = dom.createElement('monitors')
+            monitors_node = dom.createElement('cE_monitors')
             # 设置标签cUnit（connected_unit)
             cunits_node = dom.createElement('cUnits')
             # 给units_node设置ID属性，值为该unit的id
@@ -355,7 +355,7 @@ class cE_simulator:
             advisors_node.setAttribute('scale', str(u[1].effector['scale']))
 
             # 对于每个与该unit连接的建议者
-            for temp_advisor in u[1].effector['advisors'].items():
+            for temp_advisor in u[1].effector['cE_advisors'].items():
                 # 初始化advisor标签
                 advisor_node = dom.createElement('advisor')
                 # 给advisor标签设置属性aID，值为该建议者的id
@@ -367,7 +367,7 @@ class cE_simulator:
             # 给monitors_node设置属性scale，值为该unit连接的监控者的个数
             monitors_node.setAttribute('scale', str(u[1].executor['scale']))
             # 对于每一个与unit相连的监控者
-            for temp_monitor in u[1].executor['monitors']:
+            for temp_monitor in u[1].executor['cE_monitors']:
                 # 初始化monitor标签
                 monitor_node = dom.createElement('monitor')
                 # 给monitor设置属性mID，值为当前监控者的id
@@ -438,12 +438,12 @@ if __name__ == '__main__':
     generation = 100
     '''
     # #不再需要三种成员的路径了，一个member_path足够
-    # units_path = 'units'
-    # advisor_path = 'advisors'
-    # monitor_path = 'monitors'
+    # units_path = 'cE_units'
+    # advisor_path = 'cE_advisors'
+    # monitor_path = 'cE_monitors'
     '''
     record_path = 'record'
-    member_path = 'member_xml'
+    member_path = 'cE_member_xml'
     version = '0.0'
     ex_id = 'cE_ex01'
 
