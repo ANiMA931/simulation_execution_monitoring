@@ -1,8 +1,9 @@
 from my_tools import *
+from random import seed, shuffle, randrange
 
 
 # 基础成员
-class member(object):
+class Member(object):
     def __init__(self, self_dict: dict):
         self.id = self_dict['id']  # 成员的id
         self.metaModel_id = self_dict['metaModel_id']  # 成员的元模型id
@@ -10,12 +11,13 @@ class member(object):
 
 # 原子型成员
 primitives = dict()
-advisors=dict()
-monitorMembers=dict()
+advisors = dict()
+monitorMembers = dict()
 
-class primitive(member):
+
+class Primitive(Member):
     def __init__(self, self_dict: dict):
-        super(primitive, self).__init__(self_dict)
+        super(Primitive, self).__init__(self_dict)
         self.msg_receive_endowment = self_dict['msg_receive_endowment']  # 信息接收禀赋
         self.msg_receive_pool = []  # 信息接收池
         self.msg_storage_endowment = self_dict['msg_storage_endowment']  # 信息存储禀赋
@@ -25,30 +27,36 @@ class primitive(member):
         self.browse = self_dict['browse']  # 个人浏览禀赋
         self.pattern = self_dict['pattern']  # 个人格局
         self.affector = self_dict['affector']  # 影响器
+        self.the_advisors = list()
         self.decider = self_dict['decider']  # 决策器
         self.executor = self_dict['executor']  # 执行器
         self.monitor = self_dict['monitor']  # 监控器
+        self.the_monitorMembers = list()
         self.connector = self_dict['connector']  # 连接器
+        self.the_connectors = dict()  # 该primitive接收谁发送的消息
+        self.the_followers = list()  # 该primitive给谁发送消息，无权重
 
 
 # 建议者
-class advisor(member):
+class Advisor(Member):
     def __init__(self, self_dict: dict):
-        super(advisor, self).__init__(self_dict)
+        super(Advisor, self).__init__(self_dict)
         self.sug_endowment = self_dict['sug_endowment']  # 建议禀赋
         self.sug_path = self_dict['sug_path']  # 建议路径
+        self.the_conn_primitive = dict()
 
 
-class monitorMember(member):
+class MonitorMember(Member):
     def __init__(self, self_dict: dict):
-        super(monitorMember, self).__init__(self_dict)
-        self.mon_endowment = self_dict['mon_endowment']  # 监控禀赋
+        super(MonitorMember, self).__init__(self_dict)
+        self.mon_endowment = float(self_dict['mon_endowment'])  # 监控禀赋
         self.mon_area = self_dict['mon_area']  # 监控领域
         self.mon_range = self_dict['mon_range']  # 监控领域角度范围 tuple
+        self.the_conn_primitive = dict()
 
 
 # 信息类
-class message:
+class Message:
     def __init__(self, self_dict: dict):
         self.id = self_dict['id']  # 信息id
         self.area = self_dict['area']  # 信息领域
@@ -57,17 +65,17 @@ class message:
 
 
 # 偏好类，与信息类完全相同
-class preference(message):
+class Preference(Message):
     def __init__(self, self_dict: dict):
-        super(preference, self).__init__(self_dict)
+        super(Preference, self).__init__(self_dict)
 
 
-def formatXmltoMember(xml_dom):
+def format_xml_to_member(xml_dom):
     root = xml_dom.documentElement
     # 偏好整合
-    preferenceInfo_labels = root.getElementsByTagName('preferenceInfo')
+    preference_info_labels = root.getElementsByTagName('preferenceInfo')
     preferences = dict()
-    for one_preference_label in preferenceInfo_labels:
+    for one_preference_label in preference_info_labels:
         start, end = one_preference_label.getAttribute('偏好方向').split('-')
         one_preference = {
             'id': one_preference_label.getAttribute('偏好ID'),
@@ -75,11 +83,11 @@ def formatXmltoMember(xml_dom):
             'strength': float(one_preference_label.getAttribute('偏好大小')),
             'range': (float(start), float(end))
         }
-        preferences.update({one_preference_label.getAttribute('偏好ID'): preference(one_preference)})
+        preferences.update({one_preference_label.getAttribute('偏好ID'): Preference(one_preference)})
     # 信息整合
-    messageInfo_labels = root.getElementsByTagName('messageInfo')
+    message_info_labels = root.getElementsByTagName('messageInfo')
     messages = dict()
-    for one_message_label in messageInfo_labels:
+    for one_message_label in message_info_labels:
         start, end = one_message_label.getAttribute('信息方向').split('-')
         one_message = {
             'id': one_message_label.getAttribute('信息ID'),
@@ -87,11 +95,11 @@ def formatXmltoMember(xml_dom):
             'strength': float(one_message_label.getAttribute('信息大小')),
             'range': (float(start), float(end))
         }
-        messages.update({one_message_label.getAttribute('信息ID'): message(one_message)})
+        messages.update({one_message_label.getAttribute('信息ID'): Message(one_message)})
     # 影响器整合
-    affectorInfo_labels = root.getElementsByTagName('affectorInfo')
+    affector_info_labels = root.getElementsByTagName('affectorInfo')
     affectors = dict()
-    for one_affector_label in affectorInfo_labels:
+    for one_affector_label in affector_info_labels:
         one_affector = {
             'id': one_affector_label.getAttribute('影响器ID'),
             'conn_upper': int(one_affector_label.getAttribute('连接成员数量')),
@@ -115,15 +123,15 @@ def formatXmltoMember(xml_dom):
         deciders.update({one_decider_label.getAttribute('决策器ID'): one_decider})
 
     # 执行器整合
-    executorInfo_labels = root.getElementsByTagName('executorInfo')
+    executor_info_labels = root.getElementsByTagName('executorInfo')
     executors = dict()
-    for one_executor_label in executorInfo_labels:
+    for one_executor_label in executor_info_labels:
         one_executor = {
             'id': one_executor_label.getAttribute('执行器ID'),
             'mutation': float(one_executor_label.getAttribute('突变率')),
             'spreading_threshold': float(one_executor_label.getAttribute('传播阈值')),
             'preference_behavior': one_executor_label.getAttribute('偏好行为'),
-            'message_vector': messages[one_executor_label.getAttribute('信息矢量')]
+            'message_vector': messages[one_executor_label.getAttribute('信息矢量')],
         }
         executors.update({one_executor_label.getAttribute('执行器ID'): one_executor})
     # 监控器整合
@@ -132,19 +140,19 @@ def formatXmltoMember(xml_dom):
     for one_monitor_label in monitorsInfo_labels:
         one_monitor = {
             'id': one_monitor_label.getAttribute('监控器ID'),
-            'mon_strength': float(one_monitor_label.getAttribute('监控强度'))
+            'mon_strength': float(one_monitor_label.getAttribute('监控强度')),
         }
-        monitors.update({one_monitor_label.getAttribute('监控器ID'):one_monitor})
+        monitors.update({one_monitor_label.getAttribute('监控器ID'): one_monitor})
     # 连接器整合
     connectorsInfo_labels = root.getElementsByTagName('connectorInfo')
-    connectors=dict()
+    connectors = dict()
     for one_connector_label in connectorsInfo_labels:
-        one_connector={
-            'id':one_connector_label.getAttribute('联接器ID'),
-            'conn_number':int(one_connector_label.getAttribute('连接成员数量')),
-            'average_conn_strength':float(one_connector_label.getAttribute('平均连接强度'))
+        one_connector = {
+            'id': one_connector_label.getAttribute('联接器ID'),
+            'conn_number': int(one_connector_label.getAttribute('连接成员数量')),
+            'average_conn_strength': float(one_connector_label.getAttribute('平均连接强度')),
         }
-        connectors.update({one_connector_label.getAttribute('联接器ID'):one_connector})
+        connectors.update({one_connector_label.getAttribute('联接器ID'): one_connector})
     # 原子形成员整合
     primitiveInfo_labels = root.getElementsByTagName('primitiveInfo')
     for one_primitive_label in primitiveInfo_labels:
@@ -165,41 +173,93 @@ def formatXmltoMember(xml_dom):
             'connector': connectors[one_primitive_label.getAttribute('联接器')],
         })
         primitives.update({
-            one_primitive_label.getAttribute('原子型成员ID'): primitive(primitive_dict),
+            one_primitive_label.getAttribute('原子型成员ID'): Primitive(primitive_dict),
         })
     # 建议者整合
-    advisorInfo_labels = root.getElementsByTagName('advisorInfo')
-    for one_advisor_label in advisorInfo_labels:
-        advisor_dict=dict()
+    advisor_info_labels = root.getElementsByTagName('advisorInfo')
+    for one_advisor_label in advisor_info_labels:
+        advisor_dict = dict()
         advisor_dict.update({
-            'id':one_advisor_label.getAttribute('建议者ID'),
-            'metaModel_id':one_advisor_label.getAttribute('成员模型'),
-            'sug_endowment':float(one_advisor_label.getAttribute('建议禀赋')),
-            'sug_path':one_advisor_label.getAttribute('建议路径')
+            'id': one_advisor_label.getAttribute('建议者ID'),
+            'metaModel_id': one_advisor_label.getAttribute('成员模型'),
+            'sug_endowment': float(one_advisor_label.getAttribute('建议禀赋')),
+            'sug_path': one_advisor_label.getAttribute('建议路径'),
         })
         advisors.update({
-            one_advisor_label.getAttribute('建议者ID'):advisor(advisor_dict),
+            one_advisor_label.getAttribute('建议者ID'): Advisor(advisor_dict),
         })
     # 监控者整合
     monitorMemberInfo_labels = root.getElementsByTagName('monitorMemberInfo')
     for one_monitorMember_label in monitorMemberInfo_labels:
-        monitorMember_dict=dict()
+        monitorMember_dict = dict()
         start, end = one_monitorMember_label.getAttribute('监控范围').split('-')
         monitorMember_dict.update({
-            'id':one_monitorMember_label.getAttribute('监控者ID'),
-            'metaModel_id':one_monitorMember_label.getAttribute('成员模型'),
-            'mon_endowment':one_monitorMember_label.getAttribute('监控禀赋'),
-            'mon_area':one_monitorMember_label.getAttribute('监控领域'),
-            'mon_range':(float(start),float(end))
+            'id': one_monitorMember_label.getAttribute('监控者ID'),
+            'metaModel_id': one_monitorMember_label.getAttribute('成员模型'),
+            'mon_endowment': one_monitorMember_label.getAttribute('监控禀赋'),
+            'mon_area': one_monitorMember_label.getAttribute('监控领域'),
+            'mon_range': (float(start), float(end)),
         })
         monitorMembers.update({
-            one_monitorMember_label.getAttribute('监控者ID'):monitorMember(monitorMember_dict),
+            one_monitorMember_label.getAttribute('监控者ID'): MonitorMember(monitorMember_dict),
         })
-def connectAllMember():
 
+
+def connect_all_member():
+    """
+
+    :return:
+    """
+    seed(1)  # 随机结果可复现
+    # promitive相连，该连接为单向，非对称网络
+    for p in primitives.keys():
+        pid_list = list(primitives.keys())
+        aid_list = list(advisors.keys())
+        mid_list = list(monitorMembers.keys())
+        shuffle(pid_list)
+        shuffle(aid_list)
+        shuffle(mid_list)
+        real_link_number = randrange(primitives[p].connector['conn_number'])
+        if p in pid_list[:real_link_number]:
+            pid_list.remove(p)
+            print('remove self connect.')  # 测试发生移除自我连接的次数
+        for one_pid in pid_list[:real_link_number]:  # 添加连接信息
+            # 这个primitive接收哪些primitive的信息，这个信息带有权重
+            primitives[p].the_connectors.update({one_pid: primitives[p].connector['average_conn_strength']})
+            # 这个primitive是哪些primitive的粉丝，无权重
+            primitives[one_pid].the_followers.append(p)
+        # primitive与advisor相连，
+        # 注意事项:拥有primitive角色的advisor不与自己连接
+        real_link_number = randrange(len(aid_list))
+        if p in aid_list:
+            aid_list.remove(p)
+            print('remove self advice.')  # 测试发生移除自我建议的次数
+        for one_aid in aid_list[:real_link_number]:
+            # 确定该primitive接收谁的建议
+            primitives[p].the_advisors.append(one_aid)
+            # 由于不确定本建议者会给多少个primitive提建议，所以建议强度初始值设置为禀赋
+            advisors[one_aid].the_conn_primitive.update({p: advisors[one_aid].sug_endowment})
+        # 建议关系生成结束后要重置建议强度
+        for a in advisors.keys():
+            for cp in advisors[a].the_conn_primitive.keys():
+                advisors[a].the_conn_primitive[cp] = advisors[a].sug_endowment / len(advisors[a].the_conn_primitive)
+        # primitive与monitor相连，
+        # 注意事项:拥有primitive角色的monitor不与自己连接
+        real_link_number = randrange(len(mid_list))
+        if p in mid_list:
+            mid_list.remove(p)
+            print('remove self monitoring.')
+        for one_mid in mid_list[:real_link_number]:
+            primitives[p].the_monitorMembers.append(one_mid)
+            monitorMembers[one_mid].the_conn_primitive.update({p: monitorMembers[one_mid].mon_endowment})
+        # 监控关系生成结束后要重置监控强度
+        for m in monitorMembers.keys():
+            for cp in monitorMembers[m].the_conn_primitive.keys():
+                monitorMembers[m].the_conn_primitive[cp] = monitorMembers[m].mon_endowment / len(
+                    monitorMembers[m].the_conn_primitive)
 
 
 if __name__ == '__main__':
-    formatXmltoMember(read_xml(r'fP_Members.xml'))
-    connectAllMember()
+    format_xml_to_member(read_xml(r'fP_Members.xml'))
+    connect_all_member()
     print()

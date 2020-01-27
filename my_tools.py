@@ -4,9 +4,11 @@ from random import random
 
 
 def read_xml(in_path):
-    '''''读取并解析xml文件
-       in_path: xml路径
-       return: ElementTree'''
+    """
+    读取并解析xml文件
+    :param in_path: xml路径
+    :return: ElementTree
+    """
     try:
         dom = xml.dom.minidom.parse(in_path)
         return dom
@@ -15,11 +17,11 @@ def read_xml(in_path):
 
 
 def member_file_name(path):
-    '''
+    """
     读取一个文件夹下的所有文件的文件名
     :param path:
     :return:
-    '''
+    """
     fileList = []
     # 返回一个列表，其中包含在目录条目的名称(google翻译)
     files = os.listdir(path)
@@ -33,12 +35,12 @@ def member_file_name(path):
 
 
 def shatter_number(upper, length):
-    '''
+    """
     将一个数撕裂称为一个设定长度的随机数组
     :param upper:要被撕裂的数
     :param length:设定被撕裂的长度
     :return:r被撕裂的随机数列表，sum(r)随机数列表和
-    '''
+    """
     r = []
     for i in range(length):
         r.append(random())
