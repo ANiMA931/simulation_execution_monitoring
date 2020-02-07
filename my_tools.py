@@ -36,7 +36,7 @@ def member_file_name(path):
 
 def shatter_number(upper, length):
     """
-    将一个数撕裂称为一个设定长度的随机数组
+    将一个数撕裂为一个设定长度的随机数组
     :param upper:要被撕裂的数
     :param length:设定被撕裂的长度
     :return:r被撕裂的随机数列表，sum(r)随机数列表和

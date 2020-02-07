@@ -1,5 +1,7 @@
+from copy import deepcopy
+from math import pi
 from my_tools import *
-from random import seed, shuffle, randrange
+from random import seed, shuffle, randrange, uniform
 
 
 # 基础成员
@@ -18,13 +20,13 @@ monitorMembers = dict()
 class Primitive(Member):
     def __init__(self, self_dict: dict):
         super(Primitive, self).__init__(self_dict)
-        self.msg_receive_endowment = self_dict['msg_receive_endowment']  # 信息接收禀赋
+        self.msg_receive_endowment = int(float(self_dict['msg_receive_endowment']))  # 信息接收禀赋，依照条目数执行
         self.msg_receive_pool = []  # 信息接收池
-        self.msg_storage_endowment = self_dict['msg_storage_endowment']  # 信息存储禀赋
+        self.msg_storage_endowment = float(self_dict['msg_storage_endowment'])  # 信息存储禀赋，依照信息强度执行
         self.msg_storage_pool = []  # 信息存储池
         self.confidence = self_dict['confidence']  # 个人自信水平
         self.discipline = self_dict['discipline']  # 个人自律水平
-        self.browse = self_dict['browse']  # 个人浏览禀赋
+        self.browse = int(float(self_dict['browse']))  # 个人浏览禀赋
         self.pattern = self_dict['pattern']  # 个人格局
         self.affector = self_dict['affector']  # 影响器
         self.the_advisors = list()
@@ -34,7 +36,7 @@ class Primitive(Member):
         self.the_monitorMembers = list()
         self.connector = self_dict['connector']  # 连接器
         self.the_connectors = dict()  # 该primitive接收谁发送的消息
-        self.the_followers = list()  # 该primitive给谁发送消息，无权重
+        self.msg_receive_pool.append((self.decider['message_vector'].strength, deepcopy(self.decider['message_vector']), 'self'))
 
 
 # 建议者
@@ -55,19 +57,27 @@ class MonitorMember(Member):
         self.the_conn_primitive = dict()
 
 
-# 信息类
-class Message:
+# 信息偏好基础类
+class BaseMessage:
     def __init__(self, self_dict: dict):
         self.id = self_dict['id']  # 信息id
         self.area = self_dict['area']  # 信息领域
         self.strength = self_dict['strength']  # 信息强度
-        self.range = self_dict['range']  # 信息角度范围 tuple
 
 
-# 偏好类，与信息类完全相同
-class Preference(Message):
+# 信息类
+class Message(BaseMessage):
+    def __init__(self, self_dict: dict):
+        super(Message, self).__init__(self_dict)
+        self.angle = self_dict['angle']
+        self.z_angle=self_dict['z_angle']
+
+
+# 偏好类，与信息类差别在于
+class Preference(BaseMessage):
     def __init__(self, self_dict: dict):
         super(Preference, self).__init__(self_dict)
+        self.range = self_dict['range']  # 信息角度范围 tuple
 
 
 def format_xml_to_member(xml_dom):
@@ -81,19 +91,19 @@ def format_xml_to_member(xml_dom):
             'id': one_preference_label.getAttribute('偏好ID'),
             'area': one_preference_label.getAttribute('所属领域ID'),
             'strength': float(one_preference_label.getAttribute('偏好大小')),
-            'range': (float(start), float(end))
+            'range': (pi * float(start) / 180, pi * float(end) / 180),
         }
         preferences.update({one_preference_label.getAttribute('偏好ID'): Preference(one_preference)})
     # 信息整合
     message_info_labels = root.getElementsByTagName('messageInfo')
     messages = dict()
     for one_message_label in message_info_labels:
-        start, end = one_message_label.getAttribute('信息方向').split('-')
         one_message = {
             'id': one_message_label.getAttribute('信息ID'),
             'area': one_message_label.getAttribute('所属领域ID'),
             'strength': float(one_message_label.getAttribute('信息大小')),
-            'range': (float(start), float(end))
+            'angle': pi * float(one_message_label.getAttribute('信息方向')) / 180,
+            'z_angle': pi* float(one_message_label.getAttribute('信息相关度')),
         }
         messages.update({one_message_label.getAttribute('信息ID'): Message(one_message)})
     # 影响器整合
@@ -113,10 +123,14 @@ def format_xml_to_member(xml_dom):
     for one_decider_label in deciderInfo_labels:
         one_decider = {
             'id': one_decider_label.getAttribute('决策器ID'),
-            'forward_threshold': one_decider_label.getAttribute('转发阈值'),
-            'mass_threshold': one_decider_label.getAttribute('群发阈值'),
-            'struct_change_threshold': one_decider_label.getAttribute('改变连接结构阈值'),
-            'weak_strength_threshold': one_decider_label.getAttribute('减弱信息强度阈值'),
+            # 'forward_threshold': one_decider_label.getAttribute('转发阈值'),
+            # 'mass_threshold': one_decider_label.getAttribute('群发阈值'),
+            # 'struct_change_threshold': one_decider_label.getAttribute('改变连接结构阈值'),
+            # 'weak_strength_threshold': one_decider_label.getAttribute('减弱信息强度阈值'),
+            'forward_threshold': 0.25,
+            'mass_threshold': 0.00000005,
+            'struct_change_threshold': -0.75,
+            'weak_strength_threshold': -0.0000025,
             'preference_vector': preferences[one_decider_label.getAttribute('偏好矢量')],
             'message_vector': messages[one_decider_label.getAttribute('信息矢量')]
         }
@@ -198,7 +212,7 @@ def format_xml_to_member(xml_dom):
             'metaModel_id': one_monitorMember_label.getAttribute('成员模型'),
             'mon_endowment': one_monitorMember_label.getAttribute('监控禀赋'),
             'mon_area': one_monitorMember_label.getAttribute('监控领域'),
-            'mon_range': (float(start), float(end)),
+            'mon_range': (pi * float(start) / 180, pi * float(end) / 180),
         })
         monitorMembers.update({
             one_monitorMember_label.getAttribute('监控者ID'): MonitorMember(monitorMember_dict),
@@ -207,11 +221,11 @@ def format_xml_to_member(xml_dom):
 
 def connect_all_member():
     """
-
+    连接已有成员
     :return:
     """
     seed(1)  # 随机结果可复现
-    # promitive相连，该连接为单向，非对称网络
+    # promitive相连，该连接为双向非对称网络
     for p in primitives.keys():
         pid_list = list(primitives.keys())
         aid_list = list(advisors.keys())
@@ -224,10 +238,9 @@ def connect_all_member():
             pid_list.remove(p)
             print('remove self connect.')  # 测试发生移除自我连接的次数
         for one_pid in pid_list[:real_link_number]:  # 添加连接信息
-            # 这个primitive接收哪些primitive的信息，这个信息带有权重
+            # 这个primitive接收哪些primitive的信息，同时给哪些primitive发信息，这个信息带有权重
             primitives[p].the_connectors.update({one_pid: primitives[p].connector['average_conn_strength']})
-            # 这个primitive是哪些primitive的粉丝，无权重
-            primitives[one_pid].the_followers.append(p)
+            primitives[one_pid].the_connectors.update({p: primitives[one_pid].connector['average_conn_strength']})
         # primitive与advisor相连，
         # 注意事项:拥有primitive角色的advisor不与自己连接
         real_link_number = randrange(len(aid_list))
