@@ -1,2 +1,14 @@
-<?xml version="1.0" ?><advisor><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="a-00" MetaModelID="p-67.258" endowment="14.79832" memberRole="advisor" memberTypeCode="2"/><pattern path="..\patterns\pattern1.xml"/><preference value="p24,p2,p5,p7,p10,p15,p19,p23"/><unitList remaining="0.12338" scale="5">
-<unit strength="4.78503" uID="u-01"/><unit strength="0.29977" uID="u-08"/><unit strength="3.3496" uID="u-10"/><unit strength="4.31748" uID="u-11"/><unit strength="1.92306" uID="u-19"/></unitList></advisor>
+<?xml version="1.0" ?>
+<advisor>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="a-00" MetaModelID="p-67.258" endowment="14.79832" memberRole="advisor" memberTypeCode="2"/>
+    <pattern path="..\patterns\pattern1.xml"/>
+    <preference value="p24,p2,p5,p7,p10,p15,p19,p23"/>
+    <unitList remaining="0.12338" scale="5">
+        <unit strength="4.78503" uID="u-01"/>
+        <unit strength="0.29977" uID="u-08"/>
+        <unit strength="3.3496" uID="u-10"/>
+        <unit strength="4.31748" uID="u-11"/>
+        <unit strength="1.92306" uID="u-19"/>
+    </unitList>
+</advisor>

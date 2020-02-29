@@ -1,5 +1,4 @@
 import sys
-import collections
 
 external_module_path = r'C:\Users\ANiMA\Desktop\external_dir'
 sys.path.append(external_module_path)

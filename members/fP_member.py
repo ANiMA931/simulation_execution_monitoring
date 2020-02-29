@@ -1,6 +1,6 @@
 from copy import deepcopy
 from math import pi
-from my_tools import *
+from my_tools import read_xml, random
 from random import seed, shuffle, randrange, uniform
 
 
@@ -11,10 +11,20 @@ class Member(object):
         self.metaModel_id = self_dict['metaModel_id']  # 成员的元模型id
 
 
-# 原子型成员
+# 原子型成员字典
 primitives = dict()
+# 建议者单元字典
 advisors = dict()
+# 监控者单元字典
 monitorMembers = dict()
+# 集合型成员字典
+collectives = dict()
+# 信息字典
+messages = dict()
+# 分组数
+group_N = 10
+# 信息分组字典
+message_group = dict()
 
 
 class Primitive(Member):
@@ -36,7 +46,8 @@ class Primitive(Member):
         self.the_monitorMembers = list()
         self.connector = self_dict['connector']  # 连接器
         self.the_connectors = dict()  # 该primitive接收谁发送的消息
-        self.msg_receive_pool.append((self.decider['message_vector'].strength, deepcopy(self.decider['message_vector']), 'self'))
+        self.msg_receive_pool.append(
+            [self.decider['message_vector'].strength, deepcopy(self.decider['message_vector']), 'self'])
 
 
 # 建议者
@@ -57,8 +68,20 @@ class MonitorMember(Member):
         self.the_conn_primitive = dict()
 
 
+class Collective(Member):
+    def __init__(self, self_dict: dict):
+        super(Collective, self).__init__(self_dict)
+        self.converger = self_dict['converger']['way']
+        self.decomposer = self_dict['decomposer']
+        self.executor = self_dict['executor']
+        self.connector = self_dict['connector']
+        self.conn_primitive = dict()
+        self.monitorMembers = list()
+        self.mission_msg_pool = list()
+
+
 # 信息偏好基础类
-class BaseMessage:
+class BaseMessage(object):
     def __init__(self, self_dict: dict):
         self.id = self_dict['id']  # 信息id
         self.area = self_dict['area']  # 信息领域
@@ -70,7 +93,7 @@ class Message(BaseMessage):
     def __init__(self, self_dict: dict):
         super(Message, self).__init__(self_dict)
         self.angle = self_dict['angle']
-        self.z_angle=self_dict['z_angle']
+        self.z_angle = self_dict['z_angle']
 
 
 # 偏好类，与信息类差别在于
@@ -80,11 +103,10 @@ class Preference(BaseMessage):
         self.range = self_dict['range']  # 信息角度范围 tuple
 
 
-def format_xml_to_member(xml_dom):
-    root = xml_dom.documentElement
+def preference_format(root) -> dict:
     # 偏好整合
     preference_info_labels = root.getElementsByTagName('preferenceInfo')
-    preferences = dict()
+    the_preferences = dict()
     for one_preference_label in preference_info_labels:
         start, end = one_preference_label.getAttribute('偏好方向').split('-')
         one_preference = {
@@ -93,19 +115,27 @@ def format_xml_to_member(xml_dom):
             'strength': float(one_preference_label.getAttribute('偏好大小')),
             'range': (pi * float(start) / 180, pi * float(end) / 180),
         }
-        preferences.update({one_preference_label.getAttribute('偏好ID'): Preference(one_preference)})
-    # 信息整合
+        the_preferences.update({one_preference_label.getAttribute('偏好ID'): Preference(one_preference)})
+    return the_preferences
+
+
+def message_format(root):
     message_info_labels = root.getElementsByTagName('messageInfo')
-    messages = dict()
     for one_message_label in message_info_labels:
         one_message = {
             'id': one_message_label.getAttribute('信息ID'),
             'area': one_message_label.getAttribute('所属领域ID'),
             'strength': float(one_message_label.getAttribute('信息大小')),
             'angle': pi * float(one_message_label.getAttribute('信息方向')) / 180,
-            'z_angle': pi* float(one_message_label.getAttribute('信息相关度')),
+            'z_angle': pi * float(one_message_label.getAttribute('信息相关度')),
         }
         messages.update({one_message_label.getAttribute('信息ID'): Message(one_message)})
+
+
+def primitive_format(root):
+    preferences = preference_format(root)
+    # 信息整合
+    message_format(root)
     # 影响器整合
     affector_info_labels = root.getElementsByTagName('affectorInfo')
     affectors = dict()
@@ -116,7 +146,6 @@ def format_xml_to_member(xml_dom):
             'average_strength': float(one_affector_label.getAttribute('平均影响强度'))
         }
         affectors.update({one_affector_label.getAttribute('影响器ID'): one_affector})
-
     # 决策器整合
     deciderInfo_labels = root.getElementsByTagName('deciderInfo')
     deciders = dict()
@@ -127,15 +156,14 @@ def format_xml_to_member(xml_dom):
             # 'mass_threshold': one_decider_label.getAttribute('群发阈值'),
             # 'struct_change_threshold': one_decider_label.getAttribute('改变连接结构阈值'),
             # 'weak_strength_threshold': one_decider_label.getAttribute('减弱信息强度阈值'),
-            'forward_threshold': 0.25,
-            'mass_threshold': 0.00000005,
-            'struct_change_threshold': -0.75,
-            'weak_strength_threshold': -0.0000025,
+            'forward_threshold': 0.75,
+            'mass_threshold': 0.55,
+            'struct_change_threshold': -0.55,
+            'weak_strength_threshold': -0.25,
             'preference_vector': preferences[one_decider_label.getAttribute('偏好矢量')],
             'message_vector': messages[one_decider_label.getAttribute('信息矢量')]
         }
         deciders.update({one_decider_label.getAttribute('决策器ID'): one_decider})
-
     # 执行器整合
     executor_info_labels = root.getElementsByTagName('executorInfo')
     executors = dict()
@@ -186,9 +214,67 @@ def format_xml_to_member(xml_dom):
             'monitor': monitors[one_primitive_label.getAttribute('监控器')],
             'connector': connectors[one_primitive_label.getAttribute('联接器')],
         })
-        primitives.update({
-            one_primitive_label.getAttribute('原子型成员ID'): Primitive(primitive_dict),
-        })
+        primitives.update({primitive_dict['id']: Primitive(primitive_dict), })
+
+
+def collective_format(root):
+    # 分解器整合
+    decomposerInfo_labels = root.getElementsByTagName('decomposerInfo')
+    decomposers = dict()
+    for one_decomposer_label in decomposerInfo_labels:
+        one_decomposer = {
+            'id': one_decomposer_label.getAttribute('分解器ID'),
+            'group': randrange(group_N),
+            'msg_expectation': one_decomposer_label.getAttribute('期望信息强度'),
+            'spreading_threshold': one_decomposer_label.getAttribute('传播阈值'),
+        }
+        decomposers.update({one_decomposer['id']: one_decomposer})
+    # 执行器整合
+    c_executorInfo_labels = root.getElementsByTagName('c_executorInfo')
+    c_executors = dict()
+    for one_c_executor_label in c_executorInfo_labels:
+        one_c_executor = {
+            'id': one_c_executor_label.getAttribute('执行器ID'),
+            'transmit_frequency': one_c_executor_label.getAttribute('传播频率'),
+        }
+        c_executors.update({one_c_executor['id']: one_c_executor})
+    # 汇聚器整合
+    convergerInfo_labels = root.getElementsByTagName('convergerInfo')
+    convergers = dict()
+    for one_converger_label in convergerInfo_labels:
+        one_converger = {
+            'id': one_converger_label.getAttribute('汇聚器ID'),
+            'way': one_converger_label.getAttribute('汇聚方式')
+        }
+        convergers.update({one_converger['id']: one_converger})
+    # 连接器整合
+    connectorsInfo_labels = root.getElementsByTagName('connectorInfo')
+    connectors = dict()
+    for one_connector_label in connectorsInfo_labels:
+        one_connector = {
+            'id': one_connector_label.getAttribute('联接器ID'),
+            'conn_number': int(one_connector_label.getAttribute('连接成员数量')),
+            'average_conn_strength': float(one_connector_label.getAttribute('平均连接强度')),
+        }
+        connectors.update({one_connector_label.getAttribute('联接器ID'): one_connector})
+    collectiveInfo_labels = root.getElementsByTagName('collectiveInfo')
+    for one_collective_label in collectiveInfo_labels:
+        one_collective_dict = {
+            'id': one_collective_label.getAttribute('集合型成员ID'),
+            'metaModel_id': one_collective_label.getAttribute('成员模型'),
+            'converger': convergers[one_collective_label.getAttribute('汇聚器')],
+            'executor': c_executors[one_collective_label.getAttribute('执行器')],
+            'decomposer': decomposers[one_collective_label.getAttribute('分解器')],
+            'connector': connectors[one_collective_label.getAttribute('联接器')]
+        }
+
+        collectives.update({one_collective_dict['id']: Collective(one_collective_dict)})
+
+
+def format_xml_to_member(xml_dom):
+    root = xml_dom.documentElement
+    primitive_format(root)
+    collective_format(root)
     # 建议者整合
     advisor_info_labels = root.getElementsByTagName('advisorInfo')
     for one_advisor_label in advisor_info_labels:
@@ -224,7 +310,29 @@ def connect_all_member():
     连接已有成员
     :return:
     """
-    seed(1)  # 随机结果可复现
+    global collectives
+    # seed(1)  # 随机结果可复现
+    # collective与primitive连接为二部图，该连接为双向非对称网络
+    for c in collectives.keys():
+        pid_list = list(primitives.keys())
+        mid_list = list(monitorMembers.keys())
+        shuffle(pid_list)
+        shuffle(mid_list)
+        real_link_number = randrange(collectives[c].connector['conn_number'])
+        for one_pid in pid_list[:real_link_number]:
+            collectives[c].conn_primitive.update({one_pid: collectives[c].connector['average_conn_strength']})
+            primitives[one_pid].the_connectors.update({c: primitives[one_pid].connector['average_conn_strength']})
+        real_link_number = randrange(len(mid_list))
+        remove_flag = False
+        if c in mid_list:
+            mid_list.remove(c)
+            remove_flag = True
+            print('remove self monitoring.')
+        for one_mid in mid_list[:real_link_number]:
+            collectives[c].monitorMembers.append(one_mid)
+            monitorMembers[one_mid].the_conn_primitive.update({c: monitorMembers[one_mid].mon_endowment})
+        if remove_flag:
+            mid_list.append(c)
     # promitive相连，该连接为双向非对称网络
     for p in primitives.keys():
         pid_list = list(primitives.keys())
@@ -233,25 +341,42 @@ def connect_all_member():
         shuffle(pid_list)
         shuffle(aid_list)
         shuffle(mid_list)
-        real_link_number = randrange(primitives[p].connector['conn_number'])
-        if p in pid_list[:real_link_number]:
-            pid_list.remove(p)
-            print('remove self connect.')  # 测试发生移除自我连接的次数
-        for one_pid in pid_list[:real_link_number]:  # 添加连接信息
-            # 这个primitive接收哪些primitive的信息，同时给哪些primitive发信息，这个信息带有权重
-            primitives[p].the_connectors.update({one_pid: primitives[p].connector['average_conn_strength']})
-            primitives[one_pid].the_connectors.update({p: primitives[one_pid].connector['average_conn_strength']})
+        # 如果当前单元已有的连接关系还未饱和
+        if primitives[p].connector['conn_number'] > len(primitives[p].the_connectors):
+            real_link_number = randrange(primitives[p].connector['conn_number'] - len(primitives[p].the_connectors))
+            remove_flag = False
+            if p in pid_list[:real_link_number]:
+                pid_list.remove(p)
+                remove_flag = True
+                print('remove self connect.')  # 测试发生移除自我连接的次数
+            for one_pid in pid_list[:real_link_number]:  # 添加连接信息
+                # 对方的连接关系中没有自己，且对方的连接关系尚未饱和
+                if len(primitives[one_pid].the_connectors)<primitives[one_pid].connector['conn_number'] \
+                        and one_pid not in primitives[p].the_connectors.keys():
+                    primitives[p].the_connectors.update({one_pid: primitives[p].connector['average_conn_strength']})
+                    primitives[one_pid].the_connectors.update({p: primitives[one_pid].connector['average_conn_strength']})
+            if remove_flag:
+                pid_list.append(p)
+                remove_flag = False
+        # 说明这个单元已经被动连接连满了
+        else:
+            pass
         # primitive与advisor相连，
         # 注意事项:拥有primitive角色的advisor不与自己连接
         real_link_number = randrange(len(aid_list))
+        remove_flag = False
         if p in aid_list:
             aid_list.remove(p)
+            remove_flag = True
             print('remove self advice.')  # 测试发生移除自我建议的次数
         for one_aid in aid_list[:real_link_number]:
             # 确定该primitive接收谁的建议
             primitives[p].the_advisors.append(one_aid)
             # 由于不确定本建议者会给多少个primitive提建议，所以建议强度初始值设置为禀赋
             advisors[one_aid].the_conn_primitive.update({p: advisors[one_aid].sug_endowment})
+        if remove_flag:
+            aid_list.append(p)
+            remove_flag = False
         # 建议关系生成结束后要重置建议强度
         for a in advisors.keys():
             for cp in advisors[a].the_conn_primitive.keys():
@@ -261,10 +386,13 @@ def connect_all_member():
         real_link_number = randrange(len(mid_list))
         if p in mid_list:
             mid_list.remove(p)
+            remove_flag = True
             print('remove self monitoring.')
         for one_mid in mid_list[:real_link_number]:
             primitives[p].the_monitorMembers.append(one_mid)
             monitorMembers[one_mid].the_conn_primitive.update({p: monitorMembers[one_mid].mon_endowment})
+        if remove_flag:
+            mid_list.append(p)
         # 监控关系生成结束后要重置监控强度
         for m in monitorMembers.keys():
             for cp in monitorMembers[m].the_conn_primitive.keys():
@@ -272,7 +400,26 @@ def connect_all_member():
                     monitorMembers[m].the_conn_primitive)
 
 
+def message_distribute():
+    """
+    信息分组
+    :return:
+    """
+    msg_id_list = list(messages.keys())
+    group_distance = len(msg_id_list) // group_N
+    shuffle(msg_id_list)
+    global message_group
+    for i in range(group_N):
+        if len(msg_id_list) < group_distance:
+            message_group.update({i: msg_id_list.copy()})
+            pass
+        else:
+            message_group.update({i: msg_id_list[:group_distance].copy()})
+            msg_id_list = msg_id_list[group_distance:]
+
+
 if __name__ == '__main__':
-    format_xml_to_member(read_xml(r'fP_Members.xml'))
+    format_xml_to_member(read_xml(r'fpMemberXml_C.xml'))
     connect_all_member()
+    message_distribute()
     print()

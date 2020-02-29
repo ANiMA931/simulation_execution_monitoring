@@ -2,13 +2,14 @@
 '''
 本文件是写的界面与后台仿真线程，目前尚不可用
 '''
+from my_tools import *
 from UI.coEvolution_child import Ui_Form  # pyUIC自动生成的pyqt5界面
-from UI.simulation_exe_monitor_1 import Ui_Form as uf
+from UI.simulation_exe_Form import Ui_Form as uf
 from PyQt5 import QtCore, QtGui, QtWidgets  # 一些必要的qt包
 from simulators import cE_simulator  # 自己写的众进化仿真类
 import ctypes  # 线程挂起恢复必要的包
-import win32con  # 线程挂起恢复必要的包
-from win32process import SuspendThread, ResumeThread  # 线程挂起恢复必要的包
+# import win32con  # 线程挂起恢复必要的包
+# from win32process import SuspendThread, ResumeThread  # 线程挂起恢复必要的包
 import sys  # 线程挂起恢复必要的包
 import os  # 必要的包
 
@@ -30,8 +31,9 @@ class Run_thread(QtCore.QThread):
     def run(self):  # 线程运行函数
         try:
             # 设置线程标志位
-            self.handle = ctypes.windll.kernel32.OpenThread(win32con.PROCESS_ALL_ACCESS, False,
-                                                            int(QtCore.QThread.currentThreadId()))
+            # self.handle = ctypes.windll.kernel32.OpenThread(win32con.PROCESS_ALL_ACCESS, False,
+            #                                                 int(QtCore.QThread.currentThreadId()))
+            pass
         except Exception as e:
             print('get thread handle failed', e)
         print('thread id', int(QtCore.QThread.currentThreadId()))
@@ -45,10 +47,49 @@ class Run_thread(QtCore.QThread):
         self._signal.emit(100.0)
         self.wait()  # 仿真结束设置线程状态
 
-class uf_Form(QtWidgets.QWidget,uf):
+
+class uf_Form(QtWidgets.QWidget, uf):
     def __init__(self):
-        super(uf_Form,self).__init__()
+        super(uf_Form, self).__init__()
         self.setupUi(self)
+        start_btn_icon = QtGui.QIcon(r'F:\pythonCode\PycharmProjects\simulation_execution_monitoring\UI\播放按钮.ico')
+        pause_btn_icon = QtGui.QIcon(r'F:\pythonCode\PycharmProjects\simulation_execution_monitoring\UI\暂停.ico')
+        stop_btn_icon = QtGui.QIcon(r'F:\pythonCode\PycharmProjects\simulation_execution_monitoring\UI\停止.ico')
+        self.start_or_pause_btn.setIcon(start_btn_icon)
+        self.stop_btn.setIcon(stop_btn_icon)
+        self.units_filedialog_btn.clicked.connect(self.slot_btn_set_units_path)
+        self.record_filedialog_btn.clicked.connect(self.slot_btn_set_record_path)
+
+    def slot_btn_set_units_path(self):
+        '''
+        读取所有成员的路径的槽函数
+        :return:
+        '''
+        try:
+            dir_units_path = QtWidgets.QFileDialog.getOpenFileName(self, "选择仿真成员xml文件", "./",
+                                                                   "All Files (*);;XML Files (*.xml)")
+
+            self.units_dir_path.setText(dir_units_path[0])
+            # 根据这个路径来读取成员
+            unit_path = dir_units_path[0]
+            dom=read_xml(unit_path)
+        except:
+            pass
+
+
+    def slot_btn_set_record_path(self):
+        '''
+        设置仿真结果路径保存的槽函数
+        :return:
+        '''
+        dir_record_path = QtWidgets.QFileDialog.getExistingDirectory(self, "选择仿真记录文件夹", os.getcwd())
+        if dir_record_path == "":
+            print('取消选择')
+            return
+        else:
+            self.record_dir_path.setText(dir_record_path)
+
+
 # 界面类，用于显示界面
 class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
@@ -58,8 +99,8 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
         # 将事件与槽函数绑定
         self.units_filedialog_btn.clicked.connect(self.slot_btn_set_units_path)
         self.record_filedialog_btn.clicked.connect(self.slot_btn_set_record_path)
-        sp_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\暂停.ico')
-        stop_btn_icon=QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\停止.ico')
+        sp_btn_icon = QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\暂停.ico')
+        stop_btn_icon = QtGui.QIcon(r'E:\code\PycharmProjects\simulation\UI\停止.ico')
         self.start_or_pause_btn.setIcon(sp_btn_icon)
         self.stop_btn.setIcon(stop_btn_icon)
         # 仿真运行状态初始化
@@ -152,11 +193,11 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
             if self.thread.handle == -1:
                 return print('handle is wrong')
             # 继续线程
-            ret = ResumeThread(self.thread.handle)
+            # ret = ResumeThread(self.thread.handle)
             ##重设按键图标
             self.start_or_pause_btn.setIcon(self.pause_icon)
             # 输出查看结果
-            print('恢复线程', self.thread.handle, ret)
+            # print('恢复线程', self.thread.handle, ret)
             # 重设仿真标志位
             self.run_status = True
         # 最后的判断是仿真状态为运行（True）的时候
@@ -164,8 +205,8 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
             if self.thread.handle == -1:
                 return print('handle is wrong')
             # 挂起线程
-            ret = SuspendThread(self.thread.handle)
-            print('挂起线程', self.thread.handle, ret)
+            # ret = SuspendThread(self.thread.handle)
+            # print('挂起线程', self.thread.handle, ret)
             # 重设图标
             self.start_or_pause_btn.setIcon(self.start_icon)
             # 更改仿真状态
@@ -200,7 +241,7 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
         self.exe_progress_bar.setValue(msg)
         # 若仿真已经到达100%
         if msg == 100.0:
-            #将仿真器与线程移除，重设运行状态为False
+            # 将仿真器与线程移除，重设运行状态为False
             del self.simulator
             del self.thread
             self.simulator = None
