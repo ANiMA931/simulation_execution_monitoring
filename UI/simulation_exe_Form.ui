@@ -113,7 +113,7 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>341</width>
+      <width>241</width>
       <height>221</height>
      </rect>
     </property>
@@ -185,22 +185,12 @@
       <string>Role</string>
      </property>
     </column>
-    <column>
-     <property name="text">
-      <string>Status</string>
-     </property>
-    </column>
     <item row="0" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="0" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="0" column="2">
      <property name="text">
       <string/>
      </property>
@@ -215,22 +205,12 @@
       <string/>
      </property>
     </item>
-    <item row="1" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
     <item row="2" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="2" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="2" column="2">
      <property name="text">
       <string/>
      </property>
@@ -245,22 +225,12 @@
       <string/>
      </property>
     </item>
-    <item row="3" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
     <item row="4" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="4" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="4" column="2">
      <property name="text">
       <string/>
      </property>
@@ -275,22 +245,12 @@
       <string/>
      </property>
     </item>
-    <item row="5" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
     <item row="6" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="6" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="6" column="2">
      <property name="text">
       <string/>
      </property>
@@ -305,22 +265,12 @@
       <string/>
      </property>
     </item>
-    <item row="7" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
     <item row="8" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="8" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="8" column="2">
      <property name="text">
       <string/>
      </property>
@@ -335,22 +285,12 @@
       <string/>
      </property>
     </item>
-    <item row="9" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
     <item row="10" column="0">
      <property name="text">
       <string/>
      </property>
     </item>
     <item row="10" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="10" column="2">
      <property name="text">
       <string/>
      </property>
@@ -431,250 +371,12 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>230</y>
-      <width>509</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <item>
-      <widget class="QLabel" name="label_56">
-       <property name="text">
-        <string>Units：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="se_ID_edit_2">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_57">
-       <property name="text">
-        <string>Advisors：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="se_ID_edit_3">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_58">
-       <property name="text">
-        <string>Monitors：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="se_ID_edit_4">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget_5">
-    <property name="geometry">
-     <rect>
-      <x>371</x>
-      <y>120</y>
-      <width>511</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="0">
-      <widget class="QLabel" name="se_ID_label">
-       <property name="text">
-        <string>Execute ID：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="se_ID_edit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="result_handle_label">
-       <property name="text">
-        <string>Inherit setting：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QComboBox" name="result_handle_combobox">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>inherit</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>don't inherit</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="se_ID_label_2">
-       <property name="text">
-        <string>Meta Member ID：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="se_ID_edit_5">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="se_ID_label_3">
-       <property name="text">
-        <string>definition ID：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QLineEdit" name="se_ID_edit_6">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="version_label">
-       <property name="text">
-        <string>Version：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="version_edit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="generation_label">
-       <property name="text">
-        <string>Generation：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="QLineEdit" name="generation_lineEdit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="modify_date_label">
-       <property name="text">
-        <string>Modify date：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QDateEdit" name="modify_dateEdit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="dateTime">
-        <datetime>
-         <hour>0</hour>
-         <minute>0</minute>
-         <second>0</second>
-         <year>2019</year>
-         <month>11</month>
-         <day>5</day>
-        </datetime>
-       </property>
-       <property name="displayFormat">
-        <string>yyyy.MM.dd</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLabel" name="step_size_label">
-       <property name="text">
-        <string>Record step size：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="3">
-      <widget class="QLineEdit" name="step_size_lineEdit">
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="layoutWidget_6">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>270</x>
       <y>32</y>
-      <width>511</width>
+      <width>611</width>
       <height>83</height>
      </rect>
     </property>
@@ -707,7 +409,7 @@ p, li { white-space: pre-wrap; }
      <item row="1" column="0">
       <widget class="QLabel" name="simu_meta_dir_label">
        <property name="text">
-        <string>Simulation Meta path：</string>
+        <string>Simulation definition path：</string>
        </property>
       </widget>
      </item>
@@ -751,6 +453,252 @@ p, li { white-space: pre-wrap; }
       <widget class="QPushButton" name="record_filedialog_btn">
        <property name="text">
         <string>Setting...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>268</x>
+      <y>230</y>
+      <width>611</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Primitive：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="se_ID_edit_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Advisors：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="se_ID_edit_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Monitors：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="se_ID_edit_4">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Collective：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="se_ID_edit_7">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>120</y>
+      <width>281</width>
+      <height>98</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="se_ID_label">
+       <property name="text">
+        <string>Execute ID：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="se_ID_edit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="se_ID_label_2">
+       <property name="text">
+        <string>Meta Member ID：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="se_ID_edit_5">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="version_label">
+       <property name="text">
+        <string>Version：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="version_edit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="modify_date_label">
+       <property name="text">
+        <string>Modify date：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateEdit" name="modify_dateEdit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2020</year>
+         <month>2</month>
+         <day>20</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy.MM.dd</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>562</x>
+      <y>120</y>
+      <width>311</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="se_ID_label_3">
+       <property name="text">
+        <string>definition ID：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="se_ID_edit_6">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="generation_label">
+       <property name="text">
+        <string>Generation：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="generation_lineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="step_size_label">
+       <property name="text">
+        <string>Record step size：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="step_size_lineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>

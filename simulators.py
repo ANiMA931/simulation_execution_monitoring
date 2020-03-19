@@ -12,7 +12,6 @@ from numpy.random import rand  # 随机数函数
 from xml.dom import minidom  # 生成xml文件时的工具
 
 
-
 # 用于存储或读取仿真运行时成员之间的各种信息
 class Observer:
     def __init__(self, unit_ids, advisor_ids, monitor_ids):
@@ -161,10 +160,10 @@ def simulate(cE_simulator, round):
         thread_list = []
         for one_unit in cE_simulator.units.items():
             # 并行函数
-            t=threading.Thread(target=one_unit_run_on_pattern,args=(cE_simulator, one_unit))
+            t = threading.Thread(target=one_unit_run_on_pattern, args=(cE_simulator, one_unit))
             t.start()
             thread_list.append(t)
-            #print(thread_list)
+            # print(thread_list)
             # 如果该unit的状态是active，那么
 
     # 跳出while循环说明所有的unit已经不能再执行，记录本迭代仿真的内容
@@ -212,7 +211,7 @@ class cE_simulator:
             input('pattern path error, press any key to exit.')
             sys.exit()
 
-        self.observer = Observer(list(self.units.keys()),list(self.advisors.keys()),list(self.monitors.keys()))
+        self.observer = Observer(list(self.units.keys()), list(self.advisors.keys()), list(self.monitors.keys()))
 
     def read_members(self, member_path):
         '''

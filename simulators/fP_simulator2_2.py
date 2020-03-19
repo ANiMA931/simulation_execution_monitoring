@@ -13,7 +13,7 @@ def thread_main_loop_for_collective(collective_id: str):
     """
     # 任务获得至任务槽，通过取余数实现任务轮转
     the_len = len(collectives[collective_id].mission_msg_pool)
-    true_len = randrange(the_len // 5)
+    true_len = randrange(the_len // 2)
     t_pool = collectives[collective_id].mission_msg_pool.copy()
     shuffle(t_pool)
     # 对任务槽中的任务信息进行轮换转发，在任务槽不为空时转发
@@ -26,7 +26,7 @@ def special_loop_for_collective(group: int, collective_ids: list):
     t_pool = message_group[group].copy()
     for c_id in collective_ids:
         shuffle(t_pool)
-        for m in t_pool[:len(t_pool) // 10]:
+        for m in t_pool[:len(t_pool) // 2]:
             for p in collectives[c_id].conn_primitive.keys():
                 transmit_message_for_collective(c_id, deepcopy(messages[m]), p)
 
@@ -462,12 +462,12 @@ if __name__ == '__main__':
     for r in range(all_round):
         # 特殊投放
 
-        if r in collective_generation:
-            for s_group in special_group:
-                tl = randrange(1, len(collectives.keys()))
-                t_lst = list(collectives.keys())
-                shuffle(t_lst)
-                special_loop_for_collective(s_group, t_lst[:tl//len(special_group)*15])
+        # if r in collective_generation:
+        #     for s_group in special_group:
+        #         tl = randrange(1, len(collectives.keys()))
+        #         t_lst = list(collectives.keys())
+        #         shuffle(t_lst)
+        #         special_loop_for_collective(s_group, t_lst[:tl//len(special_group)*5])
         # # 一般投放
         # if r in collective_generation:
         #     tl = randrange(1, len(collectives.keys()))
@@ -502,10 +502,10 @@ if __name__ == '__main__':
     record_format()
     print('simulation end.\nTime =', time() - a)
     # 生成excel表格
-    wb = xlsxwriter.Workbook('simu_rec_table1.xlsx')
+    wb = xlsxwriter.Workbook('simu_rec_table3.xlsx')
     ws = wb.add_worksheet('simu_record')
     ws.write(0, 0, 'generation')
-    ws.write(0, 1, '混合针对投放')
+    ws.write(0, 1, '无投放')
     for i, m in zip(range(all_round), record_sum_stngth_rcv_list):
         ws.write(i + 1, 0, i)
         ws.write(i + 1, 1, m)

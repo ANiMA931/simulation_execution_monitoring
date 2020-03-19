@@ -1,6 +1,6 @@
 # cE_simulation_tool.py
 '''
-本文件是写的界面与后台仿真线程，目前尚不可用
+本文件是写的界面与后台仿真线程
 '''
 from my_tools import *
 from UI.coEvolution_child import Ui_Form  # pyUIC自动生成的pyqt5界面
@@ -48,7 +48,7 @@ class Run_thread(QtCore.QThread):
         self.wait()  # 仿真结束设置线程状态
 
 
-class uf_Form(QtWidgets.QWidget, uf):
+class uf_Form(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
         super(uf_Form, self).__init__()
         self.setupUi(self)
@@ -252,6 +252,6 @@ class CE_simulation_Form(QtWidgets.QWidget, Ui_Form):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = uf_Form()
-    window.setWindowTitle('Simulation Result')
+    window.setWindowTitle('众智网络仿真执行工具软件')
     window.show()
     sys.exit(app.exec_())

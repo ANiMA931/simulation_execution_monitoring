@@ -1,1 +1,401 @@
-<?xml version="1.0" ?><record round="5" successRate="0.65"><unit ID="u-00" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="132.90588" resourceCost="-157.03905999999998" resourceRemain="289.94494" result="wrong" selfConfidence="6.32451" selfDegeneration="0.68599" selfDiscipline="3.82562" target="p22"><advisors endowment="5.28312" remain="0.8861140416158558" scale="6"><advisor aID="a-16" strength="0.31630205664000355"/><advisor aID="a-05" strength="0.6338474360371358"/><advisor aID="a-19" strength="0.3602934797964642"/><advisor aID="a-18" strength="1.0848993671661762"/><advisor aID="a-04" strength="1.073930546446819"/><advisor aID="a-11" strength="0.9277330722975463"/></advisors><monitors scale="2"><monitor mID="m-13"/><monitor mID="m-01"/></monitors><cUnits endowment="1.56782" remain="0.79679" scale="1"><connUnit strength="0.77103" uID="u-18"/></cUnits></unit><unit ID="u-01" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('fail', ('p8', 'p11')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="183.67334" resourceCost="-147.48846000000003" resourceRemain="331.1618" result="wrong" selfConfidence="9.17896" selfDegeneration="0.52815" selfDiscipline="3.78088" target="p22"><advisors endowment="3.98988" remain="1.5288520390771285" scale="1"><advisor aID="a-11" strength="2.461027960922871"/></advisors><monitors scale="3"><monitor mID="m-15"/><monitor mID="m-07"/><monitor mID="m-09"/></monitors><cUnits endowment="17.50303" remain="17.50303" scale="0"/></unit><unit ID="u-02" Path="['p0', 'p4', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p0')), ('success', ('p0', 'p4')), ('success', ('p4', 'p8')), ('fail', ('p8', 'p11')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="191.75708" resourceCost="-137.62353" resourceRemain="329.38061" result="succeed" selfConfidence="6.15101" selfDegeneration="0.19384" selfDiscipline="6.88891" target="p22"><advisors endowment="18.63434" remain="0.9890269147666148" scale="9"><advisor aID="a-00" strength="2.3793144148689716"/><advisor aID="a-13" strength="3.1073450451745095"/><advisor aID="a-11" strength="1.9675171477220972"/><advisor aID="a-08" strength="1.3109572523049327"/><advisor aID="a-03" strength="2.2087134267345614"/><advisor aID="a-12" strength="2.1920413772450162"/><advisor aID="a-17" strength="1.0713246682261997"/><advisor aID="a-07" strength="0.36226908460343177"/><advisor aID="a-16" strength="3.045830668353669"/></advisors><monitors scale="0"/><cUnits endowment="7.72134" remain="7.72134" scale="0"/></unit><unit ID="u-03" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('fail', ('p19', 'p23')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="149.07661" resourceCost="-147.90948999999998" resourceRemain="296.98609999999996" result="wrong" selfConfidence="9.77257" selfDegeneration="0.61102" selfDiscipline="6.22719" target="p22"><advisors endowment="8.09973" remain="3.260202451592699" scale="2"><advisor aID="a-01" strength="1.8111432620600312"/><advisor aID="a-07" strength="3.0283842863472694"/></advisors><monitors scale="6"><monitor mID="m-01"/><monitor mID="m-03"/><monitor mID="m-19"/><monitor mID="m-06"/><monitor mID="m-16"/><monitor mID="m-00"/></monitors><cUnits endowment="3.52966" remain="3.36899" scale="1"><connUnit strength="0.16067" uID="u-04"/></cUnits></unit><unit ID="u-04" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="159.36149" resourceCost="-140.28796999999997" resourceRemain="299.64946" result="succeed" selfConfidence="6.8991" selfDegeneration="0.04429" selfDiscipline="9.75673" target="p22"><advisors endowment="5.83368" remain="1.5821455330424763" scale="2"><advisor aID="a-12" strength="1.7740415775790568"/><advisor aID="a-15" strength="2.477492889378468"/></advisors><monitors scale="0"/><cUnits endowment="9.00639" remain="1.70797" scale="1"><connUnit strength="7.29842" uID="u-03"/></cUnits></unit><unit ID="u-05" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="131.34368" resourceCost="-192.07362" resourceRemain="323.4173" result="succeed" selfConfidence="0.901" selfDegeneration="0.39125" selfDiscipline="1.36971" target="p22"><advisors endowment="19.62197" remain="3.2661643280131156" scale="8"><advisor aID="a-02" strength="1.538773305084754"/><advisor aID="a-16" strength="0.2535989102807629"/><advisor aID="a-06" strength="2.0257588807417966"/><advisor aID="a-11" strength="4.1298424530239135"/><advisor aID="a-03" strength="0.8800364377804215"/><advisor aID="a-09" strength="3.8025526422117633"/><advisor aID="a-01" strength="0.6804554178069319"/><advisor aID="a-08" strength="3.0447876250565407"/></advisors><monitors scale="1"><monitor mID="m-12"/></monitors><cUnits endowment="12.23119" remain="12.23119" scale="0"/></unit><unit ID="u-06" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="107.90532" resourceCost="-157.03906" resourceRemain="264.94438" result="wrong" selfConfidence="2.96548" selfDegeneration="0.42267" selfDiscipline="6.30831" target="p22"><advisors endowment="12.14617" remain="5.532842183638489" scale="2"><advisor aID="a-06" strength="5.714334827996195"/><advisor aID="a-14" strength="0.8989929883653174"/></advisors><monitors scale="4"><monitor mID="m-05"/><monitor mID="m-00"/><monitor mID="m-17"/><monitor mID="m-15"/></monitors><cUnits endowment="15.05699" remain="15.04753" scale="1"><connUnit strength="0.00946" uID="u-18"/></cUnits></unit><unit ID="u-07" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="179.9952" resourceCost="-192.07362" resourceRemain="372.06882" result="succeed" selfConfidence="3.88321" selfDegeneration="0.0549" selfDiscipline="4.82854" target="p22"><advisors endowment="11.79432" remain="1.7260870448437475" scale="9"><advisor aID="a-02" strength="0.31530418626935147"/><advisor aID="a-14" strength="2.064390447856689"/><advisor aID="a-05" strength="2.113727330141713"/><advisor aID="a-03" strength="1.8202256007857636"/><advisor aID="a-09" strength="1.9219495511650289"/><advisor aID="a-08" strength="0.5130090193050523"/><advisor aID="a-13" strength="0.7692706228914786"/><advisor aID="a-00" strength="0.4313389144987654"/><advisor aID="a-06" strength="0.11901728224240997"/></advisors><monitors scale="5"><monitor mID="m-03"/><monitor mID="m-00"/><monitor mID="m-16"/><monitor mID="m-19"/><monitor mID="m-17"/></monitors><cUnits endowment="16.77932" remain="16.33639" scale="1"><connUnit strength="0.44293" uID="u-15"/></cUnits></unit><unit ID="u-08" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="129.01766" resourceCost="-115.64841999999996" resourceRemain="244.66607999999997" result="wrong" selfConfidence="6.92775" selfDegeneration="0.29243" selfDiscipline="8.53801" target="p22"><advisors endowment="12.40301" remain="1.9038060590397137" scale="2"><advisor aID="a-03" strength="5.746949547783016"/><advisor aID="a-00" strength="4.752254393177271"/></advisors><monitors scale="5"><monitor mID="m-04"/><monitor mID="m-06"/><monitor mID="m-01"/><monitor mID="m-18"/><monitor mID="m-00"/></monitors><cUnits endowment="6.89502" remain="1.50084" scale="1"><connUnit strength="5.39418" uID="u-09"/></cUnits></unit><unit ID="u-09" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="105.16972" resourceCost="-115.64841999999997" resourceRemain="220.81813999999997" result="wrong" selfConfidence="7.97104" selfDegeneration="0.90366" selfDiscipline="4.49856" target="p22"><advisors endowment="17.72771" remain="4.108525387957685" scale="6"><advisor aID="a-14" strength="1.434631170264642"/><advisor aID="a-02" strength="5.915331842369982"/><advisor aID="a-15" strength="2.797885690145601"/><advisor aID="a-08" strength="0.07945657109438642"/><advisor aID="a-12" strength="1.7455975435527706"/><advisor aID="a-17" strength="1.6462817946149326"/></advisors><monitors scale="7"><monitor mID="m-03"/><monitor mID="m-15"/><monitor mID="m-08"/><monitor mID="m-06"/><monitor mID="m-05"/><monitor mID="m-00"/><monitor mID="m-19"/></monitors><cUnits endowment="18.3431" remain="3.75271" scale="2"><connUnit strength="13.39527" uID="u-08"/><connUnit strength="1.19513" uID="u-14"/></cUnits></unit><unit ID="u-10" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="148.98449" resourceCost="-140.28796999999997" resourceRemain="289.27245999999997" result="succeed" selfConfidence="9.5875" selfDegeneration="0.88587" selfDiscipline="4.61578" target="p22"><advisors endowment="1.47948" remain="0.15366847012344775" scale="6"><advisor aID="a-05" strength="0.07884863862887055"/><advisor aID="a-00" strength="0.2355324041156084"/><advisor aID="a-19" strength="0.22680980986949553"/><advisor aID="a-17" strength="0.34387676494854325"/><advisor aID="a-14" strength="0.23645091625406975"/><advisor aID="a-06" strength="0.20429299605996448"/></advisors><monitors scale="1"><monitor mID="m-02"/></monitors><cUnits endowment="11.79124" remain="11.79124" scale="0"/></unit><unit ID="u-11" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="188.29107" resourceCost="-192.07361999999995" resourceRemain="380.36468999999994" result="succeed" selfConfidence="6.11648" selfDegeneration="0.57961" selfDiscipline="1.77064" target="p22"><advisors endowment="14.03548" remain="0.7920718280035244" scale="5"><advisor aID="a-09" strength="6.229432209844079"/><advisor aID="a-10" strength="0.6964179941112111"/><advisor aID="a-15" strength="5.105085952186393"/><advisor aID="a-02" strength="0.43870959593042624"/><advisor aID="a-01" strength="0.7737624199243653"/></advisors><monitors scale="0"/><cUnits endowment="18.53469" remain="18.53469" scale="0"/></unit><unit ID="u-12" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="140.25898" resourceCost="-192.07362" resourceRemain="332.3326" result="succeed" selfConfidence="2.92312" selfDegeneration="0.89219" selfDiscipline="7.29879" target="p22"><advisors endowment="2.39978" remain="0.2708430396998112" scale="1"><advisor aID="a-09" strength="2.1289369603001886"/></advisors><monitors scale="9"><monitor mID="m-05"/><monitor mID="m-15"/><monitor mID="m-19"/><monitor mID="m-14"/><monitor mID="m-18"/><monitor mID="m-06"/><monitor mID="m-12"/><monitor mID="m-09"/><monitor mID="m-11"/></monitors><cUnits endowment="19.45723" remain="19.45723" scale="0"/></unit><unit ID="u-13" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="102.1369" resourceCost="-150.68297999999996" resourceRemain="252.81987999999996" result="succeed" selfConfidence="9.11146" selfDegeneration="0.90564" selfDiscipline="1.26248" target="p22"><advisors endowment="5.61235" remain="2.3006030676883773" scale="1"><advisor aID="a-15" strength="3.3117469323116224"/></advisors><monitors scale="1"><monitor mID="m-10"/></monitors><cUnits endowment="13.66373" remain="13.66373" scale="0"/></unit><unit ID="u-14" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="124.50629" resourceCost="-140.28797" resourceRemain="264.79426" result="succeed" selfConfidence="3.24641" selfDegeneration="0.0735" selfDiscipline="7.7083" target="p22"><advisors endowment="13.64289" remain="1.168556831325363" scale="6"><advisor aID="a-01" strength="1.8878196365880577"/><advisor aID="a-05" strength="0.5626176540964812"/><advisor aID="a-03" strength="3.178140577140139"/><advisor aID="a-12" strength="1.263348700376855"/><advisor aID="a-15" strength="3.4497018451526604"/><advisor aID="a-00" strength="2.1327047553204412"/></advisors><monitors scale="3"><monitor mID="m-09"/><monitor mID="m-01"/><monitor mID="m-05"/></monitors><cUnits endowment="11.86396" remain="11.24125" scale="1"><connUnit strength="0.62271" uID="u-09"/></cUnits></unit><unit ID="u-15" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]" mutationRate="0.0005" resource="160.38277" resourceCost="-157.03906" resourceRemain="317.42183" result="wrong" selfConfidence="9.35156" selfDegeneration="0.49314" selfDiscipline="6.70941" target="p22"><advisors endowment="5.9869" remain="1.3499655573872076" scale="4"><advisor aID="a-13" strength="0.315639238930962"/><advisor aID="a-10" strength="2.162621889364478"/><advisor aID="a-04" strength="2.0977584586950226"/><advisor aID="a-19" strength="0.060914855622329865"/></advisors><monitors scale="6"><monitor mID="m-07"/><monitor mID="m-04"/><monitor mID="m-11"/><monitor mID="m-05"/><monitor mID="m-02"/><monitor mID="m-16"/></monitors><cUnits endowment="12.05817" remain="5.76097" scale="1"><connUnit strength="6.2972" uID="u-07"/></cUnits></unit><unit ID="u-16" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="162.31069" resourceCost="-192.07361999999998" resourceRemain="354.38430999999997" result="succeed" selfConfidence="1.80052" selfDegeneration="0.64529" selfDiscipline="3.95635" target="p22"><advisors endowment="1.85472" remain="0.8021176417884347" scale="2"><advisor aID="a-18" strength="0.3614701400065486"/><advisor aID="a-08" strength="0.6911322182050167"/></advisors><monitors scale="7"><monitor mID="m-10"/><monitor mID="m-01"/><monitor mID="m-07"/><monitor mID="m-11"/><monitor mID="m-12"/><monitor mID="m-02"/><monitor mID="m-15"/></monitors><cUnits endowment="12.44677" remain="2.944" scale="1"><connUnit strength="9.50277" uID="u-19"/></cUnits></unit><unit ID="u-17" Path="['p0', 'p4', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p0')), ('success', ('p0', 'p4')), ('success', ('p4', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="193.47628" resourceCost="-147.17412999999996" resourceRemain="340.65040999999997" result="succeed" selfConfidence="3.55462" selfDegeneration="0.95845" selfDiscipline="9.54739" target="p22"><advisors endowment="18.92759" remain="0.46692669596000325" scale="8"><advisor aID="a-09" strength="3.5679830903966896"/><advisor aID="a-10" strength="3.519704528700752"/><advisor aID="a-07" strength="2.3436342075173955"/><advisor aID="a-16" strength="3.5232555872777453"/><advisor aID="a-08" strength="1.5552120378447927"/><advisor aID="a-13" strength="0.727910816915592"/><advisor aID="a-06" strength="1.191940947840305"/><advisor aID="a-15" strength="2.0310220875467246"/></advisors><monitors scale="2"><monitor mID="m-13"/><monitor mID="m-17"/></monitors><cUnits endowment="6.48784" remain="6.48784" scale="0"/></unit><unit ID="u-18" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="129.83097" resourceCost="-192.07361999999998" resourceRemain="321.90459" result="succeed" selfConfidence="7.85286" selfDegeneration="0.7894" selfDiscipline="8.20357" target="p22"><advisors endowment="14.59502" remain="2.8765636451492247" scale="5"><advisor aID="a-13" strength="2.0221283215743173"/><advisor aID="a-02" strength="0.5269297150704414"/><advisor aID="a-05" strength="2.513357937898099"/><advisor aID="a-19" strength="4.544646449316865"/><advisor aID="a-16" strength="2.111393930991055"/></advisors><monitors scale="3"><monitor mID="m-11"/><monitor mID="m-10"/><monitor mID="m-13"/></monitors><cUnits endowment="15.12592" remain="7.68353" scale="2"><connUnit strength="1.18754" uID="u-00"/><connUnit strength="6.25485" uID="u-06"/></cUnits></unit><unit ID="u-19" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']" actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('fail', ('p11', 'p15')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]" mutationRate="0.0005" resource="182.45051" resourceCost="-149.69256999999993" resourceRemain="332.14307999999994" result="succeed" selfConfidence="7.00726" selfDegeneration="0.79918" selfDiscipline="0.94596" target="p22"><advisors endowment="17.5567" remain="0.03702363149553878" scale="7"><advisor aID="a-09" strength="5.5145850631009425"/><advisor aID="a-16" strength="0.00920959637444072"/><advisor aID="a-00" strength="2.4928324426584028"/><advisor aID="a-02" strength="1.9146481058941398"/><advisor aID="a-19" strength="0.9638684824071095"/><advisor aID="a-14" strength="4.025657546611705"/><advisor aID="a-15" strength="2.5988751314577194"/></advisors><monitors scale="9"><monitor mID="m-17"/><monitor mID="m-01"/><monitor mID="m-11"/><monitor mID="m-00"/><monitor mID="m-09"/><monitor mID="m-13"/><monitor mID="m-05"/><monitor mID="m-08"/><monitor mID="m-06"/></monitors><cUnits endowment="10.37609" remain="4.51355" scale="1"><connUnit strength="5.86254" uID="u-16"/></cUnits></unit></record>
+<?xml version="1.0" ?>
+<record round="5" successRate="0.65">
+    <unit ID="u-00" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="132.90588" resourceCost="-157.03905999999998" resourceRemain="289.94494"
+          result="wrong" selfConfidence="6.32451" selfDegeneration="0.68599" selfDiscipline="3.82562" target="p22">
+        <advisors endowment="5.28312" remain="0.8861140416158558" scale="6">
+            <advisor aID="a-16" strength="0.31630205664000355"/>
+            <advisor aID="a-05" strength="0.6338474360371358"/>
+            <advisor aID="a-19" strength="0.3602934797964642"/>
+            <advisor aID="a-18" strength="1.0848993671661762"/>
+            <advisor aID="a-04" strength="1.073930546446819"/>
+            <advisor aID="a-11" strength="0.9277330722975463"/>
+        </advisors>
+        <monitors scale="2">
+            <monitor mID="m-13"/>
+            <monitor mID="m-01"/>
+        </monitors>
+        <cUnits endowment="1.56782" remain="0.79679" scale="1">
+            <connUnit strength="0.77103" uID="u-18"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-01" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('fail', ('p8', 'p11')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="183.67334" resourceCost="-147.48846000000003" resourceRemain="331.1618"
+          result="wrong" selfConfidence="9.17896" selfDegeneration="0.52815" selfDiscipline="3.78088" target="p22">
+        <advisors endowment="3.98988" remain="1.5288520390771285" scale="1">
+            <advisor aID="a-11" strength="2.461027960922871"/>
+        </advisors>
+        <monitors scale="3">
+            <monitor mID="m-15"/>
+            <monitor mID="m-07"/>
+            <monitor mID="m-09"/>
+        </monitors>
+        <cUnits endowment="17.50303" remain="17.50303" scale="0"/>
+    </unit>
+    <unit ID="u-02" Path="['p0', 'p4', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p0')), ('success', ('p0', 'p4')), ('success', ('p4', 'p8')), ('fail', ('p8', 'p11')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="191.75708" resourceCost="-137.62353" resourceRemain="329.38061"
+          result="succeed" selfConfidence="6.15101" selfDegeneration="0.19384" selfDiscipline="6.88891" target="p22">
+        <advisors endowment="18.63434" remain="0.9890269147666148" scale="9">
+            <advisor aID="a-00" strength="2.3793144148689716"/>
+            <advisor aID="a-13" strength="3.1073450451745095"/>
+            <advisor aID="a-11" strength="1.9675171477220972"/>
+            <advisor aID="a-08" strength="1.3109572523049327"/>
+            <advisor aID="a-03" strength="2.2087134267345614"/>
+            <advisor aID="a-12" strength="2.1920413772450162"/>
+            <advisor aID="a-17" strength="1.0713246682261997"/>
+            <advisor aID="a-07" strength="0.36226908460343177"/>
+            <advisor aID="a-16" strength="3.045830668353669"/>
+        </advisors>
+        <monitors scale="0"/>
+        <cUnits endowment="7.72134" remain="7.72134" scale="0"/>
+    </unit>
+    <unit ID="u-03" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('fail', ('p19', 'p23')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="149.07661" resourceCost="-147.90948999999998"
+          resourceRemain="296.98609999999996" result="wrong" selfConfidence="9.77257" selfDegeneration="0.61102"
+          selfDiscipline="6.22719" target="p22">
+        <advisors endowment="8.09973" remain="3.260202451592699" scale="2">
+            <advisor aID="a-01" strength="1.8111432620600312"/>
+            <advisor aID="a-07" strength="3.0283842863472694"/>
+        </advisors>
+        <monitors scale="6">
+            <monitor mID="m-01"/>
+            <monitor mID="m-03"/>
+            <monitor mID="m-19"/>
+            <monitor mID="m-06"/>
+            <monitor mID="m-16"/>
+            <monitor mID="m-00"/>
+        </monitors>
+        <cUnits endowment="3.52966" remain="3.36899" scale="1">
+            <connUnit strength="0.16067" uID="u-04"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-04" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="159.36149" resourceCost="-140.28796999999997" resourceRemain="299.64946"
+          result="succeed" selfConfidence="6.8991" selfDegeneration="0.04429" selfDiscipline="9.75673" target="p22">
+        <advisors endowment="5.83368" remain="1.5821455330424763" scale="2">
+            <advisor aID="a-12" strength="1.7740415775790568"/>
+            <advisor aID="a-15" strength="2.477492889378468"/>
+        </advisors>
+        <monitors scale="0"/>
+        <cUnits endowment="9.00639" remain="1.70797" scale="1">
+            <connUnit strength="7.29842" uID="u-03"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-05" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="131.34368" resourceCost="-192.07362" resourceRemain="323.4173"
+          result="succeed" selfConfidence="0.901" selfDegeneration="0.39125" selfDiscipline="1.36971" target="p22">
+        <advisors endowment="19.62197" remain="3.2661643280131156" scale="8">
+            <advisor aID="a-02" strength="1.538773305084754"/>
+            <advisor aID="a-16" strength="0.2535989102807629"/>
+            <advisor aID="a-06" strength="2.0257588807417966"/>
+            <advisor aID="a-11" strength="4.1298424530239135"/>
+            <advisor aID="a-03" strength="0.8800364377804215"/>
+            <advisor aID="a-09" strength="3.8025526422117633"/>
+            <advisor aID="a-01" strength="0.6804554178069319"/>
+            <advisor aID="a-08" strength="3.0447876250565407"/>
+        </advisors>
+        <monitors scale="1">
+            <monitor mID="m-12"/>
+        </monitors>
+        <cUnits endowment="12.23119" remain="12.23119" scale="0"/>
+    </unit>
+    <unit ID="u-06" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="107.90532" resourceCost="-157.03906" resourceRemain="264.94438" result="wrong"
+          selfConfidence="2.96548" selfDegeneration="0.42267" selfDiscipline="6.30831" target="p22">
+        <advisors endowment="12.14617" remain="5.532842183638489" scale="2">
+            <advisor aID="a-06" strength="5.714334827996195"/>
+            <advisor aID="a-14" strength="0.8989929883653174"/>
+        </advisors>
+        <monitors scale="4">
+            <monitor mID="m-05"/>
+            <monitor mID="m-00"/>
+            <monitor mID="m-17"/>
+            <monitor mID="m-15"/>
+        </monitors>
+        <cUnits endowment="15.05699" remain="15.04753" scale="1">
+            <connUnit strength="0.00946" uID="u-18"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-07" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="179.9952" resourceCost="-192.07362" resourceRemain="372.06882"
+          result="succeed" selfConfidence="3.88321" selfDegeneration="0.0549" selfDiscipline="4.82854" target="p22">
+        <advisors endowment="11.79432" remain="1.7260870448437475" scale="9">
+            <advisor aID="a-02" strength="0.31530418626935147"/>
+            <advisor aID="a-14" strength="2.064390447856689"/>
+            <advisor aID="a-05" strength="2.113727330141713"/>
+            <advisor aID="a-03" strength="1.8202256007857636"/>
+            <advisor aID="a-09" strength="1.9219495511650289"/>
+            <advisor aID="a-08" strength="0.5130090193050523"/>
+            <advisor aID="a-13" strength="0.7692706228914786"/>
+            <advisor aID="a-00" strength="0.4313389144987654"/>
+            <advisor aID="a-06" strength="0.11901728224240997"/>
+        </advisors>
+        <monitors scale="5">
+            <monitor mID="m-03"/>
+            <monitor mID="m-00"/>
+            <monitor mID="m-16"/>
+            <monitor mID="m-19"/>
+            <monitor mID="m-17"/>
+        </monitors>
+        <cUnits endowment="16.77932" remain="16.33639" scale="1">
+            <connUnit strength="0.44293" uID="u-15"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-08" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="129.01766" resourceCost="-115.64841999999996"
+          resourceRemain="244.66607999999997" result="wrong" selfConfidence="6.92775" selfDegeneration="0.29243"
+          selfDiscipline="8.53801" target="p22">
+        <advisors endowment="12.40301" remain="1.9038060590397137" scale="2">
+            <advisor aID="a-03" strength="5.746949547783016"/>
+            <advisor aID="a-00" strength="4.752254393177271"/>
+        </advisors>
+        <monitors scale="5">
+            <monitor mID="m-04"/>
+            <monitor mID="m-06"/>
+            <monitor mID="m-01"/>
+            <monitor mID="m-18"/>
+            <monitor mID="m-00"/>
+        </monitors>
+        <cUnits endowment="6.89502" remain="1.50084" scale="1">
+            <connUnit strength="5.39418" uID="u-09"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-09" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="105.16972" resourceCost="-115.64841999999997"
+          resourceRemain="220.81813999999997" result="wrong" selfConfidence="7.97104" selfDegeneration="0.90366"
+          selfDiscipline="4.49856" target="p22">
+        <advisors endowment="17.72771" remain="4.108525387957685" scale="6">
+            <advisor aID="a-14" strength="1.434631170264642"/>
+            <advisor aID="a-02" strength="5.915331842369982"/>
+            <advisor aID="a-15" strength="2.797885690145601"/>
+            <advisor aID="a-08" strength="0.07945657109438642"/>
+            <advisor aID="a-12" strength="1.7455975435527706"/>
+            <advisor aID="a-17" strength="1.6462817946149326"/>
+        </advisors>
+        <monitors scale="7">
+            <monitor mID="m-03"/>
+            <monitor mID="m-15"/>
+            <monitor mID="m-08"/>
+            <monitor mID="m-06"/>
+            <monitor mID="m-05"/>
+            <monitor mID="m-00"/>
+            <monitor mID="m-19"/>
+        </monitors>
+        <cUnits endowment="18.3431" remain="3.75271" scale="2">
+            <connUnit strength="13.39527" uID="u-08"/>
+            <connUnit strength="1.19513" uID="u-14"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-10" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="148.98449" resourceCost="-140.28796999999997"
+          resourceRemain="289.27245999999997" result="succeed" selfConfidence="9.5875" selfDegeneration="0.88587"
+          selfDiscipline="4.61578" target="p22">
+        <advisors endowment="1.47948" remain="0.15366847012344775" scale="6">
+            <advisor aID="a-05" strength="0.07884863862887055"/>
+            <advisor aID="a-00" strength="0.2355324041156084"/>
+            <advisor aID="a-19" strength="0.22680980986949553"/>
+            <advisor aID="a-17" strength="0.34387676494854325"/>
+            <advisor aID="a-14" strength="0.23645091625406975"/>
+            <advisor aID="a-06" strength="0.20429299605996448"/>
+        </advisors>
+        <monitors scale="1">
+            <monitor mID="m-02"/>
+        </monitors>
+        <cUnits endowment="11.79124" remain="11.79124" scale="0"/>
+    </unit>
+    <unit ID="u-11" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="188.29107" resourceCost="-192.07361999999995"
+          resourceRemain="380.36468999999994" result="succeed" selfConfidence="6.11648" selfDegeneration="0.57961"
+          selfDiscipline="1.77064" target="p22">
+        <advisors endowment="14.03548" remain="0.7920718280035244" scale="5">
+            <advisor aID="a-09" strength="6.229432209844079"/>
+            <advisor aID="a-10" strength="0.6964179941112111"/>
+            <advisor aID="a-15" strength="5.105085952186393"/>
+            <advisor aID="a-02" strength="0.43870959593042624"/>
+            <advisor aID="a-01" strength="0.7737624199243653"/>
+        </advisors>
+        <monitors scale="0"/>
+        <cUnits endowment="18.53469" remain="18.53469" scale="0"/>
+    </unit>
+    <unit ID="u-12" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="140.25898" resourceCost="-192.07362" resourceRemain="332.3326"
+          result="succeed" selfConfidence="2.92312" selfDegeneration="0.89219" selfDiscipline="7.29879" target="p22">
+        <advisors endowment="2.39978" remain="0.2708430396998112" scale="1">
+            <advisor aID="a-09" strength="2.1289369603001886"/>
+        </advisors>
+        <monitors scale="9">
+            <monitor mID="m-05"/>
+            <monitor mID="m-15"/>
+            <monitor mID="m-19"/>
+            <monitor mID="m-14"/>
+            <monitor mID="m-18"/>
+            <monitor mID="m-06"/>
+            <monitor mID="m-12"/>
+            <monitor mID="m-09"/>
+            <monitor mID="m-11"/>
+        </monitors>
+        <cUnits endowment="19.45723" remain="19.45723" scale="0"/>
+    </unit>
+    <unit ID="u-13" Path="['p2', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="102.1369" resourceCost="-150.68297999999996"
+          resourceRemain="252.81987999999996" result="succeed" selfConfidence="9.11146" selfDegeneration="0.90564"
+          selfDiscipline="1.26248" target="p22">
+        <advisors endowment="5.61235" remain="2.3006030676883773" scale="1">
+            <advisor aID="a-15" strength="3.3117469323116224"/>
+        </advisors>
+        <monitors scale="1">
+            <monitor mID="m-10"/>
+        </monitors>
+        <cUnits endowment="13.66373" remain="13.66373" scale="0"/>
+    </unit>
+    <unit ID="u-14" Path="['p1', 'p5', 'p7', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p1')), ('success', ('p1', 'p5')), ('success', ('p5', 'p7')), ('success', ('p7', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="124.50629" resourceCost="-140.28797" resourceRemain="264.79426"
+          result="succeed" selfConfidence="3.24641" selfDegeneration="0.0735" selfDiscipline="7.7083" target="p22">
+        <advisors endowment="13.64289" remain="1.168556831325363" scale="6">
+            <advisor aID="a-01" strength="1.8878196365880577"/>
+            <advisor aID="a-05" strength="0.5626176540964812"/>
+            <advisor aID="a-03" strength="3.178140577140139"/>
+            <advisor aID="a-12" strength="1.263348700376855"/>
+            <advisor aID="a-15" strength="3.4497018451526604"/>
+            <advisor aID="a-00" strength="2.1327047553204412"/>
+        </advisors>
+        <monitors scale="3">
+            <monitor mID="m-09"/>
+            <monitor mID="m-01"/>
+            <monitor mID="m-05"/>
+        </monitors>
+        <cUnits endowment="11.86396" remain="11.24125" scale="1">
+            <connUnit strength="0.62271" uID="u-09"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-15" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p23']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p23'))]"
+          mutationRate="0.0005" resource="160.38277" resourceCost="-157.03906" resourceRemain="317.42183" result="wrong"
+          selfConfidence="9.35156" selfDegeneration="0.49314" selfDiscipline="6.70941" target="p22">
+        <advisors endowment="5.9869" remain="1.3499655573872076" scale="4">
+            <advisor aID="a-13" strength="0.315639238930962"/>
+            <advisor aID="a-10" strength="2.162621889364478"/>
+            <advisor aID="a-04" strength="2.0977584586950226"/>
+            <advisor aID="a-19" strength="0.060914855622329865"/>
+        </advisors>
+        <monitors scale="6">
+            <monitor mID="m-07"/>
+            <monitor mID="m-04"/>
+            <monitor mID="m-11"/>
+            <monitor mID="m-05"/>
+            <monitor mID="m-02"/>
+            <monitor mID="m-16"/>
+        </monitors>
+        <cUnits endowment="12.05817" remain="5.76097" scale="1">
+            <connUnit strength="6.2972" uID="u-07"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-16" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="162.31069" resourceCost="-192.07361999999998"
+          resourceRemain="354.38430999999997" result="succeed" selfConfidence="1.80052" selfDegeneration="0.64529"
+          selfDiscipline="3.95635" target="p22">
+        <advisors endowment="1.85472" remain="0.8021176417884347" scale="2">
+            <advisor aID="a-18" strength="0.3614701400065486"/>
+            <advisor aID="a-08" strength="0.6911322182050167"/>
+        </advisors>
+        <monitors scale="7">
+            <monitor mID="m-10"/>
+            <monitor mID="m-01"/>
+            <monitor mID="m-07"/>
+            <monitor mID="m-11"/>
+            <monitor mID="m-12"/>
+            <monitor mID="m-02"/>
+            <monitor mID="m-15"/>
+        </monitors>
+        <cUnits endowment="12.44677" remain="2.944" scale="1">
+            <connUnit strength="9.50277" uID="u-19"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-17" Path="['p0', 'p4', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p0')), ('success', ('p0', 'p4')), ('success', ('p4', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="193.47628" resourceCost="-147.17412999999996"
+          resourceRemain="340.65040999999997" result="succeed" selfConfidence="3.55462" selfDegeneration="0.95845"
+          selfDiscipline="9.54739" target="p22">
+        <advisors endowment="18.92759" remain="0.46692669596000325" scale="8">
+            <advisor aID="a-09" strength="3.5679830903966896"/>
+            <advisor aID="a-10" strength="3.519704528700752"/>
+            <advisor aID="a-07" strength="2.3436342075173955"/>
+            <advisor aID="a-16" strength="3.5232555872777453"/>
+            <advisor aID="a-08" strength="1.5552120378447927"/>
+            <advisor aID="a-13" strength="0.727910816915592"/>
+            <advisor aID="a-06" strength="1.191940947840305"/>
+            <advisor aID="a-15" strength="2.0310220875467246"/>
+        </advisors>
+        <monitors scale="2">
+            <monitor mID="m-13"/>
+            <monitor mID="m-17"/>
+        </monitors>
+        <cUnits endowment="6.48784" remain="6.48784" scale="0"/>
+    </unit>
+    <unit ID="u-18" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="129.83097" resourceCost="-192.07361999999998" resourceRemain="321.90459"
+          result="succeed" selfConfidence="7.85286" selfDegeneration="0.7894" selfDiscipline="8.20357" target="p22">
+        <advisors endowment="14.59502" remain="2.8765636451492247" scale="5">
+            <advisor aID="a-13" strength="2.0221283215743173"/>
+            <advisor aID="a-02" strength="0.5269297150704414"/>
+            <advisor aID="a-05" strength="2.513357937898099"/>
+            <advisor aID="a-19" strength="4.544646449316865"/>
+            <advisor aID="a-16" strength="2.111393930991055"/>
+        </advisors>
+        <monitors scale="3">
+            <monitor mID="m-11"/>
+            <monitor mID="m-10"/>
+            <monitor mID="m-13"/>
+        </monitors>
+        <cUnits endowment="15.12592" remain="7.68353" scale="2">
+            <connUnit strength="1.18754" uID="u-00"/>
+            <connUnit strength="6.25485" uID="u-06"/>
+        </cUnits>
+    </unit>
+    <unit ID="u-19" Path="['p2', 'p5', 'p8', 'p11', 'p15', 'p19', 'p22']"
+          actionSequence="[('success', ('p24', 'p2')), ('success', ('p2', 'p5')), ('success', ('p5', 'p8')), ('success', ('p8', 'p11')), ('fail', ('p11', 'p15')), ('success', ('p11', 'p15')), ('success', ('p15', 'p19')), ('success', ('p19', 'p22'))]"
+          mutationRate="0.0005" resource="182.45051" resourceCost="-149.69256999999993"
+          resourceRemain="332.14307999999994" result="succeed" selfConfidence="7.00726" selfDegeneration="0.79918"
+          selfDiscipline="0.94596" target="p22">
+        <advisors endowment="17.5567" remain="0.03702363149553878" scale="7">
+            <advisor aID="a-09" strength="5.5145850631009425"/>
+            <advisor aID="a-16" strength="0.00920959637444072"/>
+            <advisor aID="a-00" strength="2.4928324426584028"/>
+            <advisor aID="a-02" strength="1.9146481058941398"/>
+            <advisor aID="a-19" strength="0.9638684824071095"/>
+            <advisor aID="a-14" strength="4.025657546611705"/>
+            <advisor aID="a-15" strength="2.5988751314577194"/>
+        </advisors>
+        <monitors scale="9">
+            <monitor mID="m-17"/>
+            <monitor mID="m-01"/>
+            <monitor mID="m-11"/>
+            <monitor mID="m-00"/>
+            <monitor mID="m-09"/>
+            <monitor mID="m-13"/>
+            <monitor mID="m-05"/>
+            <monitor mID="m-08"/>
+            <monitor mID="m-06"/>
+        </monitors>
+        <cUnits endowment="10.37609" remain="4.51355" scale="1">
+            <connUnit strength="5.86254" uID="u-16"/>
+        </cUnits>
+    </unit>
+</record>

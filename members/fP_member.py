@@ -21,10 +21,12 @@ monitorMembers = dict()
 collectives = dict()
 # 信息字典
 messages = dict()
-# 分组数
-group_N = 10
 # 信息分组字典
 message_group = dict()
+# 领域集合
+area_list = list()
+# group
+group_N = int()
 
 
 class Primitive(Member):
@@ -46,6 +48,7 @@ class Primitive(Member):
         self.the_monitorMembers = list()
         self.connector = self_dict['connector']  # 连接器
         self.the_connectors = dict()  # 该primitive接收谁发送的消息
+        self.reduce_g_round = randrange(100)
         self.msg_receive_pool.append(
             [self.decider['message_vector'].strength, deepcopy(self.decider['message_vector']), 'self'])
 
@@ -150,6 +153,12 @@ def primitive_format(root):
     deciderInfo_labels = root.getElementsByTagName('deciderInfo')
     deciders = dict()
     for one_decider_label in deciderInfo_labels:
+        # 选择偏好
+        preference_pool = list()
+        t_pref_id_list = list(preferences.keys())
+        shuffle(t_pref_id_list)
+        for one_preference_id in t_pref_id_list[:randrange(1, len(root.getElementsByTagName('areaInfo'))//2)]:
+            preference_pool.append(preferences[one_preference_id])
         one_decider = {
             'id': one_decider_label.getAttribute('决策器ID'),
             # 'forward_threshold': one_decider_label.getAttribute('转发阈值'),
@@ -160,7 +169,7 @@ def primitive_format(root):
             'mass_threshold': 0.55,
             'struct_change_threshold': -0.55,
             'weak_strength_threshold': -0.25,
-            'preference_vector': preferences[one_decider_label.getAttribute('偏好矢量')],
+            'preference_vector': preference_pool,
             'message_vector': messages[one_decider_label.getAttribute('信息矢量')]
         }
         deciders.update({one_decider_label.getAttribute('决策器ID'): one_decider})
@@ -219,6 +228,18 @@ def primitive_format(root):
 
 def collective_format(root):
     # 分解器整合
+    area_info_labels = root.getElementsByTagName('areaInfo')
+    global message_group
+    group_N = len(area_info_labels)
+    for one_area_label in area_info_labels:
+        area_list.append(one_area_label.getAttribute('领域ID'))
+    for i in range(group_N):
+        message_group.update({i: list()})
+    for msg_id in messages.keys():
+        for j in message_group.keys():
+            if messages[msg_id].area == area_list[j]:
+                message_group[j].append(msg_id)
+
     decomposerInfo_labels = root.getElementsByTagName('decomposerInfo')
     decomposers = dict()
     for one_decomposer_label in decomposerInfo_labels:
@@ -269,6 +290,8 @@ def collective_format(root):
         }
 
         collectives.update({one_collective_dict['id']: Collective(one_collective_dict)})
+        collectives[one_collective_dict['id']].mission_msg_pool = message_group[
+            collectives[one_collective_dict['id']].decomposer['group']]
 
 
 def format_xml_to_member(xml_dom):
@@ -311,7 +334,6 @@ def connect_all_member():
     :return:
     """
     global collectives
-    # seed(1)  # 随机结果可复现
     # collective与primitive连接为二部图，该连接为双向非对称网络
     for c in collectives.keys():
         pid_list = list(primitives.keys())
@@ -351,10 +373,11 @@ def connect_all_member():
                 print('remove self connect.')  # 测试发生移除自我连接的次数
             for one_pid in pid_list[:real_link_number]:  # 添加连接信息
                 # 对方的连接关系中没有自己，且对方的连接关系尚未饱和
-                if len(primitives[one_pid].the_connectors)<primitives[one_pid].connector['conn_number'] \
+                if len(primitives[one_pid].the_connectors) < primitives[one_pid].connector['conn_number'] \
                         and one_pid not in primitives[p].the_connectors.keys():
                     primitives[p].the_connectors.update({one_pid: primitives[p].connector['average_conn_strength']})
-                    primitives[one_pid].the_connectors.update({p: primitives[one_pid].connector['average_conn_strength']})
+                    primitives[one_pid].the_connectors.update(
+                        {p: primitives[one_pid].connector['average_conn_strength']})
             if remove_flag:
                 pid_list.append(p)
                 remove_flag = False
@@ -400,26 +423,7 @@ def connect_all_member():
                     monitorMembers[m].the_conn_primitive)
 
 
-def message_distribute():
-    """
-    信息分组
-    :return:
-    """
-    msg_id_list = list(messages.keys())
-    group_distance = len(msg_id_list) // group_N
-    shuffle(msg_id_list)
-    global message_group
-    for i in range(group_N):
-        if len(msg_id_list) < group_distance:
-            message_group.update({i: msg_id_list.copy()})
-            pass
-        else:
-            message_group.update({i: msg_id_list[:group_distance].copy()})
-            msg_id_list = msg_id_list[group_distance:]
-
-
 if __name__ == '__main__':
     format_xml_to_member(read_xml(r'fpMemberXml_C.xml'))
     connect_all_member()
-    message_distribute()
     print()

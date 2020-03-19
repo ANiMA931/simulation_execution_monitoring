@@ -1,17 +1,17 @@
 import sys
 
 
-class control_back(object):
+class ControlBack(object):
     def __init__(self, member_xml_path=None, program_path=None, record_path=None, generation=0, version=None,
                  ex_id=None):
         """
         定义函数
-        :param member_xml_path:
-        :param program_path:
-        :param record_path:
-        :param generation:
-        :param version:
-        :param ex_id:
+        :param member_xml_path: 成员xml文件地址
+        :param program_path: 程序入口地址
+        :param record_path: 记录生成路径
+        :param generation: 迭代数
+        :param version: 版本
+        :param ex_id: 仿真ID
         """
         self.member_xml_path = member_xml_path
         self.program_path = program_path

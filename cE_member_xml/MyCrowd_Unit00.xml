@@ -1,5 +1,44 @@
-<?xml version="1.0" ?><unit><commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/><memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="184.90686"/><pattern path="..\patterns\pattern1.xml"><target pID="p22"/><now pID="p24"/></pattern><effector endowment="3.67518" remain="6e-05" scale="9">
-<advisor aID="a-17" strength="1.61066"/><advisor aID="a-04" strength="1.07686"/><advisor aID="a-19" strength="0.15018"/><advisor aID="a-11" strength="0.82111"/><advisor aID="a-15" strength="0.00797"/><advisor aID="a-16" strength="0.00083"/><advisor aID="a-08" strength="0.00026"/><advisor aID="a-06" strength="0.00491"/><advisor aID="a-03" strength="0.00234"/></effector><decider depth="1" selfConfidence="3.10709" strategy="normal"><decisionList scale="0">
-</decisionList></decider><executor mutationRate="0.0005" scale="1" selfDegeneration="0.05397" selfDiscipline="7.73689">
-<monitor mID="m-00"/></executor><parameter endowment="10.87435" remain="0.0" scale="14">
-<cUnit strength="8.12248" uID="u-01"/><cUnit strength="0.88908" uID="u-02"/><cUnit strength="1.69877" uID="u-04"/><cUnit strength="0.14584" uID="u-07"/><cUnit strength="0.0094" uID="u-08"/><cUnit strength="0.00807" uID="u-09"/><cUnit strength="8e-05" uID="u-10"/><cUnit strength="0.0002" uID="u-11"/><cUnit strength="0.00033" uID="u-12"/><cUnit strength="2e-05" uID="u-13"/><cUnit strength="3e-05" uID="u-14"/><cUnit strength="0.0" uID="u-16"/><cUnit strength="3e-05" uID="u-18"/><cUnit strength="1e-05" uID="u-19"/></parameter><comment>default</comment></unit>
+<?xml version="1.0" ?>
+<unit>
+    <commonInformation author="MA" modifyDate="2019.04.09" remark="No" version="0.0"/>
+    <memberType ID="u-00" MetaModelID="p-67.258" memberRole="unit" memberTypeCode="1" resource="184.90686"/>
+    <pattern path="..\patterns\pattern1.xml">
+        <target pID="p22"/>
+        <now pID="p24"/>
+    </pattern>
+    <effector endowment="3.67518" remain="6e-05" scale="9">
+        <advisor aID="a-17" strength="1.61066"/>
+        <advisor aID="a-04" strength="1.07686"/>
+        <advisor aID="a-19" strength="0.15018"/>
+        <advisor aID="a-11" strength="0.82111"/>
+        <advisor aID="a-15" strength="0.00797"/>
+        <advisor aID="a-16" strength="0.00083"/>
+        <advisor aID="a-08" strength="0.00026"/>
+        <advisor aID="a-06" strength="0.00491"/>
+        <advisor aID="a-03" strength="0.00234"/>
+    </effector>
+    <decider depth="1" selfConfidence="3.10709" strategy="normal">
+        <decisionList scale="0">
+        </decisionList>
+    </decider>
+    <executor mutationRate="0.0005" scale="1" selfDegeneration="0.05397" selfDiscipline="7.73689">
+        <monitor mID="m-00"/>
+    </executor>
+    <parameter endowment="10.87435" remain="0.0" scale="14">
+        <cUnit strength="8.12248" uID="u-01"/>
+        <cUnit strength="0.88908" uID="u-02"/>
+        <cUnit strength="1.69877" uID="u-04"/>
+        <cUnit strength="0.14584" uID="u-07"/>
+        <cUnit strength="0.0094" uID="u-08"/>
+        <cUnit strength="0.00807" uID="u-09"/>
+        <cUnit strength="8e-05" uID="u-10"/>
+        <cUnit strength="0.0002" uID="u-11"/>
+        <cUnit strength="0.00033" uID="u-12"/>
+        <cUnit strength="2e-05" uID="u-13"/>
+        <cUnit strength="3e-05" uID="u-14"/>
+        <cUnit strength="0.0" uID="u-16"/>
+        <cUnit strength="3e-05" uID="u-18"/>
+        <cUnit strength="1e-05" uID="u-19"/>
+    </parameter>
+    <comment>default</comment>
+</unit>
