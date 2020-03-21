@@ -26,7 +26,7 @@ def special_loop_for_collective(group: int, collective_ids: list):
     t_pool = message_group[group].copy()
     for c_id in collective_ids:
         shuffle(t_pool)
-        for m in t_pool[:len(t_pool) // 10]:
+        for m in t_pool[:len(t_pool) // 110]:
             for p in collectives[c_id].conn_primitive.keys():
                 transmit_message_for_collective(c_id, deepcopy(messages[m]), p)
 

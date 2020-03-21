@@ -38,7 +38,7 @@ class ControlBack(object):
             try:
                 一个特定的入口函数，特定的入口函数需要的参数都在control_back里，但是现在的问题是怎么把迭代数给返回出来
             except Exception:
-                input('main_function error，input any word to exit')
+                input('main function error，input any word to exit')
                 raise
         else:
             print('item is not complete.')

@@ -473,7 +473,7 @@ if __name__ == '__main__':
             tl = randrange(1, len(collectives.keys()))
             t_lst = list(collectives.keys())
             shuffle(t_lst)
-            for c in t_lst[:tl//15]:
+            for c in t_lst[:tl//10]:
                 thread_main_loop_for_collective(c)
 
         # 无论运行与否，primitive都要走它自己的流程，但必须同步，

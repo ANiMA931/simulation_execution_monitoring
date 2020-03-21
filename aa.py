@@ -14,6 +14,5 @@ def A():
     print(locals())
 sdfe='vberaewrdc'
 enumerate(sdfe)
-
 globals()['p'](locals()['sdfe'])
 globals()['A']()

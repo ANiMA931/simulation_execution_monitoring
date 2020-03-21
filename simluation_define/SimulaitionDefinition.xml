@@ -14,14 +14,24 @@
             <attributeType>attributeName</attributeType>
             <attributeConsraint>attributeName</attributeConsraint>
         </attributeConsraint>
-        <memberMetaModelID></memberMetaModelID>
+        <memberMetaModelID>ID3</memberMetaModelID>
         <memberDocument>
             <filePath>C:\Users\王吉武\Desktop</filePath>
         </memberDocument>
         <roundMethodDefinition>
-            <roundMethodName></roundMethodName>
-            <roundMethodID></roundMethodID>
-            <roundMethod></roundMethod>
+            <primitiveRoundMethod name="p" ID="noID" path="C:\Users\over\Desktop\external_dir">
+                <attribute name="str" type="str"/>
+                <attribute name="str1" type="str"/>
+            </primitiveRoundMethod>
+            <advisorRoundMethod name="" ID="" path="">
+                    <attribute name="" type=""/>
+            </advisorRoundMethod>
+            <monitorRoundMethod name="" ID="" path="">
+                    <attribute name="" type=""/>
+            </monitorRoundMethod>
+            <collectiveRoundMethod name="" ID="" path="">
+                    <attribute name="" type=""/>
+            </collectiveRoundMethod>
         </roundMethodDefinition>
     </simulationExecutionType>
 </SimulationExecutionMetaModel>
