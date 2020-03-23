@@ -23,9 +23,9 @@
                 <attribute name="str" type="str"/>
                 <attribute name="str1" type="str"/>
             </primitiveRoundMethod>
-            <advisorRoundMethod name="" ID="" path="">
+            <adviserRoundMethod name="" ID="" path="">
                     <attribute name="" type=""/>
-            </advisorRoundMethod>
+            </adviserRoundMethod>
             <monitorRoundMethod name="" ID="" path="">
                     <attribute name="" type=""/>
             </monitorRoundMethod>
