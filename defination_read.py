@@ -38,3 +38,6 @@ if __name__ == '__main__':
     from aa__ import *  # 一个特定的名字
 
     globals()[primitiveRoundMethod_dict['name']](**primitiveRoundMethod_dict['attributes'])
+    globals()[collectiveRoundMethod_dict['name']](**collectiveRoundMethod_dict['attributes'])
+    globals()[adviserRoundMethod_dict['name']](**adviserRoundMethod_dict['attributes'])
+    globals()[monitorRoundMethod_dict['name']](**monitorRoundMethod_dict['attributes'])

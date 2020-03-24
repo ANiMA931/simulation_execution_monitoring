@@ -19,18 +19,21 @@
             <filePath>C:\Users\王吉武\Desktop</filePath>
         </memberDocument>
         <roundMethodDefinition>
-            <primitiveRoundMethod name="p" ID="noID" path="C:\Users\over\Desktop\external_dir">
+            <primitiveRoundMethod name="primitive_round_method" ID="noID" path="C:\Users\over\Desktop\external_dir">
                 <attribute name="str" type="str"/>
                 <attribute name="str1" type="str"/>
             </primitiveRoundMethod>
-            <adviserRoundMethod name="" ID="" path="">
-                    <attribute name="" type=""/>
+            <adviserRoundMethod name="adviser_round_method" ID="noID" path="C:\Users\over\Desktop\external_dir">
+                <attribute name="str" type="str"/>
+                <attribute name="str1" type="str"/>
             </adviserRoundMethod>
-            <monitorRoundMethod name="" ID="" path="">
-                    <attribute name="" type=""/>
+            <monitorRoundMethod name="monitor_round_method" ID="noID" path="C:\Users\over\Desktop\external_dir">
+                <attribute name="str" type="str"/>
+                <attribute name="str1" type="str"/>
             </monitorRoundMethod>
-            <collectiveRoundMethod name="" ID="" path="">
-                    <attribute name="" type=""/>
+            <collectiveRoundMethod name="collective_round_method" ID="noID" path="C:\Users\over\Desktop\external_dir">
+                <attribute name="str" type="str"/>
+                <attribute name="str1" type="str"/>
             </collectiveRoundMethod>
         </roundMethodDefinition>
     </simulationExecutionType>
