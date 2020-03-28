@@ -32,3 +32,4 @@ class AdviserMember(BaseMember):
 class MonitorMember(BaseMember):
     def __init__(self, ID, preference, endowment):
         super().__init__(ID, preference, endowment)
+

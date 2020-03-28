@@ -36,5 +36,19 @@
                 <attribute name="str1" type="str"/>
             </collectiveRoundMethod>
         </roundMethodDefinition>
+        <globalAttributeRecursionMethods>
+            <globalAttributeRecursionMethod aName="globalAttribute1" type="str" ID="noID" fName="A1"
+                                            path="C:\Users\over\Desktop\external_dir">
+                <attribute name="f1" type="float"/>
+                <attribute name="f2" type="int"/>
+                <attribute name="f3" type="str"/>
+            </globalAttributeRecursionMethod>
+            <globalAttributeRecursionMethod aName="globalAttribute2" type="float" ID="noID" fName="A2"
+                                            path="C:\Users\over\Desktop\external_dir">
+                <attribute name="f1" type="float"/>
+                <attribute name="f2" type="int"/>
+                <attribute name="f3" type="str"/>
+            </globalAttributeRecursionMethod>
+        </globalAttributeRecursionMethods>
     </simulationExecutionType>
 </SimulationExecutionMetaModel>
