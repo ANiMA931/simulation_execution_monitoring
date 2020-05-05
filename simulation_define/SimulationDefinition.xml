@@ -19,6 +19,18 @@
             <filePath>C:\Users\王吉武\Desktop</filePath>
         </memberDocument>
         <roundMethodDefinition>
+            <primitiveRoundMethodDefinition>
+                <!--
+                    影响器一个函数；决策器一个函数；执行器一个函数；监督器一个函数；连接器一个函数
+                -->
+            </primitiveRoundMethodDefinition>
+            <collectiveRoundMethodDefinition>
+                <!--
+                    分解器一个函数；汇聚器一个函数；影响器一个函数；决策器一个函数；执行器一个函数；监督器一个函数；连接器一个函数
+                 -->
+            </collectiveRoundMethodDefinition>
+        </roundMethodDefinition>
+        <roundMethodDefinition>
             <primitiveRoundMethod name="primitive_round_method" ID="noID" path="C:\Users\over\Desktop\external_dir">
                 <attribute name="str" type="str"/>
                 <attribute name="str1" type="str"/>

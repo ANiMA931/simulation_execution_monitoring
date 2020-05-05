@@ -3,7 +3,7 @@ import os
 from random import random
 
 
-def read_xml(in_path):
+def read_xml(in_path)->xml.dom.minidom.Document:
     """
     读取并解析xml文件
     :param in_path: xml路径
@@ -165,3 +165,4 @@ def floyd_with_path(weight_matrix, path_matrix):
                 if weight_matrix[i][j] > weight_matrix[i][k] + weight_matrix[k][j]:
                     weight_matrix[i][j] = weight_matrix[i][k] + weight_matrix[k][j]
                     path_matrix[i][j] = k
+

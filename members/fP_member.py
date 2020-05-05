@@ -424,6 +424,8 @@ def connect_all_member():
 
 
 if __name__ == '__main__':
+    dom=read_xml(r'fpMemberXml_C.xml')
+    print(dom.__class__)
     format_xml_to_member(read_xml(r'fpMemberXml_C.xml'))
     connect_all_member()
     print()

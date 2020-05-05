@@ -108,7 +108,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QTableWidget" name="tableWidget_3">
+   <widget class="QTableWidget" name="member_tableWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -307,21 +307,21 @@
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_53">
+      <widget class="QLabel" name="log_text_label">
        <property name="text">
         <string>mutual message:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_54">
+      <widget class="QLabel" name="warning_text_log_label">
        <property name="text">
         <string>Warning message:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QLabel" name="label_55">
+      <widget class="QLabel" name="service_msg_log_label">
        <property name="text">
         <string>service message:</string>
        </property>
@@ -342,7 +342,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QTextEdit" name="log_text_2">
+      <widget class="QTextEdit" name="warning_log_text">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
@@ -356,7 +356,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QTextEdit" name="log_text_3">
+      <widget class="QTextEdit" name="service_msg_log_text">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
@@ -382,14 +382,14 @@ p, li { white-space: pre-wrap; }
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="units_dir_label">
+      <widget class="QLabel" name="member_xml_path_label">
        <property name="text">
         <string>Member path：</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="units_dir_path">
+      <widget class="QLineEdit" name="members_xml_path_edit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -400,21 +400,21 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="units_filedialog_btn">
+      <widget class="QPushButton" name="members_filedialog_btn">
        <property name="text">
         <string>Browser...</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="simu_meta_dir_label">
+      <widget class="QLabel" name="def_xml_path_label">
        <property name="text">
         <string>Simulation definition path：</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="simu_meta_dir_path">
+      <widget class="QLineEdit" name="def_xml_path_edit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -425,7 +425,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QPushButton" name="simu_meta_filedialog_btn">
+      <widget class="QPushButton" name="def_xml_filedialog_btn">
        <property name="text">
         <string>Browser...</string>
        </property>
@@ -439,7 +439,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="record_dir_path">
+      <widget class="QLineEdit" name="record_dir_path_edit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -476,7 +476,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="se_ID_edit_2">
+      <widget class="QLineEdit" name="primitive_num_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -494,7 +497,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="se_ID_edit_3">
+      <widget class="QLineEdit" name="adviser_num_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -512,7 +518,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="se_ID_edit_4">
+      <widget class="QLineEdit" name="monitor_num_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -530,7 +539,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="se_ID_edit_7">
+      <widget class="QLineEdit" name="collective_num_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -542,7 +554,7 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -578,7 +590,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="se_ID_edit_5">
+      <widget class="QLineEdit" name="meta_member_ID_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -639,7 +654,7 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>562</x>
@@ -657,7 +672,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="se_ID_edit_6">
+      <widget class="QLineEdit" name="definition_ID_edit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -675,7 +693,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="generation_lineEdit">
+      <widget class="QLineEdit" name="generation_Edit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
@@ -692,7 +710,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="step_size_lineEdit">
+      <widget class="QLineEdit" name="step_size_Edit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -706,8 +724,6 @@ p, li { white-space: pre-wrap; }
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="GraphRes.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
